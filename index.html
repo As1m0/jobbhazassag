@@ -37,7 +37,7 @@
 
 <body>
 
-
+<!-- POP-UP -->
     <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content shadow-lg border-0">
@@ -45,7 +45,7 @@
                     <h1 class="modal-title fs-4" id="programModalLabel">
                         <i class="fas fa-heart me-2"></i>Köszönjük, hogy érdeklődsz!
                     </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white;"></button>
                 </div>
                 <div class="modal-body">
                     <p class="lead mb-4">
@@ -68,8 +68,9 @@
                         </div>
                     </div>
 
-                    <form id="interestForm">
+                    <form id="interestForm" class="mt-3">
                         <div class="row">
+                            <h4>Ha érdekel a lehetőség kérjük add meg az email címed és hogy hogyan szólíthatunk.</h4>
                             <div class="col-md-6 mb-3">
                                 <label for="email" class="form-label">Email cím *</label>
                                 <input type="email" class="form-control" id="emailInput" placeholder="pelda@email.com"
@@ -101,9 +102,6 @@
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <!-- Floating Hearts -->
-    <div class="floating-hearts" id="floatingHearts"></div>
-
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
@@ -116,6 +114,7 @@
         </div>
     </section>
 
+    <!--MI ez?-->
     <section id="program" class="py-5">
         <div class="container">
             <div class="section-card">
@@ -142,22 +141,92 @@
         </div>
     </section>
 
+    <!-- How it Works -->
+    <section id="how-it-works" class="pb-5" style="background: var(--soft-cream);">
+        <div class="container">
+            <div class="section-card">
+                <h2 class="text-center mb-5 display-5">Hogyan működik a gyakorlatban?</h2>
+                <p class="lead text-center mb-5">
+                    Ez nem egy PDF, nem egy random blogcikk-gyűjtemény.<br>
+                    Ez egy <strong>interaktív, vezetett önismereti program.</strong>
+                    <br>Minden nap lehetőséged van választani egy <strong>mini tananyagot</strong> vagy egy
+                    <strong>önismereti gyakorlatot</strong> az
+                    adott hét témáján belül – hogy pont azt dolgozhasd fel, ami neked aktuális.
+                </p>
+
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h4>Mini tananyagok</h4>
+                            <p>Rövid, könnyen olvasható anyagok, amik egy párkapcsolati témát bontanak ki, és közben
+                                érthetően elmagyarázzák a pszichológiai hátteret is. Segítenek megérteni, mi miért
+                                történik köztetek – és benned. Interaktív tesztekkel segítünk feltárni az adott témához
+                                kapcsolódó működésedet.</p>
+                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn1"
+                                onclick="scrollToSection('carouselPos')">
+                                <span style="color: var(--primary-teal)">Példa</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5 mt-2">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <h4>Önismereti gyakorlatok</h4>
+                            <p>Ezek vezetett írásos feladatok, amik mélyebb önreflexióra hívnak. A gyakorlat első fele
+                                befelé nézést segítő kérdésekkel dolgozik, a második rész pedig elmagyarázza a
+                                viselkedésed mögött milyen sémák húzódnak meg.</p>
+                            <p>⏳ Egy napra csak egy tananyagot vagy gyakorlatot választhatsz – így lesz időd
+                                feldolgozni, átérezni, és nem csak átfutni a lényeget.<br><strong>Napi 10–15
+                                    perc</strong> – ennyit kérünk tőled</p>
+                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn2"
+                                onclick="scrollToSection('carouselPos')">
+                                <span style="color: var(--primary-teal)">Példa</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4 mt-2">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4>+1: TeddMegMa</h4>
+                            <p>Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap választhatsz egyet
+                                a TeddMegMa feladatok közül is.</p>
+                            <p>
+                                Ezek 10 apró, konkrét kapcsolódási lehetőséget kínálnak, az adott heti témához
+                                illeszkedve.
+                                Lehet egy mondat, amit kimondasz. Egy gesztus. Egy apró lépés a másik felé.
+                            </p>
+                            <p>Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a kapcsolatod csak
+                                akkor fejlődik, ha meg is éled a tanultakat.</p>
+                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn3"
+                                onclick="scrollToSection('carouselPos')">
+                                <span style="color: var(--primary-teal)">Példa</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-
-
-
-
+    <!--     4 MODUL       -->
     <section id="modules" class="pt-5">
         <div class="container">
-            <h2 class="text-center mb-5 display-5">4 hét, ami újraélesztheti a házasságotokat</h2>
+            <h2 class="text-center mb-5 display-5">4 hét, ami újraéleszti a házasságotokat</h2>
 
             <!-- Module 1 -->
             <div class="module-card">
                 <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module1" aria-expanded="true"
                     aria-controls="module1">
                     <h3 class="d-inline">
-                        <span style="color:rgb(255, 193, 7)">1. hét</span> Kommunikáció - Beszélj, hogy értsenek
+                        <span style="color:rgb(255, 193, 7)">1. hét</span> Kommunikáció fejlesztése
                     </h3>
                     <i class="fas fa-chevron-down collapse-icon"></i>
                 </div>
@@ -381,83 +450,7 @@
         <img class="illustration" src="img/illustration_1.png" alt="woman sad">
     </div>
 
-    <!-- How it Works -->
-    <section id="how-it-works" class="py-5" style="background: var(--soft-cream);">
-        <div class="container">
-            <div class="section-card">
-                <h2 class="text-center mb-5 display-5">Hogyan működik a gyakorlatban?</h2>
-                <p class="lead text-center mb-5">
-                    Ez nem egy PDF, nem egy random blogcikk-gyűjtemény.<br>
-                    Ez egy <strong>interaktív, vezetett önismereti program.</strong>
-                    <br>Minden nap lehetőséged van választani egy <strong>mini tananyagot</strong> vagy egy
-                    <strong>önismereti gyakorlatot</strong> az
-                    adott hét témáján belül – hogy pont azt dolgozhasd fel, ami neked aktuális.
-                </p>
-
-                <div class="row">
-                    <div class="col-lg-4 mb-5">
-                        <div class="text-center">
-                            <div class="feature-icon">
-                                <i class="fas fa-book-open"></i>
-                            </div>
-                            <h4>Mini tananyagok</h4>
-                            <p>Rövid, könnyen olvasható anyagok, amik egy párkapcsolati témát bontanak ki, és közben
-                                érthetően elmagyarázzák a pszichológiai hátteret is. Segítenek megérteni, mi miért
-                                történik köztetek – és benned. Interaktív tesztekkel segítünk feltárni az adott témához
-                                kapcsolódó működésedet.</p>
-                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn1"
-                                onclick="scrollToSection('carouselPos')">
-                                <span id="btnText" style="color: var(--primary-teal)">Show Gallery 1</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-5 mt-2">
-                        <div class="text-center">
-                            <div class="feature-icon">
-                                <i class="fas fa-book-reader"></i>
-                            </div>
-                            <h4>Önismereti gyakorlatok</h4>
-                            <p>Ezek vezetett írásos feladatok, amik mélyebb önreflexióra hívnak. A gyakorlat első fele
-                                befelé nézést segítő kérdésekkel dolgozik, a második rész pedig elmagyarázza a
-                                viselkedésed mögött milyen sémák húzódnak meg.</p>
-                            <p>⏳ Egy napra csak egy tananyagot vagy gyakorlatot választhatsz – így lesz időd
-                                feldolgozni, átérezni, és nem csak átfutni a lényeget.<br><strong>Napi 10–15
-                                    perc</strong> – ennyit kérünk tőled</p>
-                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn2"
-                                onclick="scrollToSection('carouselPos')">
-                                <span id="btnText" style="color: var(--primary-teal)">Show Gallery 2</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4 mt-2">
-                        <div class="text-center">
-                            <div class="feature-icon">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <h4>+1: TeddMegMa</h4>
-                            <p>Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap választhatsz egyet
-                                a TeddMegMa feladatok közül is.</p>
-                            <p>
-                                Ezek 10 apró, konkrét kapcsolódási lehetőséget kínálnak, az adott heti témához
-                                illeszkedve.
-                                Lehet egy mondat, amit kimondasz. Egy gesztus. Egy apró lépés a másik felé.
-                            </p>
-                            <p>Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a kapcsolatod csak
-                                akkor fejlődik, ha meg is éled a tanultakat.</p>
-                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn3"
-                                onclick="scrollToSection('carouselPos')">
-                                <span id="btnText" style="color: var(--primary-teal)">Show Gallery 3</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
+<!-- Gyakori kerdesek -->
     <section class="pb-5 pt-2" style="background-color: var(--soft-cream);">
         <div class="container">
             <div class="section-card">
