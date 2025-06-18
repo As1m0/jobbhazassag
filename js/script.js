@@ -102,14 +102,4 @@ document.addEventListener('DOMContentLoaded', function () {
             heroTitle.classList.add('h2');
         }
     }
-
-
-    // Track various interactions
-    document.addEventListener('scroll', () => trackEngagement('scroll'));
-    document.querySelectorAll('.module-card').forEach(card => {
-        card.addEventListener('mouseenter', () => trackEngagement('module_hover'));
-    });
-    document.querySelectorAll('.story-card').forEach(card => {
-        card.addEventListener('click', () => trackEngagement('story_click'));
-    });
 });
