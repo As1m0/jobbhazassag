@@ -37,7 +37,7 @@
 
 <body>
 
-<!-- POP-UP -->
+    <!-- POP-UP -->
     <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content shadow-lg border-0">
@@ -45,7 +45,7 @@
                     <h1 class="modal-title fs-4" id="programModalLabel">
                         <i class="fas fa-heart me-2"></i>Köszönjük, hogy érdeklődsz!
                     </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white;"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p class="lead mb-4">
@@ -129,7 +129,7 @@
                         </h4>
                         <div class="my-3">
                             <p
-                                style="background-color: var(--primary-teal); padding: 10px 20px; border-radius: 10px; color: white;">
+                                style="background-color: var(--primary-teal); padding: 10px 20px; border-radius: 10px; color: white">
                                 <b>Ez egy biztonságos, lépésről lépésre vezetett út, ahol újratanulhatjátok, hogyan
                                     lehettek
                                     újra egy pár – és nemcsak szülőtársak. </b>
@@ -142,7 +142,7 @@
     </section>
 
     <!-- How it Works -->
-    <section id="how-it-works" class="pb-5" style="background: var(--soft-cream);">
+    <section id="how-it-works" class="pb-5">
         <div class="container">
             <div class="section-card">
                 <h2 class="text-center mb-5 display-5">Hogyan működik a gyakorlatban?</h2>
@@ -226,7 +226,7 @@
                 <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module1" aria-expanded="true"
                     aria-controls="module1">
                     <h3 class="d-inline">
-                        <span style="color:rgb(255, 193, 7)">1. hét</span> Kommunikáció fejlesztése
+                        <span style="color:var(--new-orange)">1. hét</span> Kommunikáció fejlesztése
                     </h3>
                     <i class="fas fa-chevron-down collapse-icon"></i>
                 </div>
@@ -284,7 +284,7 @@
                 <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module2" aria-expanded="false"
                     aria-controls="module2">
                     <h3 class="d-inline">
-                        <span style="color:rgb(255, 193, 7)">2. hét</span> Érzelmi intimitás újraépítése
+                        <span style="color:var(--new-orange)">2. hét</span> Érzelmi intimitás újraépítése
                     </h3>
                     <i class="fas fa-chevron-down collapse-icon"></i>
                 </div>
@@ -339,7 +339,7 @@
                 <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module3" aria-expanded="false"
                     aria-controls="module3">
                     <h3 class="d-inline">
-                        <span style="color:rgb(255, 193, 7)">3. hét</span> Újratanulni az érintést
+                        <span style="color:var(--new-orange)">3. hét</span> Újratanulni az érintést
                     </h3>
                     <i class="fas fa-chevron-down collapse-icon"></i>
                 </div>
@@ -394,7 +394,7 @@
                 <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module4" aria-expanded="false"
                     aria-controls="module4">
                     <h3 class="d-inline">
-                        <span style="color:rgb(255, 193, 7)">4. hét</span> Hogyan tovább
+                        <span style="color:var(--new-orange)">4. hét</span> Hogyan tovább
                     </h3>
                     <i class="fas fa-chevron-down collapse-icon"></i>
                 </div>
@@ -450,8 +450,8 @@
         <img class="illustration" src="img/illustration_1.png" alt="woman sad">
     </div>
 
-<!-- Gyakori kerdesek -->
-    <section class="pb-5 pt-2" style="background-color: var(--soft-cream);">
+    <!-- Gyakori kerdesek -->
+    <section class="pb-5 pt-2">
         <div class="container">
             <div class="section-card">
                 <h2 class="text-center mb-5 display-5">Gyakori kérdések</h2>
@@ -587,7 +587,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <div class="p-4 d-inline-block" style="background-color: rgba(255, 193, 7, .8); border-radius: 22px;">
+                <div class="p-4 d-inline-block" style="background-color: var(--new-orange); border-radius: 22px;">
                     <i class="fas fa-shield-alt me-2" style="font-size: 32px;"></i>
                     <div style="font-size: 22px;">
                         <strong>14 napos pénzvisszafizetési garancia</strong>
@@ -610,7 +610,7 @@
     <section class="py-5" style="background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-teal) 100%);">
         <div class="container text-center text-white">
             <h2 class="display-4 mb-4">Készen állsz újraindítani a házasságod?</h2>
-            <p class="lead mb-4">Kezdd el még ma a 4 hetes kapcsolatmentő programot!</p>
+            <p class="lead mb-4" style="color: white">Kezdd el még ma a 4 hetes kapcsolatmentő programot!</p>
             <button data-bs-toggle="modal" data-bs-target="#emailModal" class="btn btn-light btn-lg px-5 py-3"
                 onclick="fbq('track', 'CompleteRegistration');">
                 <i class="fas fa-heart me-2"></i>
@@ -626,10 +626,10 @@
     <!--         CAROUSEL        -->
 
     <section id="carouselPos">
-        <div class="container  text-center mb-5" id="carouselContainer">
+        <div class="container text-center" id="carouselContainer">
 
 
-            <div class="carousel-section" id="carouselSection1">
+            <div class="carousel-section py-4" id="carouselSection1">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Carousel 1</h1>
                 <span class="close-btn" onclick="hideAllCarousel()">X</span>
                 <div id="imageCarousel1" class="carousel slide">
@@ -687,7 +687,7 @@
             </div>
 
 
-            <div class="carousel-section" id="carouselSection2">
+            <div class="carousel-section py-4" id="carouselSection2">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Carousel 2</h1>
                 <span class="close-btn" onclick="hideAllCarousel()">X</span>
                 <div id="imageCarousel2" class="carousel slide">
@@ -728,7 +728,7 @@
                 </div>
             </div>
 
-            <div class="carousel-section" id="carouselSection3">
+            <div class="carousel-section py-4" id="carouselSection3">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Carousel 3</h1>
                 <span class="close-btn" onclick="hideAllCarousel()">X</span>
                 <div id="imageCarousel3" class="carousel slide">
@@ -780,6 +780,28 @@
 
         </div>
     </section>
+
+    <div class="py-3 text-center" style="background: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 mb-2">
+                    <i class="fas fa-shield-alt text-success me-2"></i>
+                    <small class="text-muted">Pénzvisszafizetési garancia</small>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <i class="fas fa-user-md text-primary me-2"></i>
+                    <small class="text-muted">Pszichológus által fejlesztve</small>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <i class="fas fa-calendar-days text-info me-2"></i><small>28 nap</small>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <i class="fas fa-clock text-warning me-2"></i>
+                    <small class="text-muted">Napi 10–15 perc</small>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
