@@ -8,7 +8,6 @@
     --light-teal: #4a7c7c;
     --warm-beige: #f5f1eb;
     --soft-cream: #faf2e7;
-    --warm-brown: #faf2e7;
     --soft-bg: #fcfaf4;
     --accent-orange: #e8946f;
     --new-orange: #ffc100;
@@ -43,7 +42,7 @@ body {
 
 .hero-section {
     /*background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-teal) 100%);*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../img/cover_img2.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../img/cover_img1.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -139,7 +138,7 @@ body {
 }
 
 .story-card {
-    background: linear-gradient(135deg, var(--new-orange) 0%, #ffd968 100%);
+    background: linear-gradient(135deg, #ffd968 0%, #f4d07d 100%);
     border-left: 4px solid var(--primary-teal);
     border-radius: 10px;
     padding: 20px;
@@ -463,6 +462,10 @@ body {
     width: 100%;
 }
 
+.carousel-caption p {
+    color: white;
+}
+
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
     transform: translateX(100%);
@@ -482,9 +485,10 @@ body {
     display: inline-block;
     position: absolute;
     right: 10px;
-    top: 10px;
-    width: 25px;
-    height: 25px;
+    top: 28px;
+    width: 30px;
+    height: 30px;
+    padding-top: 2px;
     border-radius: 50%;
     background-color: #006666;
     color: white;
