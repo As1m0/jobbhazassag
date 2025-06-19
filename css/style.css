@@ -235,13 +235,13 @@ body {
 }
 
 .btn-primary-custom2 {
-    background-color: var(--primary-teal);
-    color: white;
+    background-color: var(--new-orange);
+    color: var(--dark-teal);
     transition: all ease .3s;
 }
 
 .btn-primary-custom2:hover {
-    opacity: .8;
+    background-color: #c49403;
 }
 
 .btn-primary-custom:hover {
