@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Configuration
-$csvFile = 'email_addresses_d2fr344g.csv';
+$csvFile = 'email_addresses.csv';
 
 // Function to validate email
 function validateEmail($email) {
@@ -187,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if ($result['success']) {
         // Also create/update Excel version
-        convertCSVToExcel($csvFile, 'email_addresses_d2fr344g.xls');
+        convertCSVToExcel($csvFile, 'email_addresses.xls');
         
         echo json_encode([
             'message' => 'Email collected successfully',
@@ -198,7 +198,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         http_response_code(500);
         echo json_encode(['error' => $result['error']]);
     }
-        
     
 } else {
     http_response_code(405);

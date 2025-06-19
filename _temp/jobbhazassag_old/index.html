@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobb Házasság Akadémia - 4 Hetes Program</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Domine:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg border-0">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="programModalLabel">
+                        <i class="fas fa-heart me-2"></i>Köszönjük, hogy érdeklődsz!
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead mb-4">
+                        A programot jelenleg <strong>20 család</strong> próbálja ki, hogy minden a helyére kerüljön,
+                        és a lehető legnagyobb segítséget tudja nyújtani nektek.
+                    </p>
+
+                    <div class="alert border-0" style="background: linear-gradient(135deg, #cdfaff, #d5f5eb);">
+                        <h5 class="alert-heading mb-3">A mostani jelentkezőknek azt ajánljuk, hogy:</h5>
+                        <div class="benefit-item">
+                            <span class="green-circle">🟢</span>
+                            <span><strong>elsőként értesítünk</strong>, amikor elindul a program</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="green-circle">🟢</span>
+                            <span>és a <strong>teljes, 4 hetes programot</strong>
+                                <span class="price-highlight">4900 Ft-ért</span> kapod meg
+                                <small class="text-muted">(teljes ár helyett)</small>
+                            </span>
+                        </div>
+                    </div>
+
+                    <form id="interestForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email cím *</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="pelda@email.com"
+                                    required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Hogyan szólíthatunk? *</label>
+                                <input type="text" class="form-control" id="name" placeholder="Neved" required>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback">
+                            Érvénytelen email cím.
+                        </div>
+                    </form>
+                    <div id="alertContainer"></div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Bezárás</button>
+                    <button type="button" class="btn btn-primary-custom2" id="submitEmail" onclick="submitForm()">
+                        <i class="fas fa-paper-plane me-2"></i>Jelentkezem!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Indicator -->
+    <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-1 mb-4 fw-bold">Szülőtársból újra szeretők</h1>
+                    <p class="h3 mb-4 opacity-90">28 napos program a házasságotok újraélesztéséért</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="py-5">
+        <div class="container">
+            <div class="section-card">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="h1 mb-4 text-primary-teal display-5">Mi ez, és miért segíthet nektek is?</h2>
+                        <p>Egy kapcsolat nem akkor megy tönkre, amikor elmarad a szex. Hanem amikor már nem beszélünk,
+                            nem értjük egymást, nem érintjük meg a másikat. És főleg: amikor már nem is tudjuk, hogyan
+                            kezdjünk hozzá a változáshoz.</p>
+                        <h4 class="text-primary-teal mt-3">Ezért hoztuk létre a Jobb Házasság Akadémia 4 hetes
+                            programját:
+                        </h4>
+                        <div class="my-3">
+                            <p
+                                style="background-color: var(--primary-teal); padding: 10px 20px; border-radius: 10px; color: white;">
+                                <b>Ez egy biztonságos, lépésről lépésre vezetett út, ahol újratanulhatjátok, hogyan
+                                    lehettek
+                                    újra egy pár – és nemcsak szülőtársak. </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="modules" class="pt-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5">4 hét, ami újraélesztheti a házasságotokat</h2>
+
+            <!-- Module 1 -->
+            <div class="module-card">
+                <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module1" aria-expanded="true"
+                    aria-controls="module1">
+                    <h3 class="d-inline">
+                        <span style="color:rgb(255, 193, 7)">1. hét</span> Kommunikáció - Beszélj, hogy értsenek
+                    </h3>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                <div class="collapse show module-content" id="module1">
+                    <div class="module-body fade-in">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5>Mini tananyagok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Az empátia és a tanácsadás
+                                        különbsége</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Miért hallgatunk, amikor szólni
+                                        kéne?</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>A romboló kommunikációs spirál
+                                        felismerése</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Mi az az asszertivitás?</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <h5>Önismereti gyakorlatok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Miért nehéz kimondanom:
+                                        „Sajnálom, igazad van"?</li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Miért félek kimondani
+                                        őszintén, amit érzek?
+                                    </li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Mi lenne, ha nem akarnék
+                                        győzni egy beszélgetésben</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-12">
+                                <h5>TeddMegMa</h5>
+                                <i>10 apró kommunikációs lépés, amik közül szabadon választhatsz minden nap, hogy ne
+                                    csak a logisztikáról beszéljetek, hanem újra tudjatok kapcsolódni egymáshoz.</i>
+                            </div>
+                        </div>
+
+                        <div class="story-card mt-4">
+                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Eszter, 42
+                            </h6>
+                            <p class="fst-italic">
+                                „Rájöttem, hogy nem az a baj, hogy nem beszélünk – hanem az, hogy nem tudjuk hogyan és
+                                mit mondjunk egymásnak, hogy kapcsolódni is tudjunk, ne csak logisztikázni. Az
+                                „én-üzenetes” feladattól szó szerint megremegtem. Először tudtam úgy elmondani, amit
+                                érzek, hogy nem lett belőle veszekedés."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module-card">
+                <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module2" aria-expanded="false"
+                    aria-controls="module2">
+                    <h3 class="d-inline">
+                        <span style="color:rgb(255, 193, 7)">2. hét</span> Érzelmi intimitás újraépítése
+                    </h3>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                <div class="collapse module-content" id="module2">
+                    <div class="module-body fade-in">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5>Mini tananyagok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Hogyan ismerd fel a saját
+                                        érzéseidet</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Ne játssz jól-létet – mutasd meg
+                                        magad</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>A napi kis gesztusok ereje</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Hogyan építhetünk érzéseket –
+                                        nemcsak feladatlistát?</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <h5>Önismereti gyakorlatok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Mi történik bennem mélyebb
+                                        beszélgetéskor?</li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Milyen mondatokkal zárom ki őt
+                                        az életemből?</li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Hogyan lát engem a párom?
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h5>TeddMegMa</h5>
+                            <i>10 kicsi kapcsolódás, amik közül szabadon választhatsz minden nap, hogy újra láthatóvá
+                                váljatok egymás számára.</i>
+                        </div>
+
+                        <div class="story-card mt-4">
+                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Katalin, 46
+                            </h6>
+                            <p class="fst-italic">
+                                A “Hogyan lát engem a párom” feladatnál sírtam. Nem gondoltam, hogy ennyire vágyom arra,
+                                hogy lásson. Aztán leírtam, és végre meg is tudtam osztani vele. Közelebb hozott minket.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module-card">
+                <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module3" aria-expanded="false"
+                    aria-controls="module3">
+                    <h3 class="d-inline">
+                        <span style="color:rgb(255, 193, 7)">3. hét</span> Újratanulni az érintést
+                    </h3>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                <div class="collapse module-content" id="module3">
+                    <div class="module-body fade-in">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5>Mini tananyagok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Miért nem kívánom őt, ha szeretem?
+                                    </li>
+                                    <li><i class="fas fa-check text-success me-2"></i>A szabályozó érintés ereje</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Közeledés ≠ szex</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Ismerjük meg újra egymás testét
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <h5>Önismereti gyakorlatok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Mit tanultam gyerekként az
+                                        érintésről?</li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Újracsatlakozás a vágyhoz
+                                    </li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Mi fér most bele - az első
+                                        lépések
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h5>TeddMegMa</h5>
+                            <i>10 finom gesztus, amiből te választhatsz minden nap, hogy újra biztonságos legyen a
+                                közelség.</i>
+                        </div>
+
+                        <div class="story-card mt-4">
+                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Norbert, 44</h6>
+                            <p class="fst-italic">
+                                „Kicsit szkeptikus voltam. De amikor kiválasztottam azt a feladatot, hogy csak üljünk
+                                egymás mellé csendben és érintkezzen a térdünk… hát, akkor rájöttem, mennyire hiányzik
+                                az egyszerű közelség."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="module-card">
+                <div class="module-header" data-bs-toggle="collapse" data-bs-target="#module4" aria-expanded="false"
+                    aria-controls="module4">
+                    <h3 class="d-inline">
+                        <span style="color:rgb(255, 193, 7)">4. hét</span> Hogyan tovább
+                    </h3>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                <div class="collapse module-content" id="module4">
+                    <div class="module-body fade-in">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5>Mini tananyagok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Ne ess vissza a megszokottba</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>A napi 10 perc megtartása</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Ha jön a következő vihar</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Hogy akarjuk egymást 5 év múlva
+                                        is?</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <h5>Önismereti gyakorlatok</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Mit mertem végre beismerni?
+                                    </li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Milyen új szokás született?
+                                    </li>
+                                    <li><i class="fas fa-lightbulb text-warning me-2"></i>Mit mondana most rólam a
+                                        párom?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <h5>TeddMegMa</h5>
+                            <i>A TeddMegMa feladatok ezen a héten a megtartásról szólnak. A kis dolgokról, amik
+                                megtartanak titeket egymásnak, hogy továbbvigyétek azt, amit elkezdtetek az előző
+                                hetekben felépíteni.</i>
+                        </div>
+
+                        <div class="story-card mt-4">
+                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Judit, 48</h6>
+                            <p class="fst-italic">
+                                „Ez a hét segített kimondani dolgokat, amiket évek óta tologattunk. És azt is, hogy mit
+                                akarunk együtt 5 év múlva. Most már nemcsak túléljük a napokat, hanem talán megyünk
+                                együtt valami felé és ez visszahozta nálunk az intimitást is."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <img class="illustration" src="img/illustration_1.png" alt="woman sad">
+    </div>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="py-5" style="background: var(--soft-cream);">
+        <div class="container">
+            <div class="section-card">
+                <h2 class="text-center mb-5 display-5">Hogyan működik a gyakorlatban?</h2>
+                <p class="lead text-center mb-5">
+                    Ez nem egy PDF, nem egy random blogcikk-gyűjtemény.<br>
+                    Ez egy <strong>interaktív, vezetett önismereti program.</strong>
+                    <br>Minden nap lehetőséged van választani egy <strong>mini tananyagot</strong> vagy egy <strong>önismereti gyakorlatot</strong> az
+                    adott hét témáján belül – hogy pont azt dolgozhasd fel, ami neked aktuális.
+                </p>
+
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h4>Mini tananyagok</h4>
+                            <p>Rövid, könnyen olvasható anyagok, amik egy párkapcsolati témát bontanak ki, és közben érthetően elmagyarázzák a pszichológiai hátteret is. Segítenek megérteni, mi miért történik köztetek – és benned. Interaktív tesztekkel segítünk feltárni az adott témához kapcsolódó működésedet.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <h4>Önismereti gyakorlatok</h4>
+                            <p>Ezek vezetett írásos feladatok, amik mélyebb önreflexióra hívnak. A gyakorlat első fele
+                                befelé nézést segítő kérdésekkel dolgozik, a második rész pedig elmagyarázza a
+                                viselkedésed mögött milyen sémák húzódnak meg.</p>
+                            <p>⏳ Egy napra csak egy tananyagot vagy gyakorlatot választhatsz – így lesz időd
+                                feldolgozni, átérezni, és nem csak átfutni a lényeget.<br><strong>Napi 10–15
+                                    perc</strong> – ennyit kérünk tőled</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4>+1: TeddMegMa</h4>
+                            <p>Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap választhatsz egyet
+                                a TeddMegMa feladatok közül is.</p>
+                            <p>
+                                Ezek 10 apró, konkrét kapcsolódási lehetőséget kínálnak, az adott heti témához
+                                illeszkedve.
+                                Lehet egy mondat, amit kimondasz. Egy gesztus. Egy apró lépés a másik felé.
+                            </p>
+                            <p>Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a kapcsolatod csak
+                                akkor fejlődik, ha meg is éled a tanultakat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="pb-5 pt-2" style="background-color: var(--soft-cream);">
+        <div class="container">
+            <div class="section-card">
+                <h2 class="text-center mb-5 display-5">Gyakori kérdések</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                Működik-e, ha csak az egyik fél csinálja?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Igen! A program az önismeretre épít. Ha te változol, az hatással lesz a kapcsolatra is.
+                                Természetesen hatékonyabb, ha mindketten részt vesztek, de egy fél változása is sokat
+                                jelenthet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                Mi van, ha nincs időm minden napra?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                A program rugalmas. Napi 10-15 perc elég, és ha egy napot kihagysz, könnyen pótolhatod.
+                                A saját tempódban haladhatsz.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                Mennyi idő alatt látok eredményt?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sok résztvevő már az első hét után érez változást. A jelentős áttörések általában
+                                a 2-3. héten jönnek. A 4 hét végére megalapozott új szokásokat alakíthatsz ki.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <img class="illustration" src="img/illustration_3.png" alt="happy sad" style="max-width: 300px;">
+    </div>
+
+    <!-- Expectations -->
+    <section id="expectations" class="py-4">
+        <div class="container">
+            <div class="section-card">
+                <h2 class="text-center mb-5 display-5">Mit várhatsz ettől a programtól - őszintén?</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-success fs-4 me-3 mt-1"></i>
+                            <div>
+                                <strong>Nem fogod "megjavítani" a párodat.</strong> De megértheted, mi történik benned.
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-success fs-4 me-3 mt-1"></i>
+                            <div>
+                                <strong>Nem garantálunk tökéletes kapcsolatot.</strong> De mutatunk utat egy működőbb
+                                verzió felé.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-success fs-4 me-3 mt-1"></i>
+                            <div>
+                                <strong>Nem kell egyedül kitalálnod, mit tegyél.</strong> Minden nap kapsz egy konkrét
+                                lépést.
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-success fs-4 me-3 mt-1"></i>
+                            <div>
+                                És talán újra felfedezitek: <strong>még mindig van köztetek valami, amit érdemes
+                                    megmenteni.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-5" style="background: var(--warm-beige);">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5">Ár: egyszeri díj - a teljes programért</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 mb-4">
+                    <div class="price-card">
+                        <h3><i class="fas fa-user me-2"></i>1 fő részvétellel</h3>
+                        <div class="display-4 my-3">8.900 Ft</div>
+                        <p>Teljes 28 napos program</p>
+                        <button data-bs-toggle="modal" data-bs-target="#emailModal"
+                            class="btn btn-light btn-lg w-100 mt-3" onclick="fbq('track', 'CompleteRegistration');">
+                            Elkezdem most!
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-5 mb-4">
+                    <div class="price-card" style="border: 3px solid var(--accent-orange);">
+                        <div class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle px-3 mt-3 py-2"
+                            style="z-index: 5;">
+                            NÉPSZERŰ
+                        </div>
+                        <h3><i class="fas fa-users me-2"></i>Páros csomag</h3>
+                        <div class="display-4 my-3">11.900 Ft</div>
+                        <p>Ha hozod a párodat is - együtt</p>
+                        <button data-bs-toggle="modal" data-bs-target="#emailModal"
+                            class="btn btn-light btn-lg w-100 mt-3" onclick="fbq('track', 'CompleteRegistration');">
+                            Együtt kezdjük!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <div class="p-4 d-inline-block" style="background-color: rgba(255, 193, 7, .8); border-radius: 22px;">
+                    <i class="fas fa-shield-alt me-2" style="font-size: 32px;"></i>
+                    <div style="font-size: 22px;">
+                        <strong>14 napos pénzvisszafizetési garancia</strong>
+                        <p style="font-size: 16px; margin-top: 10px;">Ha nem hoz felismerést, visszakérheted a teljes
+                            összeget!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <img class="illustration" src="img/illustration_2.png" alt="happy coule"
+            style="max-width: 400px; margin-bottom: -2px; z-index: -1;">
+    </div>
+
+
+    <!-- Final CTA -->
+    <section class="py-5" style="background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-teal) 100%);">
+        <div class="container text-center text-white">
+            <h2 class="display-4 mb-4">Készen állsz újraindítani a házasságod?</h2>
+            <p class="lead mb-4">Kezdd el még ma a 4 hetes kapcsolatmentő programot!</p>
+            <button data-bs-toggle="modal" data-bs-target="#emailModal" class="btn btn-light btn-lg px-5 py-3"
+                onclick="fbq('track', 'CompleteRegistration');">
+                <i class="fas fa-heart me-2"></i>
+                Igen, szeretném elkezdeni!
+            </button>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="email_modal.js"></script>
+    <script>
+        // Add smooth animations and enhanced interactivity
+        document.addEventListener('DOMContentLoaded', function () {
+            const moduleHeaders = document.querySelectorAll('.module-header');
+
+            moduleHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    // Add a subtle pulse effect when clicked
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 100);
+                });
+            });
+
+            // Add fade-in animation to content when it's shown
+            const collapseElements = document.querySelectorAll('.collapse');
+            collapseElements.forEach(collapse => {
+                collapse.addEventListener('shown.bs.collapse', function () {
+                    const content = this.querySelector('.module-body');
+                    content.classList.add('fade-in');
+                });
+
+                collapse.addEventListener('hidden.bs.collapse', function () {
+                    const content = this.querySelector('.module-body');
+                    content.classList.remove('fade-in');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
