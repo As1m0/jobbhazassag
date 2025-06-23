@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Configuration
-$csvFile = 'email_addresses_d2fr344g.csv';
+$csvFile = 'd2fr344g.csv';
 
 // Function to validate email
 function validateEmail($email) {

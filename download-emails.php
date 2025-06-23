@@ -16,8 +16,8 @@ if (!isset($_SERVER['PHP_AUTH_USER']) ||
 
 
 // Configuration
-$csvFile = 'email_addresses_d2fr344g.csv';
-$excelFile = 'email_addresses_d2fr344g.xls';
+$csvFile = 'd2fr344g.csv';
+$excelFile = 'd2fr344g.xls';
 
 // Function to convert CSV to Excel and download
 function downloadAsExcel($csvFile, $excelFile) {
