@@ -83,8 +83,8 @@ results = [
 
 //progress bar
 
-let currentProgress = 1;
-const totalSegments = questions.length + 3; // Total number of questions
+let currentProgress = 0;
+const totalSegments = questions.length + 2; // Total number of questions
 
 
 function initializeProgressBar() {
@@ -129,7 +129,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //carousel
 
-function startTest(){
+document.getElementById('startTestBtn').addEventListener('click', () => {
+    currentProgress++;
+    updateProgressDisplay();
+});
+
+function nextslide() {
+    currentProgress++;
+    updateProgressDisplay();
+    document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
+    document.querySelector('#imageCarousel4').style.display = 'none';
+    document.getElementById('imageCarousel5').classList.add('fade-in');
+    document.getElementById('imageCarousel5').style.display = 'block';
+
+}
+
+document.getElementById('finalBtn').addEventListener('click', () => {
+    scrollToSection("how-it-works");
+});
+
+function startTest() {
     const testWrapper = document.querySelector('.test-wrapper');
     if (testWrapper) {
         testWrapper.style.display = 'block';
@@ -201,6 +220,8 @@ function renderSlides() {
                 if (answers.every(a => a !== null)) {
                     currentProgress = questions.length;
                     currentSlide = questions.length;
+                    currentProgress++;
+                    updateProgressDisplay();
                     //document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
                     updateSlide();
                     prevBtn.style.display = 'none';
@@ -242,6 +263,8 @@ function renderSlides() {
         document.querySelector('.test-wrapper').style.display = 'none';
         document.querySelector('#imageCarousel4').style.display = 'block';
         document.querySelector('#imageCarousel4').classList.add('fade-in');
+        currentProgress++;
+        updateProgressDisplay();
     };
     resultCard.appendChild(resultText);
     resultCard.appendChild(resultImg);
@@ -278,7 +301,7 @@ function showResult() {
     const totalScore = answers.reduce((sum, val) => sum + (val || 0), 0);
     const result = document.getElementById("result");
     result.innerHTML = `
-      <h2>Teszt vége!</h2><br><br>
+      <h2>Teszt vége!</h2>
       <h1> Eredményed <strong>${totalScore}</strong> pont</h1>
     `;
     document.getElementById('resultText').innerHTML = getResultText(totalScore);

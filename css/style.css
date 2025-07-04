@@ -544,7 +544,8 @@ body {
 /* PÁRKAPCSOLATI TEST CAROUSEL */
 
 
-.test-wrapper, .start-test-cover{
+.test-wrapper,
+.start-test-cover {
     width: 100%;
     max-width: 1200px;
     max-height: 1000px;
@@ -559,9 +560,15 @@ body {
     border-bottom: none;
 }
 
-.start-test-cover{
+#imageCarousel4,
+#imageCarousel5 {
+    max-height: 1000px;
+}
+
+.start-test-cover {
     height: 800px;
-    border-bottom: #eaaf4b 30px solid;;
+    border-bottom: #eaaf4b 30px solid;
+    ;
 }
 
 .start-test-cover p {
@@ -571,8 +578,7 @@ body {
 }
 
 #testOpenImage {
-    max-height: 350px;
-    width: 100%;
+    width: 80%;
     margin: 20px auto;
     display: block;
 }
@@ -590,7 +596,8 @@ body {
     transition: transform 0.4s ease-in-out;
 }
 
-.test-card, .start-test-cover {
+.test-card,
+.start-test-cover {
     width: 100%;
     padding: 30px 20px;
     flex-shrink: 0;
@@ -600,7 +607,8 @@ body {
     overflow: hidden;
 }
 
-.test-card h2, .start-test-cover h2 {
+.test-card h2,
+.start-test-cover h2 {
     font-size: 34px !important;
     text-align: center;
     color: #6c3c25;
@@ -611,10 +619,11 @@ body {
 .options-wrapper {
     margin-top: 10px;
     margin-bottom: 70px;
-    max-height: 600px;;
+    max-height: 600px;
+    ;
 }
 
-.option{
+.option {
     background: #f1d482;
     text-align: center;
     padding: 20px 10px 0 10px;
@@ -643,7 +652,7 @@ body {
     text-align: center;
     font-size: 14px;
     color: #8a5700;
-   position: relative;
+    position: relative;
     bottom: 50px;
     width: 100%;
 }
@@ -687,8 +696,10 @@ body {
     background: #eaaf4b;
     padding: 5px;
     width: 100%;
+    border-radius: 0px 0px 20px 20px;
     position: absolute;
     bottom: 0;
+    margin-bottom: 20px;
 }
 
 

@@ -816,76 +816,52 @@
                             <!--    JS rendering cards  -->
                         </div>
                         <div class="navigation">
-                            <button class="nav-btn" id="prevBtn">< Vissza</button>
-                            <button class="nav-btn" id="nextBtn">Tovább ></button>
+                            <button class="nav-btn" id="prevBtn">
+                                < Vissza</button>
+                                    <button class="nav-btn" id="nextBtn">Tovább ></button>
                         </div>
                     </div>
-                    <div class="progress-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-2">
-                                    <span class="progress-label">Teszt</span>
-                                </div>
-                                <div class="col-8">
-                                    <div class="progress-bar-test" id="progressBarTest">
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <span class="progress-label">Egy mondat</span>
-                                </div>
-                            </div>
-                            <div class="progress-header">
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-                <!--    image carousel    -->
+                <!--    next slide    -->
                 <div id="imageCarousel4" class="carousel slide" style="display: none;">
-                    <!--
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#imageCarousel4" data-bs-slide-to="0"
-                            class="active"></button>
-                        <button type="button" data-bs-target="#imageCarousel4" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#imageCarousel4" data-bs-slide-to="2"></button>
+                    <div class="start-test-cover">
+                        <h2 class="test-title mt-3">szöveg</h2>
+                        <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
+                            kapcsolatotok felbomlásához vezet</p>
+                        <img src="img/carousel/test/hellboy2.png" alt="Rose Image" id="testOpenImage">
+                        <button class="btn btn-light start-test-btn" id="" onclick="nextslide()">Tovább</button>
                     </div>
-                    -->
-                    <div class="carousel-inner" id="carouselInner">
-                        <div class="carousel-item active">
-                            <img src="img/carousel/test/slide_1.png" id="carousel-img1" class="d-block w-100"
-                                alt="Beautiful Landscape">
-                            <div class="carousel-caption  d-md-block">
-                                <h5>Carousel 3Scenic Mountain View</h5>
-                                <p>Breathtaking landscapes that inspire wonder and tranquility.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/test/slide_2.png" id="carousel-img2" class="d-block w-100" alt="Ocean Waves">
-                            <div class="carousel-caption  d-md-block">
-                                <h5>Ocean Paradise</h5>
-                                <p>Crystal clear waters and endless horizons.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/test/slide_3.png" id="carousel-img2" class="d-block w-100" alt="Ocean Waves">
-                            <div class="carousel-caption  d-md-block">
-                                <h5>Ocean Paradise</h5>
-                                <p>Crystal clear waters and endless horizons.</p>
-                            </div>
-                        </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel4"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel4"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                </div>
+                <!--    next slide    -->
+                <div id="imageCarousel5" class="carousel slide" style="display: none;">
+                    <div class="start-test-cover">
+                        <h2 class="test-title mt-3">Egy mondat:</h2>
+                        <h3>Lorem ipsu dolol set aim!</h3>
+                        <button class="btn btn-light start-test-btn" id="finalBtn"
+                            onclick="hideAllCarousel()">Kész</button>
                     </div>
                 </div>
 
+                <!--    progress bar    -->
+                <div class="progress-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="progress-label">Teszt</span>
+                            </div>
+                            <div class="col-8">
+                                <div class="progress-bar-test" id="progressBarTest">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <span class="progress-label">Egy mondat</span>
+                            </div>
+                        </div>
+                        <div class="progress-header">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
