@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
+//buttons
 const carouselButton1 = document.getElementById("carousel-btn1");
 const carouselButton2 = document.getElementById("carousel-btn2");
 const carouselButton3 = document.getElementById("carousel-btn3");
+const carouselButton4 = document.getElementById("carousel-btn4");
 
 carouselButton1.addEventListener("click", () => {
     toggleCarousel("carouselSection1");
@@ -23,6 +24,9 @@ carouselButton2.addEventListener("click", () => {
 });
 carouselButton3.addEventListener("click", () => {
     toggleCarousel("carouselSection3");
+});
+carouselButton4.addEventListener("click", () => {
+    toggleCarousel("carouselSection4");
 });
 
 
@@ -98,4 +102,4 @@ function enhanceCarouselAnimations(carouselId) {
 }
 
 // Apply to all carousels
-['imageCarousel1', 'imageCarousel2', 'imageCarousel3'].forEach(enhanceCarouselAnimations);
+//['imageCarousel1', 'imageCarousel2', 'imageCarousel3'].forEach(enhanceCarouselAnimations);

@@ -87,13 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add mobile-specific improvements
     if (window.innerWidth < 768) {
-        // Adjust sticky CTA for mobile
-        const stickyCTA = document.querySelector('.sticky-cta');
-        if (stickyCTA) {
-            stickyCTA.classList.remove('d-none', 'd-lg-block');
-            stickyCTA.style.bottom = '10px';
-            stickyCTA.style.right = '10px';
-        }
 
         // Make hero text more readable on mobile
         const heroTitle = document.querySelector('.hero-section h1');

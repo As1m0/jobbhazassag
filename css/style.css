@@ -96,13 +96,14 @@ body {
     transform: translateX(10px);
 }
 
+/* --- Module Header Styles --- */
 .module-header {
     padding: 25px;
     background: linear-gradient(135deg, var(--primary-teal), #006666);
-    color: white;
+    color: #fff;
     cursor: pointer;
     position: relative;
-    transition: all 0.3s ease;
+    transition: background 0.3s, color 0.3s;
 }
 
 .module-header:hover {
@@ -115,28 +116,31 @@ body {
     font-weight: 600;
 }
 
+/* --- Collapse Icon --- */
 .collapse-icon {
     position: absolute;
     right: 25px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .module-header[aria-expanded="true"] .collapse-icon {
     transform: translateY(-50%) rotate(180deg);
 }
 
+/* --- Module Content --- */
 .module-content {
     padding: 0;
-    transition: all 0.4s ease;
+    transition: all 0.4s;
 }
 
 .module-body {
     padding: 30px;
 }
 
+/* --- Story Card --- */
 .story-card {
     background: linear-gradient(135deg, #ffd968 0%, #f4d07d 100%);
     border-left: 4px solid var(--primary-teal);
@@ -529,4 +533,189 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+
+
+
+
+
+/* PÁRKAPCSOLATI TEST CAROUSEL */
+
+
+.test-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    overflow: hidden;
+    background: #f2c145;
+    position: relative;
+    border: #eaaf4b 30px solid;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+.test-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.test-card {
+    width: 100%;
+    padding: 30px 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.test-card h2 {
+    font-size: 42px !important;
+    text-align: center;
+    color: #6c3c25;
+    font-family: "Bona Nova", serif !important;
+}
+
+.options-wrapper {
+    margin-top: 20px;
+    margin-bottom: 90px;
+    max-height: 600px;;
+}
+
+.option {
+    background: #f1d482;
+    text-align: center;
+    padding: 20px 10px 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: auto;
+    color: #5c3b00;
+    font-size: 23px;
+    height: 120px;
+    max-width: 650px;
+    width: 90%;
+    margin-top: 40px;
+}
+
+.option:hover {
+    background: #ffe38a;
+}
+
+.option.selected {
+    background: #eaaf4b;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #8a5700;
+    margin-top: 10px;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-btn {
+    background: #ffc107;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #5c3b00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+    background: #ffca2c;
+}
+
+.result {
+    font-size: 24px;
+    text-align: center;
+    color: #5c3b00;
+    margin-top: 10px;
+}
+
+
+
+
+.progress-container {
+    background: #eaaf4b;
+    padding: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.progress-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d27e3d;
+}
+
+.progress-bar-test {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+    margin: 5px 0;
+}
+
+.progress-segment {
+    width: 30px;
+    height: 15px;
+    margin: 0 1px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.progress-segment.filled {
+    background: #d27e3d;
+    transform: scale(1.1);
+}
+
+.progress-segment.empty {
+    background: #f1d482;
+    opacity: 1;
+}
+
+.progress-arrow {
+    font-size: 10px;
+    color: #F5DEB3;
+    margin-left: 10px;
+}
+
+#resultImg {
+    height: 300px;
+    margin: 30px auto;
+    display: block;
+}
+
+#resultText {
+    font-size: 26px;
+    text-align: center;
+    color: #5c3b00;
+    margin-top: 30px;
 }

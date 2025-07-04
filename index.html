@@ -211,6 +211,27 @@
                             </button>
                         </div>
                     </div>
+                    <div class="col-lg-4 mb-4 mt-2">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4>Párkapcsolati teszt</h4>
+                            <p>Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap választhatsz egyet
+                                a TeddMegMa feladatok közül is.</p>
+                            <p>
+                                Ezek 10 apró, konkrét kapcsolódási lehetőséget kínálnak, az adott heti témához
+                                illeszkedve.
+                                Lehet egy mondat, amit kimondasz. Egy gesztus. Egy apró lépés a másik felé.
+                            </p>
+                            <p>Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a kapcsolatod csak
+                                akkor fejlődik, ha meg is éled a tanultakat.</p>
+                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn4"
+                                onclick="scrollToSection('carouselPos')">
+                                <span style="color: var(--primary-teal)">Példa</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -773,8 +794,52 @@
                     </div>
                 </div>
             </div>
+
+            <!-- TEST CAROUSEL Modal -->
+
+            <div class="carousel-section py-4" id="carouselSection4">
+                <h1 class="mb-4" style="color: var(--primary-teal)">Párkapcsolati Teszt</h1>
+                <span class="close-btn" onclick="hideAllCarousel()">X</span>
+                <div class="test-wrapper">
+                    <div class="test-carousel" id="carousel">
+                        <div class="test-slider" id="test-slider"></div>
+                        <div class="navigation">
+                            <button class="nav-btn" id="prevBtn">⏮ Vissza</button>
+                            <button class="nav-btn" id="nextBtn">Tovább ⏭</button>
+                        </div>
+
+                    </div>
+                    <div class="progress-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="progress-label">Teszt</span>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress-bar-test" id="progressBarTest">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <span class="progress-label">Egy mondat</span>
+                                </div>
+                            </div>
+                            <div class="progress-header">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
 
     <!-- FOOTER -->
     <div class="py-3 text-center" style="background: white;">
@@ -800,11 +865,11 @@
     </div>
 
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/email_modal.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/test_carousel.js"></script>
 </body>
 
 </html>
