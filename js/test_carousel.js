@@ -58,10 +58,22 @@ const questions = [
 ];
 
 results = [
-    { text: "A kapcsolatodban sok a feszültség és a konfliktus. Próbáljatok meg többet kommunikálni és megérteni egymást.", img: './img/carousel/test/rozsa.png' },
-    { text: "A kapcsolatodban vannak problémák, de van lehetőség a fejlődésre. Fontos, hogy mindketten nyitottak legyetek a változásra és a kompromisszumokra.", img: './img/carousel/test/rozsa.png' },
-    { text: "A kapcsolatod erős alapokon áll, de mindig van hová fejlődni. Továbbra is figyeljetek egymásra és támogassátok egymást.", img: './img/carousel/test/rozsa.png' },
-    { text: "A kapcsolatod nagyon erős és egészsé   ges. Kiválóan kommunikáltok és támogatjátok egymást. Folytassátok így!", img: './img/carousel/test/rozsa.png' }
+    {
+        text: "A kapcsolatodban sok a feszültség és a konfliktus. Próbáljatok meg többet kommunikálni és megérteni egymást.",
+        img: './img/carousel/test/rozsa.png'
+    },
+    {
+        text: "A kapcsolatodban vannak problémák, de van lehetőség a fejlődésre. Fontos, hogy mindketten nyitottak legyetek a változásra és a kompromisszumokra.",
+        img: './img/carousel/test/rozsa.png'
+    },
+    {
+        text: "A kapcsolatod erős alapokon áll, de mindig van hová fejlődni. Továbbra is figyeljetek egymásra és támogassátok egymást.",
+        img: './img/carousel/test/rozsa.png'
+    },
+    {
+        text: "A kapcsolatod nagyon erős és egészsé   ges. Kiválóan kommunikáltok és támogatjátok egymást. Folytassátok így!",
+        img: './img/carousel/test/rozsa.png'
+    }
 ]
 
 
@@ -116,6 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //carousel
+
+function startTest(){
+    const testWrapper = document.querySelector('.test-wrapper');
+    if (testWrapper) {
+        testWrapper.style.display = 'block';
+        testWrapper.classList.add('fade-in');
+    }
+    document.getElementsByClassName('start-test-cover')[0].style.display = 'none';
+}
 
 const slider = document.getElementById('test-slider');
 const prevBtn = document.getElementById('prevBtn');

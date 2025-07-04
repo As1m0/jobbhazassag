@@ -544,7 +544,7 @@ body {
 /* PÁRKAPCSOLATI TEST CAROUSEL */
 
 
-.test-wrapper {
+.test-wrapper, .start-test-cover{
     width: 100%;
     max-width: 1200px;
     margin: 30px auto;
@@ -556,6 +556,23 @@ body {
     border: #eaaf4b 30px solid;
     border-bottom: none;
     border-radius: 12px 12px 0 0;
+}
+
+.start-test-cover{
+    height: 900px;
+    border-bottom: #eaaf4b 30px solid;
+}
+
+.start-test-cover p {
+    color: #5c3b00;
+    font-size: 23px;
+    text-align: center;
+}
+
+#testOpenImage {
+    height: 350px;
+    margin: 20px auto;
+    display: block;
 }
 
 .test-carousel {
@@ -571,7 +588,7 @@ body {
     transition: transform 0.4s ease-in-out;
 }
 
-.test-card {
+.test-card, .start-test-cover {
     width: 100%;
     padding: 30px 20px;
     flex-shrink: 0;
@@ -580,7 +597,7 @@ body {
     justify-content: space-between;
 }
 
-.test-card h2 {
+.test-card h2, .start-test-cover h2 {
     font-size: 42px !important;
     text-align: center;
     color: #6c3c25;
@@ -593,7 +610,7 @@ body {
     max-height: 600px;;
 }
 
-.option {
+.option{
     background: #f1d482;
     text-align: center;
     padding: 20px 10px 0 10px;
