@@ -235,10 +235,13 @@ function renderSlides() {
     resultImg.id = 'resultImg';
     const nextButton = document.createElement('button');
     nextButton.className = 'btn btn-light btn-lg mb-5'; //TODO
-    nextButton.textContent = 'Kész';
+    nextButton.textContent = 'Tovább';
     nextButton.onclick = () => {
-        scrollToSection("how-it-works");
-        hideAllCarousel();
+        //scrollToSection("how-it-works");
+        //hideAllCarousel();
+        document.querySelector('.test-wrapper').style.display = 'none';
+        document.querySelector('#imageCarousel4').style.display = 'block';
+        document.querySelector('#imageCarousel4').classList.add('fade-in');
     };
     resultCard.appendChild(resultText);
     resultCard.appendChild(resultImg);
