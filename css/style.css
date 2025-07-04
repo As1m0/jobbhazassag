@@ -547,6 +547,7 @@ body {
 .test-wrapper, .start-test-cover{
     width: 100%;
     max-width: 1200px;
+    max-height: 1000px;
     margin: 30px auto;
     font-family: "Cardo", serif;
     font-weight: 400;
@@ -555,10 +556,12 @@ body {
     position: relative;
     border: #eaaf4b 30px solid;
     border-radius: 12px;
+    border-bottom: none;
 }
 
 .start-test-cover{
-    height: 900px;
+    height: 800px;
+    border-bottom: #eaaf4b 30px solid;;
 }
 
 .start-test-cover p {
@@ -568,7 +571,8 @@ body {
 }
 
 #testOpenImage {
-    height: 350px;
+    max-height: 350px;
+    width: 100%;
     margin: 20px auto;
     display: block;
 }
@@ -593,18 +597,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .test-card h2, .start-test-cover h2 {
-    font-size: 42px !important;
+    font-size: 34px !important;
     text-align: center;
     color: #6c3c25;
     font-family: "Bona Nova", serif !important;
+    font-weight: bold;
 }
 
 .options-wrapper {
-    margin-top: 20px;
-    margin-bottom: 90px;
+    margin-top: 10px;
+    margin-bottom: 70px;
     max-height: 600px;;
 }
 
@@ -617,11 +623,11 @@ body {
     transition: background 0.2s;
     margin: auto;
     color: #5c3b00;
-    font-size: 23px;
+    font-size: 20px;
     height: 120px;
     max-width: 650px;
     width: 90%;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .option:hover {
@@ -633,11 +639,13 @@ body {
     font-weight: bold;
 }
 
-.footer {
+.slider-footer {
     text-align: center;
     font-size: 14px;
     color: #8a5700;
-    margin-top: 10px;
+   position: relative;
+    bottom: 50px;
+    width: 100%;
 }
 
 .navigation {
@@ -666,7 +674,7 @@ body {
 }
 
 .result {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #5c3b00;
     margin-top: 10px;
@@ -723,13 +731,13 @@ body {
 }
 
 #resultImg {
-    height: 300px;
+    height: 250px;
     margin: 30px auto;
     display: block;
 }
 
 #resultText {
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     color: #5c3b00;
     margin-top: 30px;

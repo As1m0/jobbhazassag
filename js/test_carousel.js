@@ -84,7 +84,7 @@ results = [
 //progress bar
 
 let currentProgress = 1;
-const totalSegments = questions.length; // Total number of questions
+const totalSegments = questions.length + 3; // Total number of questions
 
 
 function initializeProgressBar() {
@@ -201,7 +201,7 @@ function renderSlides() {
                 if (answers.every(a => a !== null)) {
                     currentProgress = questions.length;
                     currentSlide = questions.length;
-                    document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
+                    //document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
                     updateSlide();
                     prevBtn.style.display = 'none';
                     nextBtn.style.display = 'none';
@@ -218,7 +218,7 @@ function renderSlides() {
         card.appendChild(optionsWrapper);
 
         const footer = document.createElement('div');
-        footer.className = 'footer';
+        footer.className = 'slider-footer';
         footer.textContent = `Kérdés ${idx + 1} / ${questions.length}`;
         card.appendChild(footer);
 
