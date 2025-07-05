@@ -11,6 +11,15 @@
     --soft-bg: #fcfaf4;
     --accent-orange: #e8946f;
     --new-orange: #ffc100;
+
+    --carousel-bg: #f2c145;
+    --carousel-border: #eaaf4b;
+    --carousel-hl: #6c3c25;
+    --carousel-text: #5c3b00;
+    --carousel-option-bg: #f1d482;
+    --carousel-option-hover: #ffe38a;
+    --carousel-progress-bg: #d27e3d;
+    --carousel-progress-arrow: #F5DEB3;
 }
 
 p {
@@ -540,7 +549,6 @@ body {
 
 
 
-
 /* PÁRKAPCSOLATI TEST CAROUSEL */
 
 
@@ -553,9 +561,9 @@ body {
     font-family: "Cardo", serif;
     font-weight: 400;
     overflow: hidden;
-    background: #f2c145;
+    background: var(--carousel-bg);
     position: relative;
-    border: #eaaf4b 30px solid;
+    border: var(--carousel-border) 30px solid;
     border-radius: 12px;
     border-bottom: none;
 }
@@ -567,12 +575,11 @@ body {
 
 .start-test-cover {
     height: 800px;
-    border-bottom: #eaaf4b 30px solid;
-    ;
+    border-bottom: var(--carousel-border) 30px solid;
 }
 
 .start-test-cover p {
-    color: #5c3b00;
+    color: var(--carousel-text);
     font-size: 23px;
     text-align: center;
 }
@@ -611,7 +618,7 @@ body {
 .start-test-cover h2 {
     font-size: 34px !important;
     text-align: center;
-    color: #6c3c25;
+    color: var(--carousel-hl);
     font-family: "Bona Nova", serif !important;
     font-weight: bold;
 }
@@ -624,7 +631,7 @@ body {
 }
 
 .option {
-    background: #f1d482;
+    background: var(--carousel-option-bg);
     text-align: center;
     padding: 20px 10px 0 10px;
     border-radius: 6px;
@@ -640,11 +647,11 @@ body {
 }
 
 .option:hover {
-    background: #ffe38a;
+    background: var(--carousel-option-hover);
 }
 
 .option.selected {
-    background: #eaaf4b;
+    background: var(--carousel-border);
     font-weight: bold;
 }
 
@@ -674,7 +681,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    color: #5c3b00;
+    color: var(--carousel-text);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -685,15 +692,31 @@ body {
 .result {
     font-size: 20px;
     text-align: center;
-    color: #5c3b00;
+    color: var(--carousel-text);
     margin-top: 10px;
+}
+
+#imageCarousel5 h1{
+    color: var(--carousel-hl);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#imageCarousel5 p{
+    color: var(--carousel-text);
+    font-size: 20px;
+    font-weight: normal;
+    background-color: var(--carousel-border);
+    padding: 30px 20px;
 }
 
 
 
 
 .progress-container {
-    background: #eaaf4b;
+    background: var(--carousel-border);
     padding: 5px;
     width: 100%;
     border-radius: 0px 0px 20px 20px;
@@ -706,7 +729,7 @@ body {
 .progress-label {
     font-size: 16px;
     font-weight: bold;
-    color: #d27e3d;
+    color: var(--carousel-progress-bg);
 }
 
 .progress-bar-test {
@@ -726,18 +749,18 @@ body {
 }
 
 .progress-segment.filled {
-    background: #d27e3d;
+    background: var(--carousel-progress-bg);
     transform: scale(1.1);
 }
 
 .progress-segment.empty {
-    background: #f1d482;
+    background: var(--carousel-option-bg);
     opacity: 1;
 }
 
 .progress-arrow {
     font-size: 10px;
-    color: #F5DEB3;
+    color: var(--carousel-progress-arrow);
     margin-left: 10px;
 }
 
@@ -750,6 +773,6 @@ body {
 #resultText {
     font-size: 20px;
     text-align: center;
-    color: #5c3b00;
+    color: var(--carousel-text);
     margin-top: 30px;
 }

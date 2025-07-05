@@ -132,21 +132,24 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('startTestBtn').addEventListener('click', () => {
     currentProgress++;
     updateProgressDisplay();
+    startTest();
 });
 
-function nextslide() {
+document.getElementById('nextslide1').addEventListener('click', () => {
     currentProgress++;
     updateProgressDisplay();
     document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
     document.querySelector('#imageCarousel4').style.display = 'none';
     document.getElementById('imageCarousel5').classList.add('fade-in');
     document.getElementById('imageCarousel5').style.display = 'block';
-
-}
+});
 
 document.getElementById('finalBtn').addEventListener('click', () => {
     scrollToSection("how-it-works");
+    hideAllCarousel();
 });
+
+
 
 function startTest() {
     const testWrapper = document.querySelector('.test-wrapper');
