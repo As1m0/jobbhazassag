@@ -191,6 +191,22 @@ body {
     }
 }
 
+.slide-in {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .module-number {
     display: inline-block;
     width: 35px;
@@ -563,25 +579,47 @@ body {
     overflow: hidden;
     background: var(--carousel-bg);
     position: relative;
-    border: var(--carousel-border) 30px solid;
+    border: var(--carousel-border) 25px solid;
     border-radius: 12px;
     border-bottom: none;
 }
 
 #imageCarousel4,
 #imageCarousel5 {
-    max-height: 1000px;
+    max-height: 800px;
 }
 
 .start-test-cover {
     height: 800px;
-    border-bottom: var(--carousel-border) 30px solid;
+    border-bottom: var(--carousel-border) 25px solid;
+}
+
+.answer-wrapper {
+    min-height: 800px;
+    background: var(--carousel-bg);
+}
+
+.answer-block {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--carousel-text);
+    text-align: center;
+    margin: 20px 10px;
+    background-color: var(--carousel-border);
+    padding: 10px 20px;
 }
 
 .start-test-cover p {
     color: var(--carousel-text);
     font-size: 23px;
     text-align: center;
+}
+
+.test-description {
+    color: var(--carousel-text);
+    font-size: 23px;
+    text-align: center;
+    padding-top: 20px;
 }
 
 #testOpenImage {
@@ -604,7 +642,8 @@ body {
 }
 
 .test-card,
-.start-test-cover {
+.start-test-cover,
+.answer-card {
     width: 100%;
     padding: 30px 20px;
     flex-shrink: 0;
@@ -612,6 +651,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    min-height: 780px;
 }
 
 .test-card h2,
@@ -621,6 +661,44 @@ body {
     color: var(--carousel-hl);
     font-family: "Bona Nova", serif !important;
     font-weight: bold;
+}
+
+.answer-card {
+    position: relative;
+}
+
+.answer-hl {
+    margin-top: 40px;
+    font-size: 26px !important;
+    font-weight: normal;
+    line-height: 1.7;
+    text-align: center;
+    color: var(--carousel-hl);
+    font-family: "Noto sans", serif !important;
+}
+
+::placeholder {
+    color: var(--carousel-hl);
+}
+
+.test-answer {
+    width: 90%;
+    height: 250px;
+    padding: 30px 20px;
+    border-radius: 6px;
+    border: 1px solid var(--carousel-border);
+    font-size: 22px;
+    color: var(--carousel-hl);
+    background: var(--carousel-option-bg);
+    resize: none;
+    position: absolute;
+    bottom: 150px;
+    margin: 0 auto;
+}
+
+.answer-image {
+    max-width: 200px;
+    margin: 0 auto -5px auto;
 }
 
 .options-wrapper {
@@ -664,6 +742,16 @@ body {
     width: 100%;
 }
 
+.answer-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #8a5700;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    margin-left: -20px;
+}
+
 .navigation {
     position: absolute;
     bottom: 70px;
@@ -696,24 +784,25 @@ body {
     margin-top: 10px;
 }
 
-#imageCarousel5 h1{
+#imageCarousel5 h1 {
     color: var(--carousel-hl);
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     text-align: center;
-    margin-top: 40px;
 }
 
-#imageCarousel5 p{
+#imageCarousel5 p {
     color: var(--carousel-text);
     font-size: 20px;
     font-weight: normal;
     background-color: var(--carousel-border);
     padding: 30px 20px;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 
-
+/* Progress Bar Styles */
 
 .progress-container {
     background: var(--carousel-border);
@@ -727,7 +816,7 @@ body {
 
 
 .progress-label {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: var(--carousel-progress-bg);
 }
@@ -737,10 +826,11 @@ body {
     align-items: center;
     flex-direction: row;
     gap: 4px;
-    margin: 5px 0;
+    justify-content: center;
 }
 
-.progress-segment {
+.progress-segment,
+.progress-segment-answer {
     width: 30px;
     height: 15px;
     margin: 0 1px;
@@ -748,12 +838,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.progress-segment.filled {
+.progress-segment.filled,
+.progress-segment-answer.filled {
     background: var(--carousel-progress-bg);
     transform: scale(1.1);
 }
 
-.progress-segment.empty {
+.progress-segment.empty,
+.progress-segment-answer.empty {
     background: var(--carousel-option-bg);
     opacity: 1;
 }

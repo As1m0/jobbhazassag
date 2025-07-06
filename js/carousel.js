@@ -20,7 +20,7 @@ carouselButton1.addEventListener("click", () => {
     toggleCarousel("carouselSection1");
 });
 carouselButton2.addEventListener("click", () => {
-    toggleCarousel("carouselSection2");
+    toggleCarousel("carouselSection5");
 });
 carouselButton3.addEventListener("click", () => {
     toggleCarousel("carouselSection3");

@@ -237,7 +237,6 @@
         </div>
     </section>
 
-
     <!--     4 MODUL       -->
     <section id="modules" class="pt-5">
         <div class="container">
@@ -640,7 +639,9 @@
         </div>
     </section>
 
-    <!--       CAROUSEL      -->
+
+
+    <!--       CAROUSELS      -->
 
     <section id="carouselPos">
         <div class="container text-center" id="carouselContainer">
@@ -833,10 +834,10 @@
                         <button class="btn btn-light start-test-btn" id="nextslide1">Tovább</button>
                     </div>
                 </div>
-                <!--    next slide    -->
+                <!--    final slide    -->
                 <div id="imageCarousel5" class="carousel slide" style="display: none;">
                     <div class="start-test-cover">
-                        <h1 class="test-title mt-3">Egy mondat magamnak</h1>
+                        <h1 class="test-title mt-5">Egy mondat magamnak</h1>
                         <p>„Nem akarok többé a csönd mögé bújni."</p>
                         <button class="btn btn-light start-test-btn" id="finalBtn" onclick="">Kész</button>
                     </div>
@@ -862,9 +863,106 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <!--    carousle 5     -->
+            <div class="carousel-section py-4 show" id="carouselSection5">
+                <h1 class="mb-4" style="color: var(--primary-teal)">Önismereti gyakorlat</h1>
+                <span class="close-btn" onclick="hideAllCarousel()">X</span>
+
+
+                <div class="test-wrapper answer-wrapper">
+                    <div class="test-carousel" id="carousel">
+                        <div class="test-slider" id="answer-slider">
+                            <div class="answer-card" style="background-color: var(--carousel-option-bg);">
+                                <h2 class="answer-hl" style="font-size: 36px !important">Miért nehéz kimondanom:</h2>
+                                <p class="answer-block">„Sajnálom,<br>igazad van"?</p>
+                                <img class="answer-image" src="./img/carousel/answer/woman.png" alt="Answer Image">
+                            </div>
+                            <div class="answer-card" style="display: block;">
+                                <h2 class="answer-hl"  style="font-size: 36px !important; margin-top: 150px; font-weight: bold;">Belső ellenállás gyakorlat</h2>
+                                <p class="test-description">Cél: Feltérképezni, miért vált egy egyszerű mondat belsó tiltássá, és hogyan lehet
+                                    ezen résnyire kinyitni az ajtót.</p>
+                            </div>
+                            <div class="answer-card">
+                                <h2 class="answer-hl">Mi volt az a pillanat, amikor elöször megfordult a fejedben, hogy
+                                    talán igaza van - és mit éreztél ekkor?</h2>
+                                <textarea class="test-answer" id="answer1"
+                                    placeholder="Írd be a válaszod..."></textarea>
+                                <div class="answer-footer">Kérdés 1 / 5</div>
+                            </div>
+                            <div class="answer-card">
+                                <h2 class="answer-hl">Mi lett volna a veszteség, ha akkor ott kimondod: „igazad van"?
+                                </h2>
+                                <textarea class="test-answer" id="answer1"
+                                    placeholder="Írd be a válaszod..."></textarea>
+                                <div class="answer-footer">Kérdés 2 / 5</div>
+                            </div>
+                            <div class="answer-card">
+                                <h2 class="answer-hl">Honnan ismeros ez az érzés? Volt-e olyan gyerekkori vagy korábbi
+                                    élményed, ahol a hibázás megalázással, gyengeséggel vagy fájdalommal járt?</h2>
+                                <textarea class="test-answer" id="answer1"
+                                    placeholder="Írd be a válaszod..."></textarea>
+                                <div class="answer-footer">Kérdés 3 / 5</div>
+                            </div>
+                            <div class="answer-card">
+                                <h2 class="answer-hl">Mit jelent számodra az, ha tudod, hogy a párodnak igaza van és ki
+                                    is mondod neki „igazad van"? Azt, hogy lemondasz valamiröl? Hogy alul maradsz? Hogy
+                                    akkor te kevesebb vagy, mint ó?</h2>
+                                <textarea class="test-answer" id="answer1"
+                                    placeholder="Írd be a válaszod..."></textarea>
+                                <div class="answer-footer">Kérdés 4 / 5</div>
+                            </div>
+                            <div class="answer-card">
+                                <h2 class="answer-hl">Mi változna kettötök között, ha egyszer tényleg kimondanád:
+                                    „sajnálom, ebben neked volt igazad"?</h2>
+                                <textarea class="test-answer" id="answer1"
+                                    placeholder="Írd be a válaszod..."></textarea>
+                                <div class="answer-footer">Kérdés 5 / 5</div>
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <button class="nav-btn" id="prevBtn2">
+                                < Előző</button>
+                                    <button class="nav-btn" id="nextBtn2">Következő ></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--    progress bar    -->
+                <div class="progress-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="progress-label">Önismereti gyakorlatok</span>
+                            </div>
+                            <div class="col-8">
+                                <div class="progress-bar-test" id="progressBarAnswer">
+                                    <div class="progress-segment-answer empty"></div>
+                                    <div class="progress-segment-answer empty"></div>
+                                    <div class="progress-segment-answer empty"></div>
+                                    <div class="progress-segment-answer empty"></div>
+                                    <div class="progress-segment-answer empty"></div>
+                                    <div class="progress-segment-answer empty"></div>
+                                    <img class="progress-arrow-answer" id="answer-arrow" src="./img/carousel/test/arrow_empty.png"
+                                        style="width: 43px; margin-left: -2px;">
+                                </div>
+                            </div>
+                            <div class="col-2" style="margin-left: -10px;">
+                                <span class="progress-label">Séma minták</span>
+                            </div>
+                        </div>
+                        <div class="progress-header">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
-
-
     </section>
 
 
@@ -905,6 +1003,7 @@
     <script src="js/email_modal.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/test_carousel.js"></script>
+    <script src="js/answer_carousel.js"></script>
 </body>
 
 </html>
