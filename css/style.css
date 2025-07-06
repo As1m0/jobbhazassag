@@ -572,7 +572,7 @@ body {
 .start-test-cover {
     width: 100%;
     max-width: 1200px;
-    max-height: 1000px;
+    max-height: 750px;
     margin: 30px auto;
     font-family: "Cardo", serif;
     font-weight: 400;
@@ -586,16 +586,14 @@ body {
 
 #imageCarousel4,
 #imageCarousel5 {
-    max-height: 800px;
+    max-height: 750px;
 }
 
 .start-test-cover {
-    height: 800px;
     border-bottom: var(--carousel-border) 25px solid;
 }
 
 .answer-wrapper {
-    min-height: 800px;
     background: var(--carousel-bg);
 }
 
@@ -656,8 +654,9 @@ body {
 
 .test-card h2,
 .start-test-cover h2 {
-    font-size: 34px !important;
+    font-size: 30px !important;
     text-align: center;
+    padding: 0 10px;
     color: var(--carousel-hl);
     font-family: "Bona Nova", serif !important;
     font-weight: bold;
@@ -668,8 +667,8 @@ body {
 }
 
 .answer-hl {
-    margin-top: 40px;
-    font-size: 26px !important;
+    margin-top: 25px;
+    font-size: 24px !important;
     font-weight: normal;
     line-height: 1.7;
     text-align: center;
@@ -692,7 +691,7 @@ body {
     background: var(--carousel-option-bg);
     resize: none;
     position: absolute;
-    bottom: 150px;
+    bottom: 180px;
     margin: 0 auto;
 }
 
@@ -703,7 +702,7 @@ body {
 
 .options-wrapper {
     margin-top: 10px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     max-height: 600px;
     ;
 }
@@ -711,14 +710,14 @@ body {
 .option {
     background: var(--carousel-option-bg);
     text-align: center;
-    padding: 20px 10px 0 10px;
+    padding: 15px 18px 0 18px;
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.2s;
     margin: auto;
     color: #5c3b00;
-    font-size: 20px;
-    height: 120px;
+    font-size: 18px;
+    height: 100px;
     max-width: 650px;
     width: 90%;
     margin-top: 30px;
@@ -738,7 +737,7 @@ body {
     font-size: 14px;
     color: #8a5700;
     position: relative;
-    bottom: 50px;
+    bottom: 65px;
     width: 100%;
 }
 
@@ -747,14 +746,14 @@ body {
     font-size: 14px;
     color: #8a5700;
     position: absolute;
-    bottom: 50px;
+    bottom: 85px;
     width: 100%;
     margin-left: -20px;
 }
 
 .navigation {
     position: absolute;
-    bottom: 70px;
+    bottom: 60px;
     left: 0;
     right: 0;
     display: flex;
@@ -801,6 +800,15 @@ body {
     margin: 0 auto;
 }
 
+#endBtn{
+    width: 110px;
+    background-color: white;
+}
+
+#endBtn:hover{
+    opacity: 0.8;;
+}
+
 
 /* Progress Bar Styles */
 
@@ -816,7 +824,7 @@ body {
 
 
 .progress-label {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: var(--carousel-progress-bg);
 }

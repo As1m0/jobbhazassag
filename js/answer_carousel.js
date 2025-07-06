@@ -22,13 +22,20 @@ const prevBtn2 = document.getElementById('prevBtn2');
 const nextBtn2 = document.getElementById('nextBtn2');
 let currentSlide2 = 0;
 const totalSlides2 = document.querySelectorAll('.answer-card').length;
+const endButton = document.getElementById('endBtn');
 
 function updateSlide2() {
     if (currentSlide2 >= totalSlides2 - 1) {
         nextBtn2.style.display = 'none';
+        endButton.style.display = 'block';
+        endButton.onclick = () => {
+            scrollToSection("how-it-works");
+            hideAllCarousel();
+        }
         document.getElementById('answer-arrow').src = './img/carousel/test/arrow_filled.png';
     } else {
         nextBtn2.style.display = 'block';
+        endButton.style.display = 'none';
         document.getElementById('answer-arrow').src = './img/carousel/test/arrow_empty.png';
     }
     if (currentSlide2 <= 0) {
