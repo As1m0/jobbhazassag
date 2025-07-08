@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //carousel
-const slider = document.getElementById('test-slider');
+const slider = document.getElementById('testSlider');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 let currentSlide = 0;
@@ -158,12 +158,12 @@ document.getElementById('finalBtn').addEventListener('click', () => {
 
 
 function startTest() {
-    const testWrapper = document.querySelector('.test-wrapper');
+    const testWrapper = document.querySelector('#testWrapper');
     if (testWrapper) {
         testWrapper.style.display = 'block';
         testWrapper.classList.add('slide-in');
     }
-    document.getElementsByClassName('start-test-cover')[0].style.display = 'none';
+    document.getElementsByClassName('carousel-wrapper')[0].style.display = 'none';
 }
 
 
@@ -199,12 +199,13 @@ function renderSlides() {
 
         const h2 = document.createElement('h2');
         h2.textContent = `${idx + 1}. ${q.text}`;
-        h2.classList.add('display-3');
+        h2.classList.add('card-hl');
+        h2.classList.add('mt-5');
         card.appendChild(h2);
 
         // Add options wrapper
         const optionsWrapper = document.createElement('div');
-        optionsWrapper.className = 'options-wrapper';
+        optionsWrapper.className = 'options-wrapper mt-3';
 
         q.options.forEach((opt, i) => {
             const btn = document.createElement('div');
@@ -241,7 +242,7 @@ function renderSlides() {
         card.appendChild(optionsWrapper);
 
         const footer = document.createElement('div');
-        footer.className = 'slider-footer';
+        footer.className = 'card-footer';
         footer.textContent = `Kérdés ${idx + 1} / ${questions.length}`;
         card.appendChild(footer);
 
@@ -256,13 +257,14 @@ function renderSlides() {
     resultText.id = 'resultText';
     const resultImg = document.createElement('img');
     resultImg.id = 'resultImg';
+    resultImg.className = 'test-image';
     const nextButton = document.createElement('button');
-    nextButton.className = 'btn btn-light btn-lg mb-5'; //TODO
+    nextButton.className = 'btn btn-light btn-bottom'; //TODO
     nextButton.textContent = 'Tovább';
     nextButton.onclick = () => {
         //scrollToSection("how-it-works");
         //hideAllCarousel();
-        document.querySelector('.test-wrapper').style.display = 'none';
+        document.querySelector('#testWrapper').style.display = 'none';
         document.querySelector('#imageCarousel4').style.display = 'block';
         document.querySelector('#imageCarousel4').classList.add('slide-in');
         currentProgress++;

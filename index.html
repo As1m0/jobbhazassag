@@ -647,7 +647,7 @@
         <div class="container text-center" id="carouselContainer">
 
             <!-- carousel 1 -->
-            <div class="carousel-section py-4" id="carouselSection1">
+            <div class="carousel-section py-4" id="carouselSection10">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Mini tananyagok</h1>
                 <span class="close-btn" onclick="hideAllCarousel()">X</span>
                 <div id="imageCarousel1" class="carousel slide">
@@ -802,24 +802,27 @@
                 <span class="close-btn" onclick="hideAllCarousel()">X</span>
 
                 <!--    open slide    -->
-                <div class="start-test-cover">
-                    <h2 class="test-title mt-3">Teszt</h2>
-                    <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
-                        kapcsolatotok felbomlásához vezet</p>
-                    <img src="img/carousel/test/hellboy.png" alt="Rose Image" id="testOpenImage">
-                    <button class="btn btn-light start-test-btn" id="startTestBtn">Elkezdem a
-                        tesztet!</button>
+                <div class="carousel-wrapper">
+                    <div class="p-3 mt-3">
+                        <h2 class="card-title mt-3">Teszt</h2>
+                        <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
+                            kapcsolatotok felbomlásához vezet</p>
+                        <img src="img/carousel/test/hellboy.png" class="test-image mb-3" alt="Rose Image"
+                            id="testOpenImage">
+                        <button class="btn btn-light btn-bottom" id="startTestBtn">Elkezdem a
+                            tesztet!</button>
+                    </div>
                 </div>
                 <!--    test slides   -->
-                <div class="test-wrapper" style="display: none;">
-                    <div class="test-carousel" id="carousel">
-                        <div class="test-slider" id="test-slider">
+                <div class="carousel-wrapper" id="testWrapper" style="display: none;">
+                    <div class="carousel">
+                        <div class="slider" id="testSlider">
                             <!--    JS rendering cards  -->
                         </div>
                         <div class="navigation">
-                            <button class="nav-btn" id="prevBtn">
-                                < Vissza</button>
-                                    <button class="nav-btn" id="nextBtn">Tovább ></button>
+                            <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn">
+                            <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn">
+                            <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
                         </div>
                     </div>
 
@@ -827,19 +830,19 @@
                 <!--    next slide    -->
                 <div id="imageCarousel4" class="carousel slide" style="display: none;">
                     <div class="start-test-cover">
-                        <h2 class="test-title mt-3">szöveg</h2>
+                        <h2 class="card-hl mt-3">szöveg</h2>
                         <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
                             kapcsolatotok felbomlásához vezet</p>
-                        <img src="img/carousel/test/hellboy2.png" alt="image missing" id="testOpenImage">
-                        <button class="btn btn-light start-test-btn" id="nextslide1">Tovább</button>
+                        <img src="img/carousel/test/hellboy2.png" class="test-image" alt="image missing">
+                        <button class="btn btn-light btn-bottom" id="nextslide1">Tovább</button>
                     </div>
                 </div>
                 <!--    final slide    -->
                 <div id="imageCarousel5" class="carousel slide" style="display: none;">
                     <div class="start-test-cover">
-                        <h1 class="test-title mt-5">Egy mondat magamnak</h1>
+                        <h1 class="card-hl mt-5">Egy mondat magamnak</h1>
                         <p>„Nem akarok többé a csönd mögé bújni."</p>
-                        <button class="btn btn-light start-test-btn" id="finalBtn" onclick="">Kész</button>
+                        <button class="btn btn-light btn-bottom" id="finalBtn" onclick="">Kész</button>
                     </div>
                 </div>
 
@@ -866,107 +869,75 @@
 
 
 
-            <!--    carousle 5     -->
-            <div class="carousel-section py-4 show" id="carouselSection5">
+            <!--    carousel 5  - with class control  -->
+            <div class="carousel-section py-4" id="carouselSection5">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Önismereti gyakorlat</h1>
                 <span class="close-btn" onclick="hideAllCarousel()">X</span>
 
-
-                <div class="test-wrapper answer-wrapper">
-                    <div class="test-carousel" id="carousel">
-                        <div class="test-slider" id="answer-slider">
-                            <div class="answer-card" style="background-color: var(--carousel-option-bg);">
-                                <h2 class="answer-hl" style="font-size: 36px !important">Miért nehéz kimondanom:</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="slider">
+                            <div class="carousel-card" style="background-color: var(--carousel-option-bg);">
+                                <h2 class="card-hl mt-5" style="font-size: 36px !important">Miért nehéz kimondanom:</h2>
                                 <p class="answer-block">„Sajnálom,<br>igazad van"?</p>
-                                <img class="answer-image" src="./img/carousel/answer/woman.png" alt="Answer Image">
+                                <img class="card-image-bottom" src="./img/carousel/answer/woman.png" alt="Answer Image">
                             </div>
-                            <div class="answer-card" style="display: block;">
-                                <h2 class="answer-hl"  style="font-size: 36px !important; margin-top: 150px; font-weight: bold;">Belső ellenállás gyakorlat</h2>
-                                <p class="test-description">Cél: Feltérképezni, miért vált egy egyszerű mondat belsó tiltássá, és hogyan lehet
-                                    ezen résnyire kinyitni az ajtót.</p>
+                            <div class="carousel-card">
+                                <h2 class="card-hl"
+                                    style="font-size: 42px !important; margin-top: 150px; font-weight: bold;">
+                                    Belső ellenállás gyakorlat</h2>
+                                <p class="test-description">Cél: Feltérképezni, miért vált egy egyszerű mondat belső
+                                    tiltássá.
+                                </p>
                             </div>
-                            <div class="answer-card">
-                                <h2 class="answer-hl">Mi volt az a pillanat, amikor elöször megfordult a fejedben, hogy
-                                    talán igaza van - és mit éreztél ekkor?</h2>
-                                <textarea class="test-answer" id="answer1"
-                                    placeholder="Írd be a válaszod..."></textarea>
-                                <div class="answer-footer">Kérdés 1 / 5</div>
+                            <div class="carousel-card">
+                                <h2 class="card-hl">Mi volt az a pillanat, amikor először megfordult a fejedben?</h2>
+                                <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
+                                <div class="card-footer">Kérdés 1 / 3</div>
                             </div>
-                            <div class="answer-card">
-                                <h2 class="answer-hl">Mi lett volna a veszteség, ha akkor ott kimondod: „igazad van"?
-                                </h2>
-                                <textarea class="test-answer" id="answer1"
-                                    placeholder="Írd be a válaszod..."></textarea>
-                                <div class="answer-footer">Kérdés 2 / 5</div>
+                            <div class="carousel-card">
+                                <h2 class="card-hl">Mi lett volna a veszteség?</h2>
+                                <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
+                                <div class="card-footer">Kérdés 2 / 3</div>
                             </div>
-                            <div class="answer-card">
-                                <h2 class="answer-hl">Honnan ismeros ez az érzés? Volt-e olyan gyerekkori vagy korábbi
-                                    élményed, ahol a hibázás megalázással, gyengeséggel vagy fájdalommal járt?</h2>
-                                <textarea class="test-answer" id="answer1"
-                                    placeholder="Írd be a válaszod..."></textarea>
-                                <div class="answer-footer">Kérdés 3 / 5</div>
-                            </div>
-                            <div class="answer-card">
-                                <h2 class="answer-hl" style="margin-top: 0px; font-size: 20px;">Mit jelent számodra az, ha tudod, hogy a párodnak igaza van és ki
-                                    is mondod neki „igazad van"? Azt, hogy lemondasz valamiröl? Hogy alul maradsz? Hogy
-                                    akkor te kevesebb vagy, mint ó?</h2>
-                                <textarea class="test-answer" id="answer1"
-                                    placeholder="Írd be a válaszod..."></textarea>
-                                <div class="answer-footer">Kérdés 4 / 5</div>
-                            </div>
-                            <div class="answer-card">
-                                <h2 class="answer-hl">Mi változna kettötök között, ha egyszer tényleg kimondanád:
-                                    „sajnálom, ebben neked volt igazad"?</h2>
-                                <textarea class="test-answer" id="answer1"
-                                    placeholder="Írd be a válaszod..."></textarea>
-                                <div class="answer-footer">Kérdés 5 / 5</div>
+                            <div class="carousel-card">
+                                <h2 class="card-hl">Mit változtatna ez a kapcsolatotokban?</h2>
+                                <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
+                                <div class="card-footer">Kérdés 3 / 3</div>
                             </div>
                         </div>
                         <div class="navigation">
-                            <button class="nav-btn" id="prevBtn2">
-                                < Előző</button>
-                                    <button class="nav-btn" id="nextBtn2">Következő ></button>
-                                    <button id="endBtn" style="display: none" class="nav-btn" id="nextBtn2">Kész</button>
+                            <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn">
+                            <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn">
+                            <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
                         </div>
                     </div>
-
                 </div>
-
-                <!--    progress bar    -->
                 <div class="progress-container">
                     <div class="container">
                         <div class="row">
                             <div class="col-2">
-                                <span class="progress-label">Önismereti gyakorlatok</span>
+                                <span class="progress-label">Önismereti<br>gyakorlatok</span>
                             </div>
                             <div class="col-8">
-                                <div class="progress-bar-test" id="progressBarAnswer">
-                                    <div class="progress-segment-answer empty"></div>
-                                    <div class="progress-segment-answer empty"></div>
-                                    <div class="progress-segment-answer empty"></div>
-                                    <div class="progress-segment-answer empty"></div>
-                                    <div class="progress-segment-answer empty"></div>
-                                    <div class="progress-segment-answer empty"></div>
-                                    <img class="progress-arrow-answer" id="answer-arrow" src="./img/carousel/test/arrow_empty.png"
-                                        style="width: 43px; margin-left: -2px;">
+                                <div class="progress-bar-test">
+                                    <!-- Progress segments will be generated dynamically -->
+                                    <img class="progress-arrow" src="./img/carousel/test/arrow_empty.png">
                                 </div>
                             </div>
-                            <div class="col-2" style="margin-left: -10px;">
-                                <span class="progress-label">Séma minták</span>
+                            <div class="col-2">
+                                <span class="progress-label">Séma<br>minták</span>
                             </div>
                         </div>
-                        <div class="progress-header">
-                        </div>
                     </div>
-
                 </div>
             </div>
 
 
+
+
         </div>
     </section>
-
-
 
 
 
@@ -1001,10 +972,49 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        ["carousel-btn1", "carousel-btn2", "carousel-btn3", "carousel-btn4"].forEach((btnId, idx) => {
+            const btn = document.getElementById(btnId);
+            const sectionIds = ["carouselSection1", "carouselSection5", "carouselSection3", "carouselSection4"];
+            if (btn) {
+                btn.addEventListener("click", () => scrollToSection(sectionIds[idx]));
+            }
+        });
+
+        function hideAllCarousel() {
+            const carouselSections = document.getElementsByClassName("carousel-section");
+            for (let i = 0; i < carouselSections.length; i++) {
+                carouselSections[i].style.display = 'none';
+                carouselSections[i].classList.remove('show');
+            }
+        }
+
+        hideAllCarousel();
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'block';
+                section.classList.add('show');
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        //scroll back on close
+        const closeButtons = document.getElementsByClassName("close-btn");
+        for (let i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].addEventListener("click", () => {
+                scrollToSection("how-it-works");
+                hideAllCarousel();
+            })
+        }
+
+    </script>
     <script src="js/email_modal.js"></script>
-    <script src="js/carousel.js"></script>
+    <!-- <script src="js/carousel.js"></script> -->
     <script src="js/test_carousel.js"></script>
-    <script src="js/answer_carousel.js"></script>
+    <!-- <script src="js/answer_carousel.js"></script> -->
+    <script src="js/CarouselHandler.js"></script>
 </body>
 
 </html>

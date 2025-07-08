@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Ovo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
     --primary-teal: #326e6c;
@@ -566,21 +567,40 @@ body {
 
 
 /* PÁRKAPCSOLATI TEST CAROUSEL */
+.carousel-section {
+    display: none;
+    padding: 20px 0;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.carousel-section.show {
+    display: block;
+}
 
-.test-wrapper,
+.close-btn2 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carousel-wrapper,
 .start-test-cover {
     width: 100%;
     max-width: 1200px;
-    max-height: 750px;
-    margin: 30px auto;
+    height: 750px;
+    margin: 30px auto 0 auto;
     font-family: "Cardo", serif;
     font-weight: 400;
     overflow: hidden;
     background: var(--carousel-bg);
     position: relative;
     border: var(--carousel-border) 25px solid;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     border-bottom: none;
 }
 
@@ -621,18 +641,18 @@ body {
 }
 
 #testOpenImage {
-    width: 80%;
+    height: 300px;
     margin: 20px auto;
-    display: block;
 }
 
-.test-carousel {
+.carousel {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
-.test-slider {
+.slider {
     display: flex;
     width: 100%;
     height: 100%;
@@ -641,15 +661,11 @@ body {
 
 .test-card,
 .start-test-cover,
-.answer-card {
+.carousel-card {
+    flex-shrink: 0;
     width: 100%;
     padding: 30px 20px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    min-height: 780px;
+    position: relative;
 }
 
 .test-card h2,
@@ -662,25 +678,25 @@ body {
     font-weight: bold;
 }
 
-.answer-card {
+.carousel-card {
     position: relative;
 }
 
-.answer-hl {
-    margin-top: 25px;
-    font-size: 24px !important;
-    font-weight: normal;
+.card-hl {
+    margin-top: 35px;
+    font-size: 32px !important;
+    font-weight: 400;
     line-height: 1.7;
     text-align: center;
     color: var(--carousel-hl);
-    font-family: "Noto sans", serif !important;
+    font-family: "Josefin Sans", sans-serif !important;
 }
 
 ::placeholder {
     color: var(--carousel-hl);
 }
 
-.test-answer {
+.card-answer {
     width: 90%;
     height: 250px;
     padding: 30px 20px;
@@ -692,19 +708,25 @@ body {
     resize: none;
     position: absolute;
     bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0 auto;
 }
 
-.answer-image {
-    max-width: 200px;
-    margin: 0 auto -5px auto;
+.card-image-bottom {
+    width: 200px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .options-wrapper {
-    margin-top: 10px;
-    margin-bottom: 60px;
-    max-height: 600px;
-    ;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
 }
 
 .option {
@@ -732,48 +754,41 @@ body {
     font-weight: bold;
 }
 
-.slider-footer {
-    text-align: center;
-    font-size: 14px;
-    color: #8a5700;
-    position: relative;
-    bottom: 65px;
-    width: 100%;
-}
-
-.answer-footer {
+.card-footer {
     text-align: center;
     font-size: 14px;
     color: #8a5700;
     position: absolute;
-    bottom: 85px;
+    bottom: 20px;
     width: 100%;
     margin-left: -20px;
 }
 
 .navigation {
     position: absolute;
-    bottom: 60px;
+    top: 20px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
-.nav-btn {
-    background: #ffc107;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--carousel-text);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.nav-btn1 {
+    width: 25px;
+    cursor: pointer !important;
 }
 
-.nav-btn:hover {
-    background: #ffca2c;
+.end-btn {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    cursor: pointer !important;
+}
+
+.nav-btn1:hover,
+.end-btn:hover {
+    opacity: .8;
 }
 
 .result {
@@ -800,15 +815,14 @@ body {
     margin: 0 auto;
 }
 
-#endBtn{
+#endBtn {
     width: 110px;
     background-color: white;
 }
 
-#endBtn:hover{
-    opacity: 0.8;;
+#endBtn:hover {
+    opacity: 0.8;
 }
-
 
 /* Progress Bar Styles */
 
@@ -817,16 +831,14 @@ body {
     padding: 5px;
     width: 100%;
     border-radius: 0px 0px 20px 20px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-
 
 .progress-label {
     font-size: 12px;
     font-weight: bold;
     color: var(--carousel-progress-bg);
+    line-height: 1;
 }
 
 .progress-bar-test {
@@ -859,13 +871,12 @@ body {
 }
 
 .progress-arrow {
-    font-size: 10px;
-    color: var(--carousel-progress-arrow);
-    margin-left: 10px;
+    width: 50px;
+    margin-left: 2px;
 }
 
-#resultImg {
-    height: 250px;
+.test-image {
+    height: 210px;
     margin: 30px auto;
     display: block;
 }
@@ -875,4 +886,12 @@ body {
     text-align: center;
     color: var(--carousel-text);
     margin-top: 30px;
+}
+
+.btn-bottom{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
 }
