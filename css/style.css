@@ -898,9 +898,9 @@ body {
 
 .carousel-select-btn{
     position: absolute;
-    bottom: 90px;
-    right: 50px;
-    left: 50px;
+    bottom: 80px;
+    right: 70px;
+    left: 70px;
     z-index: 10;
     background-color: white;
     color: var(--carousel-text);
@@ -913,5 +913,11 @@ body {
 }
 
 .carousel-select-btn:hover{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+
+#GreetingSlide{
+    border: var(--carousel-border) 25px solid;
+    border-radius: 12px;
 }

@@ -651,7 +651,7 @@
             <!-- carousel 1 MINI TANANYAGOK -->
             <div class="carousel-section py-4" id="carouselSection1">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Mini tananyagok</h1>
-                <span class="close-btn" onclick="hideAllCarousel()">X</span>
+                <span class="close-btn">X</span>
                 <div id="imageCarousel1" class="carousel slide">
 
                     <div class="carousel-inner" id="carouselInner">
@@ -701,12 +701,13 @@
             <!-- carousel 2 TEDDMEGMA -->
             <div class="carousel-section py-4" id="carouselSection4">
                 <h1 class="mb-4" style="color: var(--primary-teal)">TeddMegMa</h1>
-                <span class="close-btn" onclick="hideAllCarousel()">X</span>
+                <span class="close-btn">X</span>
                 <div id="imageCarousel2" class="carousel slide">
 
                     <div class="carousel-inner" id="carouselInner">
 
-                        <button class="carousel-select-btn" id="CourseSelect"  style="display: none;">Ezt
+                        <button class="carousel-select-btn" id="CourseSelect" onclick="greetings()"
+                            style="display: none;">Ezt
                             választom</button>
 
                         <div class="carousel-item active">
@@ -746,6 +747,18 @@
                             data-bs-target="#imageCarousel2" data-bs-slide="next">
                     </div>
                 </div>
+
+                <!--gratulation slide-->
+                <div class="carousel-wrapper" id="GreetingSlide" style="display: none;">
+                    <div class="p-3 mt-3">
+                        <h2 class="card-title mt-3">Gratulálunk</h2>
+                        <p class="test-description">Szép választás!<br>Még egy lépéssel közelebb kerültél a
+                            párodhoz.</p>
+                        <img src="img/carousel/test/rozsa.png" class="test-image mb-3" alt="Rose Image">
+                        <button class="carousel-select-btn" onclick="hideAndScroll()">Kész</button>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -753,7 +766,7 @@
             <!--  carousel 4 PÁRKAPCSOLATI TEST -->
             <div class="carousel-section py-4" id="carouselSection3">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Párkapcsolati Teszt</h1>
-                <span class="close-btn" onclick="hideAllCarousel()">X</span>
+                <span class="close-btn">X</span>
 
                 <!--    open slide    -->
                 <div class="carousel-wrapper" id="testOpenSlide">
@@ -825,7 +838,7 @@
             <!--    carousel 5  ÖNISMERETI GYAK -- with class control  -->
             <div class="carousel-section py-4" id="carouselSection2">
                 <h1 class="mb-4" style="color: var(--primary-teal)">Önismereti gyakorlat</h1>
-                <span class="close-btn" onclick="hideAllCarousel()">X</span>
+                <span class="close-btn">X</span>
 
                 <div class="carousel-wrapper">
                     <div class="carousel">
@@ -929,12 +942,13 @@
     <script src="js/script.js"></script>
     <script>
 
+
         // Initialize carousels
         ["carousel-btn1", "carousel-btn2", "carousel-btn3", "carousel-btn4"].forEach((btnId, idx) => {
             const btn = document.getElementById(btnId);
             const sectionIds = ["carouselSection1", "carouselSection2", "carouselSection3", "carouselSection4"];
             if (btn) {
-                btn.addEventListener("click", () => scrollToSection(sectionIds[idx]));
+                btn.addEventListener("click", () => scrollToCarousel(sectionIds[idx]));
             }
         });
 
@@ -948,7 +962,7 @@
 
         hideAllCarousel();
 
-        function scrollToSection(sectionId) {
+        function scrollToCarousel(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
                 section.style.display = 'block';
@@ -957,36 +971,59 @@
             }
         }
 
-        //scroll back on close
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        //scroll back on close btn
         const closeButtons = document.getElementsByClassName("close-btn");
         for (let i = 0; i < closeButtons.length; i++) {
             closeButtons[i].addEventListener("click", () => {
-                scrollToSection("how-it-works");
-                hideAllCarousel();
+                hideAndScroll();
             })
+        }
+
+        function hideAndScroll() {
+            hideAllCarousel();
+            scrollToSection("how-it-works");
+
         }
 
         // Fade in effect for CourseSelect button (TeddMegMa carousel)
         function FadeBtn() {
             const courseSelectBtn = document.getElementById("CourseSelect");
             const activeCourseItems = document.querySelectorAll(".carousel-item.course.carousel-item-next.carousel-item-start");
-            if(activeCourseItems.length > 0) {
-               if (courseSelectBtn) {
-                 courseSelectBtn.style.display = "none";
-                setTimeout(() => {
-                    courseSelectBtn.style.display = "block";
-                    courseSelectBtn.classList.add("fade-in");
-                }, 300);
-                setTimeout(() => {
-                    courseSelectBtn.classList.remove("fade-in");
-                }, 1000);
-            }
+            if (activeCourseItems.length > 0) {
+                if (courseSelectBtn) {
+                    courseSelectBtn.style.display = "none";
+                    setTimeout(() => {
+                        courseSelectBtn.style.display = "block";
+                        courseSelectBtn.classList.add("fade-in");
+                    }, 300);
+                    setTimeout(() => {
+                        courseSelectBtn.classList.remove("fade-in");
+                    }, 1000);
+                }
             }
             else {
                 courseSelectBtn.style.display = "none";
             }
-            
         }
+
+        //reveal greeting slide (TeddMegMa carousel)
+        function greetings() {
+            const greetingSlide = document.getElementById("GreetingSlide");
+            console.log(greetingSlide);
+            greetingSlide.style.display = "block";
+            greetingSlide.classList.add("fade-in");
+            document.getElementById('imageCarousel2').style.display = "none";
+        }
+
+
+
 
     </script>
     <script src="js/email_modal.js"></script>

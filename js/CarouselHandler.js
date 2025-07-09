@@ -198,8 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
     carousels.carousel5 = new CarouselHandler('carouselSection2', {
         onComplete: () => {
             console.log('Önismereti gyakorlat completed!');
-            scrollToSection("how-it-works");
-            hideAllCarousel();
+            hideAndScroll();
             carousels.carousel5.reset();
         }
     });
