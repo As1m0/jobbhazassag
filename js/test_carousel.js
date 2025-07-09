@@ -163,7 +163,7 @@ function startTest() {
         testWrapper.style.display = 'block';
         testWrapper.classList.add('slide-in');
     }
-    document.getElementsByClassName('carousel-wrapper')[0].style.display = 'none';
+    document.getElementById('testOpenSlide').style.display = 'none';
 }
 
 

@@ -195,9 +195,9 @@ const carousels = {};
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    carousels.carousel5 = new CarouselHandler('carouselSection5', {
+    carousels.carousel5 = new CarouselHandler('carouselSection2', {
         onComplete: () => {
-            console.log('Carousel 5 completed');
+            console.log('Önismereti gyakorlat completed!');
             scrollToSection("how-it-works");
             hideAllCarousel();
             carousels.carousel5.reset();

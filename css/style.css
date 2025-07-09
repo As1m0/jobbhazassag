@@ -604,8 +604,7 @@ body {
     border-bottom: none;
 }
 
-#imageCarousel4,
-#imageCarousel5 {
+.image-carousel {
     max-height: 750px;
 }
 
