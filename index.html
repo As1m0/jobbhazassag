@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <title>Jobb Házasság Akadémia - 4 Hetes Program</title>
 
     <!-- Meta Pixel Code -->
@@ -25,7 +26,6 @@
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
-
 
     <link
         href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Domine:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ovo&display=swap"
@@ -156,20 +156,23 @@
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4 mb-5">
+                    <div class="col-lg-4 mb-4 mt-2">
                         <div class="text-center">
                             <div class="feature-icon">
-                                <i class="fas fa-book-open"></i>
+                                <i class="fas fa-tasks"></i>
                             </div>
-                            <h4>Mini tananyagok</h4>
-                            <p>Rövid, könnyen olvasható anyagok, amik egy párkapcsolati témát bontanak ki, és közben
-                                érthetően elmagyarázzák a pszichológiai hátteret is. Segítenek megérteni, mi miért
-                                történik köztetek – és benned. Interaktív tesztekkel segítünk feltárni az adott témához
-                                kapcsolódó működésedet.</p>
-                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn1"
-                                onclick="scrollToSection('carouselPos')">
-                                <span style="color: var(--primary-teal)">Példa</span>
-                            </button>
+                            <h4>24 Párkapcsolati teszt</h4>
+                            <p>Minden témához kapsz egy rövid tesztet, ami segít felismerni, te hogyan működsz az adott
+                                helyzetekben, és hol lehet a kapcsolatotokban az elakadás. Nem diagnózis. Inkább egy
+                                tükör: őszinte, de biztonságos.</p>
+                            <div class="start-test-wrapper">
+                                <p class="test-btn-title"><i class="fa fa-check" aria-hidden="true"></i> Kommunikációs
+                                    mintáid példa teszt</p>
+                                <button class="start-test-btn" id="carousel-btn3"
+                                    onclick="scrollToSection('carouselPos')">
+                                    <span style="color: var(--primary-teal)">Start</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-5 mt-2">
@@ -177,38 +180,22 @@
                             <div class="feature-icon">
                                 <i class="fas fa-book-reader"></i>
                             </div>
-                            <h4>Önismereti gyakorlatok</h4>
+                            <h4>12 Önismereti gyakorlat</h4>
                             <p>Ezek vezetett írásos feladatok, amik mélyebb önreflexióra hívnak. A gyakorlat első fele
                                 befelé nézést segítő kérdésekkel dolgozik, a második rész pedig elmagyarázza a
                                 viselkedésed mögött milyen sémák húzódnak meg.</p>
                             <p>⏳ Egy napra csak egy tananyagot vagy gyakorlatot választhatsz – így lesz időd
                                 feldolgozni, átérezni, és nem csak átfutni a lényeget.<br><strong>Napi 10–15
                                     perc</strong> – ennyit kérünk tőled</p>
-                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn2"
-                                onclick="scrollToSection('carouselPos')">
-                                <span style="color: var(--primary-teal)">Példa</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4 mt-2">
-                        <div class="text-center">
-                            <div class="feature-icon">
-                                <i class="fas fa-tasks"></i>
+                            <div class="start-test-wrapper">
+                                <p class="test-btn-title"><i class="fa fa-check" aria-hidden="true"></i> Miért nehéz
+                                    kimondanom: “Igazad van” önismereti gyakorlat
+                                    példa</p>
+                                <button class="start-test-btn" id="carousel-btn2"
+                                    onclick="scrollToSection('carouselPos')">
+                                    <span style="color: var(--primary-teal)">Start</span>
+                                </button>
                             </div>
-                            <h4>Párkapcsolati teszt</h4>
-                            <p>Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap választhatsz egyet
-                                a TeddMegMa feladatok közül is.</p>
-                            <p>
-                                Ezek 10 apró, konkrét kapcsolódási lehetőséget kínálnak, az adott heti témához
-                                illeszkedve.
-                                Lehet egy mondat, amit kimondasz. Egy gesztus. Egy apró lépés a másik felé.
-                            </p>
-                            <p>Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a kapcsolatod csak
-                                akkor fejlődik, ha meg is éled a tanultakat.</p>
-                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn3"
-                                onclick="scrollToSection('carouselPos')">
-                                <span style="color: var(--primary-teal)">Példa</span>
-                            </button>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-4 mt-2">
@@ -216,7 +203,7 @@
                             <div class="feature-icon">
                                 <i class="fa-solid fa-location-crosshairs"></i>
                             </div>
-                            <h4>+1: TeddMegMa</h4>
+                            <h4>40 TeddMegMa feladat</h4>
                             <p>Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap választhatsz egyet
                                 a TeddMegMa feladatok közül is.</p>
                             <p>
@@ -226,14 +213,39 @@
                             </p>
                             <p>Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a kapcsolatod csak
                                 akkor fejlődik, ha meg is éled a tanultakat.</p>
-                            <button class="btn btn-primary-custom3 mx-auto" id="carousel-btn4"
-                                onclick="scrollToSection('carouselPos')">
-                                <span style="color: var(--primary-teal)">Példa</span>
-                            </button>
+                            <div class="start-test-wrapper">
+                                <p class="test-btn-title"><i class="fa fa-check" aria-hidden="true"></i> 5 feladat, amit
+                                    akár ma is kipróbálhatsz</p>
+                                <button class="start-test-btn" id="carousel-btn4"
+                                    onclick="scrollToSection('carouselPos')">
+                                    <span style="color: var(--primary-teal)">Start</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h4>16 Mini tananyag</h4>
+                            <p>Rövid, könnyen olvasható anyagok, amik egy párkapcsolati témát bontanak ki, és közben
+                                érthetően elmagyarázzák a pszichológiai hátteret is. Segítenek megérteni, mi miért
+                                történik köztetek – és benned. Interaktív tesztekkel segítünk feltárni az adott témához
+                                kapcsolódó működésedet.</p>
+                            <div class="start-test-wrapper">
+                                <p class="test-btn-title"><i class="fa fa-check" aria-hidden="true"></i> A romboló
+                                    kommunikációs spirál felismerése</p>
+                                <button class="start-test-btn" id="carousel-btn1"
+                                    onclick="scrollToSection('carouselPos')">
+                                    <span style="color: var(--primary-teal)">Start</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -287,7 +299,8 @@
                         </div>
 
                         <div class="story-card mt-4">
-                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Eszter, 42
+                            <h6><img class="testimonial" src="img/testimonials/Eszter.jpg" alt="Eszter">Sikersztori -
+                                Eszter, 42
                             </h6>
                             <p class="fst-italic">
                                 „Rájöttem, hogy nem az a baj, hogy nem beszélünk – hanem az, hogy nem tudjuk hogyan és
@@ -344,7 +357,8 @@
                         </div>
 
                         <div class="story-card mt-4">
-                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Katalin, 46
+                            <h6><img class="testimonial" src="img/testimonials/Katalin.jpg" alt="Katalin">Sikersztori -
+                                Katalin, 46
                             </h6>
                             <p class="fst-italic">
                                 A “Hogyan lát engem a párom” feladatnál sírtam. Nem gondoltam, hogy ennyire vágyom arra,
@@ -399,7 +413,8 @@
                         </div>
 
                         <div class="story-card mt-4">
-                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Norbert, 44</h6>
+                            <h6><img class="testimonial" src="img/testimonials/Norbert.jpg" alt="Norbert">Sikersztori -
+                                Norbert, 44</h6>
                             <p class="fst-italic">
                                 „Kicsit szkeptikus voltam. De amikor kiválasztottam azt a feladatot, hogy csak üljünk
                                 egymás mellé csendben és érintkezzen a térdünk… hát, akkor rájöttem, mennyire hiányzik
@@ -453,7 +468,8 @@
                         </div>
 
                         <div class="story-card mt-4">
-                            <h6><i class="fas fa-microphone me-2"></i>Sikersztori - Judit, 48</h6>
+                            <h6><img class="testimonial" src="img/testimonials/Judit.jpg" alt="Judit"></i>Sikersztori -
+                                Judit, 48</h6>
                             <p class="fst-italic">
                                 „Ez a hét segített kimondani dolgokat, amiket évek óta tologattunk. És azt is, hogy mit
                                 akarunk együtt 5 év múlva. Most már nemcsak túléljük a napokat, hanem talán megyünk
@@ -646,11 +662,9 @@
     <section id="carouselPos">
         <div class="container text-center" id="carouselContainer">
 
-
-
-            <!-- carousel 1 MINI TANANYAGOK -->
+            <!--    MINI TANANYAGOK     -->
             <div class="carousel-section py-4" id="carouselSection1">
-                <h1 class="mb-4" style="color: var(--primary-teal)">Mini tananyagok</h1>
+                <h1 class="mb-4 w-75 m-auto" style="color: var(--primary-teal)">A romboló kommunikációs spirál felismerése</h1>
                 <span class="close-btn">X</span>
                 <div id="imageCarousel1" class="carousel slide">
 
@@ -698,9 +712,9 @@
 
 
 
-            <!-- carousel 2 TEDDMEGMA -->
+            <!--     TEDDMEGMA     -->
             <div class="carousel-section py-4" id="carouselSection4">
-                <h1 class="mb-4" style="color: var(--primary-teal)">TeddMegMa</h1>
+                <h1 class="mb-4 w-75 m-auto" style="color: var(--primary-teal)">TeddMegMa feladat</h1>
                 <span class="close-btn">X</span>
                 <div id="imageCarousel2" class="carousel slide">
 
@@ -747,7 +761,6 @@
                             data-bs-target="#imageCarousel2" data-bs-slide="next">
                     </div>
                 </div>
-
                 <!--gratulation slide-->
                 <div class="carousel-wrapper" id="GreetingSlide" style="display: none;">
                     <div class="p-3 mt-3">
@@ -763,9 +776,9 @@
 
 
 
-            <!--  carousel 4 PÁRKAPCSOLATI TEST -->
+            <!--    PÁRKAPCSOLATI TEST   -->
             <div class="carousel-section py-4" id="carouselSection3">
-                <h1 class="mb-4" style="color: var(--primary-teal)">Párkapcsolati Teszt</h1>
+                <h1 class="mb-4 w-75 m-auto" style="color: var(--primary-teal)">Kommunikációs mintáid</h1>
                 <span class="close-btn">X</span>
 
                 <!--    open slide    -->
@@ -774,8 +787,7 @@
                         <h2 class="card-title mt-3">Teszt</h2>
                         <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
                             kapcsolatotok felbomlásához vezet</p>
-                        <img src="img/carousel/test/hellboy.png" class="test-image mb-3" alt="Rose Image"
-                            id="testOpenImage">
+                        <img src="img/carousel/test/hellboy.png" class="test-image mb-3" alt="Rose Image">
                         <button class="btn btn-light btn-bottom" id="startTestBtn">Elkezdem a
                             tesztet!</button>
                     </div>
@@ -809,7 +821,7 @@
                     <div class="start-test-cover">
                         <h1 class="card-hl mt-5">Egy mondat magamnak</h1>
                         <p>„Nem akarok többé a csönd mögé bújni."</p>
-                        <button class="btn btn-light btn-bottom" id="finalBtn" onclick="">Kész</button>
+                        <button class="btn btn-light btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
                     </div>
                 </div>
                 <!--    progress bar    -->
@@ -835,9 +847,9 @@
 
 
 
-            <!--    carousel 5  ÖNISMERETI GYAK -- with class control  -->
+            <!--    ÖNISMERETI GYAK - with class control  -->
             <div class="carousel-section py-4" id="carouselSection2">
-                <h1 class="mb-4" style="color: var(--primary-teal)">Önismereti gyakorlat</h1>
+                <h1 class="mb-4 w-75 m-auto" style="color: var(--primary-teal)">Miért nehéz kimondanom: “Igazad van”</h1>
                 <span class="close-btn">X</span>
 
                 <div class="carousel-wrapper">
@@ -903,15 +915,8 @@
 
 
 
-
         </div>
     </section>
-
-
-
-
-
-
 
 
     <!-- FOOTER -->
@@ -942,8 +947,7 @@
     <script src="js/script.js"></script>
     <script>
 
-
-        // Initialize carousels
+        // Initialize carousel reveal buttons
         ["carousel-btn1", "carousel-btn2", "carousel-btn3", "carousel-btn4"].forEach((btnId, idx) => {
             const btn = document.getElementById(btnId);
             const sectionIds = ["carouselSection1", "carouselSection2", "carouselSection3", "carouselSection4"];
@@ -1016,20 +1020,15 @@
         //reveal greeting slide (TeddMegMa carousel)
         function greetings() {
             const greetingSlide = document.getElementById("GreetingSlide");
-            console.log(greetingSlide);
             greetingSlide.style.display = "block";
             greetingSlide.classList.add("fade-in");
             document.getElementById('imageCarousel2').style.display = "none";
         }
 
 
-
-
     </script>
     <script src="js/email_modal.js"></script>
-    <!-- <script src="js/carousel.js"></script> -->
     <script src="js/test_carousel.js"></script>
-    <!-- <script src="js/answer_carousel.js"></script> -->
     <script src="js/CarouselHandler.js"></script>
 </body>
 

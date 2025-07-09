@@ -92,6 +92,34 @@ body {
     color: var(--primary-teal) !important;
 }
 
+.start-test-wrapper{
+    width: 95%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    background-color: var(--new-orange);
+}
+
+.test-btn-title{
+    font-weight: bold;
+    color: var(--primary-teal);
+    text-align: center;
+}
+
+.start-test-btn{
+    height: 50px;
+    border: none;
+    width: 140px;
+    border-radius: 25px;
+    color: var(--dark-teal);
+    background-color: white;
+    transition: all ease .2s;
+}
+
+.start-test-btn:hover{
+    opacity: 0.8;
+}
+
 .module-card {
     background: var(--soft-bg);
     border-radius: 15px;
@@ -178,6 +206,13 @@ body {
 
 .fade-in {
     animation: fadeIn 0.5s ease-in;
+}
+
+.testimonial{
+    display: inline-block;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 @keyframes fadeIn {
@@ -449,25 +484,6 @@ body {
     transform: scale(1.1);
 }
 
-.carousel-indicators button {
-    background-color: #ff6b6b;
-    border-radius: 50%;
-    width: 12px !important;
-    height: 12px !important;
-    margin: 0 3px;
-}
-
-.carousel-caption {
-    background: var(--light-teal);
-    opacity: 0;
-    border-radius: 10px;
-    padding: 15px;
-    backdrop-filter: blur(5px);
-    transition: all 0.5s ease;
-    transform: translateY(20px);
-    margin-bottom: 30px;
-}
-
 .fade-in2 {
     animation: fadeIn2 0.3s ease-in;
 }
@@ -549,21 +565,6 @@ body {
     opacity: .8;
 }
 
-@keyframes captionSlide {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-
 
 
 /* PÁRKAPCSOLATI TEST CAROUSEL */
@@ -637,11 +638,6 @@ body {
     font-size: 23px;
     text-align: center;
     padding-top: 20px;
-}
-
-#testOpenImage {
-    height: 300px;
-    margin: 20px auto;
 }
 
 .carousel {
@@ -915,7 +911,6 @@ body {
 .carousel-select-btn:hover{
     background-color: rgba(255, 255, 255, 0.85);
 }
-
 
 #GreetingSlide{
     border: var(--carousel-border) 25px solid;
