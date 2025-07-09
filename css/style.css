@@ -894,3 +894,24 @@ body {
     transform: translateX(-50%);
     width: 90%;
 }
+
+
+.carousel-select-btn{
+    position: absolute;
+    bottom: 90px;
+    right: 50px;
+    left: 50px;
+    z-index: 10;
+    background-color: white;
+    color: var(--carousel-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-select-btn:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}

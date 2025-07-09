@@ -705,27 +705,31 @@
                 <div id="imageCarousel2" class="carousel slide">
 
                     <div class="carousel-inner" id="carouselInner">
+
+                        <button class="carousel-select-btn" id="CourseSelect"  style="display: none;">Ezt
+                            választom</button>
+
                         <div class="carousel-item active">
                             <img src="img/carousel/teddmegma/tedd_meg_ma_1.png" class="d-block w-100"
                                 alt="teddmegma kep">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item course">
                             <img src="img/carousel/teddmegma/tedd_meg_ma_2.png" class="d-block w-100"
                                 alt="teddmegma kep">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item course">
                             <img src="img/carousel/teddmegma/tedd_meg_ma_3.png" class="d-block w-100"
                                 alt="teddmegma kep">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item course">
                             <img src="img/carousel/teddmegma/tedd_meg_ma_4.png" class="d-block w-100"
                                 alt="teddmegma kep">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item course">
                             <img src="img/carousel/teddmegma/tedd_meg_ma_5.png" class="d-block w-100"
                                 alt="teddmegma kep">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item course">
                             <img src="img/carousel/teddmegma/tedd_meg_ma_6.png" class="d-block w-100"
                                 alt="teddmegma kep">
                         </div>
@@ -736,11 +740,10 @@
                     </div>
 
                     <div class="navigation" style="left: 22px; right: 22px; top: 40px;">
-                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" data-bs-target="#imageCarousel2"
-                            data-bs-slide="prev">
-                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" data-bs-target="#imageCarousel2"
-                            data-bs-slide="next">
-                        <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
+                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" onclick="FadeBtn()"
+                            data-bs-target="#imageCarousel2" data-bs-slide="prev">
+                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" onclick="FadeBtn()"
+                            data-bs-target="#imageCarousel2" data-bs-slide="next">
                     </div>
                 </div>
             </div>
@@ -961,6 +964,28 @@
                 scrollToSection("how-it-works");
                 hideAllCarousel();
             })
+        }
+
+        // Fade in effect for CourseSelect button (TeddMegMa carousel)
+        function FadeBtn() {
+            const courseSelectBtn = document.getElementById("CourseSelect");
+            const activeCourseItems = document.querySelectorAll(".carousel-item.course.carousel-item-next.carousel-item-start");
+            if(activeCourseItems.length > 0) {
+               if (courseSelectBtn) {
+                 courseSelectBtn.style.display = "none";
+                setTimeout(() => {
+                    courseSelectBtn.style.display = "block";
+                    courseSelectBtn.classList.add("fade-in");
+                }, 300);
+                setTimeout(() => {
+                    courseSelectBtn.classList.remove("fade-in");
+                }, 1000);
+            }
+            }
+            else {
+                courseSelectBtn.style.display = "none";
+            }
+            
         }
 
     </script>
