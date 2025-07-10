@@ -594,14 +594,14 @@ body {
 .start-test-cover {
     width: 100%;
     max-width: 1200px;
-    height: 750px;
+    height: 720px;
     margin: 30px auto 0 auto;
     font-family: "Cardo", serif;
     font-weight: 400;
     overflow: hidden;
     background: var(--carousel-bg);
     position: relative;
-    border: var(--carousel-border) 25px solid;
+    border: var(--carousel-border) 20px solid;
     border-radius: 12px 12px 0 0;
     border-bottom: none;
 }
@@ -611,7 +611,7 @@ body {
 }
 
 .start-test-cover {
-    border-bottom: var(--carousel-border) 25px solid;
+    border-bottom: var(--carousel-border) 20px solid;
 }
 
 .answer-wrapper {
@@ -681,7 +681,7 @@ body {
     margin-top: 40px;
     margin-bottom: 20px;
     padding: 0 15px;
-    font-size: 28px !important;
+    font-size: 24px !important;
     text-align: center;
     color: var(--carousel-hl);
     font-family: "Josefin Sans", sans-serif !important;
@@ -797,11 +797,27 @@ body {
     margin-top: 10px;
 }
 
+
+#resultText {
+    font-size: 18px;
+    text-align: center;
+    color: var(--carousel-text);
+    margin-top: 5px;
+}
+
+
 #resultTextHL {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     color: var(--carousel-text);
+}
+
+.test-img-bottom{
+    width: 100%;
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
 }
 
 #imageCarousel5 h1 {
@@ -882,13 +898,6 @@ body {
     text-align: center;
     color: var(--carousel-hl);
     font-size: 34px !important;
-}
-
-#resultText {
-    font-size: 20px;
-    text-align: center;
-    color: var(--carousel-text);
-    margin-top: 30px;
 }
 
 .btn-bottom {

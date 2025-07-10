@@ -125,15 +125,12 @@ class CarouselHandler {
         });
 
         // Swipe support
-        let touchStartX = 0;
-        let touchEndX = 0;
-
         this.slider.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
+            this.touchStartX = e.changedTouches[0].screenX;
         });
 
         this.slider.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
+            this.touchEndX = e.changedTouches[0].screenX;
             this.handleSwipeGesture();
         });
     }
@@ -141,6 +138,7 @@ class CarouselHandler {
 
     handleSwipeGesture() {
         const swipeDistance = this.touchStartX - this.touchEndX;
+        console.log("swipe distance:" + swipeDistance);
         if (swipeDistance > 50) this.goToNext();
         else if (swipeDistance < -50) this.goToPrevious();
     }

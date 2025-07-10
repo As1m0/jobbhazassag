@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/*
 // Progress bar
 function updateProgressBar() {
     const scrollTop = window.pageYOffset;
@@ -37,7 +38,7 @@ function updateProgressBar() {
 }
 
 window.addEventListener('scroll', updateProgressBar);
-
+*/
 
 // Smooth scrolling
 function scrollToSection(sectionId) {

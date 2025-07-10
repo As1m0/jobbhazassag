@@ -773,8 +773,7 @@
 
                     <div class="carousel-inner" id="carouselInner">
 
-                        <button class="carousel-select-btn" id="CourseSelect" onclick="greetings()"
-                            style="display: none;">Ezt
+                        <button class="carousel-select-btn" id="CourseSelect" style="display: none;">Ezt
                             választom</button>
 
                         <div class="carousel-item active">
@@ -803,21 +802,22 @@
                     </div>
 
                     <div class="navigation" style="left: 28px; right: 28px; top: 40px;">
-                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn01" onclick="FadeBtn()"
+                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn01"
                             data-bs-target="#imageCarousel2" data-bs-slide="prev">
-                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn01" onclick="FadeBtn()"
+                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn01"
                             data-bs-target="#imageCarousel2" data-bs-slide="next">
                     </div>
                 </div>
                 <!--gratulation slide-->
                 <div class="mt-4 mb-4" id="GreetingSlide" style="display: none;">
-                    <img src="img/carousel/teddmegma/final.png" class="d-block w-100 mx-auto" alt="teddmegma kep" style="margin-top: -20px;">
+                    <img src="img/carousel/teddmegma/final.png" class="d-block w-100 mx-auto" alt="teddmegma kep"
+                        style="margin-top: -20px;">
                     <button class="carousel-select-btn" style="bottom: 120px;" onclick="hideAndScroll()">Kész</button>
                 </div>
             </div>
 
             <script>
-                // Fade in effect for CourseSelect button
+
                 function FadeBtn() {
                     const courseSelectBtn = document.getElementById("CourseSelect");
                     let activeCourseItems = [
@@ -841,14 +841,40 @@
                     }
                 }
 
+                // Fade in effect for CourseSelect button
+                document.getElementById('prevBtn01').addEventListener("click", () => {
+                    FadeBtn();
+                });
+                document.getElementById('nextBtn01').addEventListener("click", () => {
+                    FadeBtn();
+                });
+
+                // Swipe gesture
+                let touchStartX1 = 0;
+                let touchEndX1 = 0;
+                const actualSlider = document.getElementById('carouselSection4');
+
+                actualSlider.addEventListener('touchstart', (e) => {
+                    touchStartX1 = e.changedTouches[0].screenX;
+                });
+
+                actualSlider.addEventListener('touchend', (e) => {
+                    touchEndX1 = e.changedTouches[0].screenX;
+                    if (touchEndX1 < touchStartX1 - 50) {
+                        FadeBtn();
+                    }
+                    if (touchEndX1 > touchStartX1 + 50) {
+                        FadeBtn();
+                    }
+                });
+
                 //reveal greeting slide
-                function greetings() {
+                document.getElementById('CourseSelect').addEventListener("click", () => {
                     const greetingSlide = document.getElementById("GreetingSlide");
                     greetingSlide.style.display = "block";
                     greetingSlide.classList.add("fade-in");
                     document.getElementById('imageCarousel2').style.display = "none";
-                }
-
+                });
             </script>
 
 
@@ -889,23 +915,20 @@
                 <div id="imageCarousel4" class="carousel slide" style="display: none;">
                     <div class="start-test-cover">
                         <p class="test-description" style="margin-top: 50px; text-align: left;">Valószinűleg időnként
-                            kritikusan, védekezően,
-                            vagy elzárkózva reagálsz a feszültségekre - és talán már észrevetted, hogy ezek a minták nem
-                            előrevisznek,hanem eltávolitanak. A jó hír? Az, hogy már észrevetted ezt, azt jelzi: van
-                            benned
-                            önreflexió. És ez az első lépés a változáshoz.</p>
+                            kritikusan, védekezően, vagy elzárkózva reagálsz a feszültségekre - és talán már
+                            észrevetted, hogy ezek a minták nem előrevisznek,hanem eltávolitanak. A jó hír? Az, hogy már
+                            észrevetted ezt, azt jelzi: van benned önreflexió. És ez az első lépés a változáshoz.</p>
                         <button class="btn btn-light btn-bottom" id="nextslide1">Tovább</button>
                     </div>
                 </div>
                 <!--    next slide    -->
                 <div id="imageCarousel5" class="carousel slide" style="display: none;">
                     <div class="start-test-cover">
-                        <p class="test-description">Ezek a minták nem sorsszerüek - hanem tanultak, és mint ilyenek: át
-                            is
-                            írhatók. Ha tudatosítod, mikor bukkannak fel benned ezek a reakciók, és az önismereti
-                            gyakorlatok és a TeddMegMa feladatok segítségével dolgoztok ezek megáltoztatásán, a
-                            kapcsolatotok is visszatalálhat az intimitáshoz.</p>
-                        <img src="img/carousel/test/visszatalal.png" class="test-image" loading="lazy">
+                        <p class="test-description" style="font-size: 19px;">Ezek a minták nem sorsszerűek - hanem
+                            tanultak, és mint ilyenek: át is írhatók. Ha tudatosítod, mikor bukkannak fel benned ezek a
+                            reakciók, és az önismereti gyakorlatok és a TeddMegMa feladatok segítségével dolgoztok ezek
+                            megáltoztatásán, a kapcsolatotok is visszatalálhat az intimitáshoz.</p>
+                        <img src="img/carousel/test/visszatalal.png" class="test-img-bottom" loading="lazy">
                         <button class="btn btn-light btn-bottom" id="nextslide2">Tovább</button>
                     </div>
                 </div>
@@ -950,7 +973,7 @@
 
                 <!-- gyakorlat carousel -->
                 <div id="gyakCarousel">
-                    <div class="carousel-wrapper">
+                    <div class="carousel-wrapper" style="height: 650px !important;">
                         <div class="carousel">
                             <div class="slider">
                                 <div class="carousel-card" style="background-color: var(--carousel-option-bg);">
@@ -990,7 +1013,7 @@
                                     <div class="card-footer">Kérdés 3 / 5</div>
                                 </div>
                                 <div class="carousel-card">
-                                    <h2 class="card-hl" style="font-size: 28px !important;">Mit jelent számodra az, ha
+                                    <h2 class="card-hl" style="font-size: 20px !important;">Mit jelent számodra az, ha
                                         tudod, hogy a párodnak igaza van és ki is mondod neki „igazad van"? Azt, hogy
                                         lemondasz valamiről? Hogy alul maradsz? Hogy akkor te kevesebb vagy, mint ő?
                                     </h2>

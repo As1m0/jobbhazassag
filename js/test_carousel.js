@@ -250,7 +250,7 @@ function renderSlides() {
     resultText.id = 'resultText';
     const resultImg = document.createElement('img');
     resultImg.id = 'resultImg';
-    resultImg.className = 'test-image';
+    resultImg.className = 'test-img-bottom';
     const nextButton = document.createElement('button');
     nextButton.className = 'btn btn-light btn-bottom'; //TODO
     nextButton.textContent = 'Tovább';
