@@ -693,6 +693,7 @@ body {
 }
 
 .card-answer {
+    display: block;
     width: 90%;
     height: 250px;
     padding: 30px 20px;
@@ -702,11 +703,7 @@ body {
     color: var(--carousel-hl);
     background: var(--carousel-option-bg);
     resize: none;
-    position: absolute;
-    bottom: 180px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
 }
 
 .card-image-bottom {

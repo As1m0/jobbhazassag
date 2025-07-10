@@ -88,11 +88,11 @@ class CarouselHandler {
         // Update navigation buttons
         if (this.currentSlide >= this.totalSlides - 1) {
             if (this.nextBtn) this.nextBtn.style.display = 'none';
-            if (this.endBtn) this.endBtn.style.display = 'block';
+            //if (this.endBtn) this.endBtn.style.display = 'block';
             if (this.progressArrow) this.progressArrow.src = this.options.arrowFilledImg;
         } else {
             if (this.nextBtn) this.nextBtn.style.display = 'block';
-            if (this.endBtn) this.endBtn.style.display = 'none';
+            //if (this.endBtn) this.endBtn.style.display = 'none';
             if (this.progressArrow) this.progressArrow.src = this.options.arrowEmptyImg;
         }
 
