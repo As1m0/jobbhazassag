@@ -92,7 +92,7 @@ body {
     color: var(--primary-teal) !important;
 }
 
-.start-test-wrapper{
+.start-test-wrapper {
     width: 95%;
     padding: 20px 30px;
     border-radius: 10px;
@@ -100,13 +100,13 @@ body {
     background-image: linear-gradient(to right, var(--new-orange), #f7c83d);
 }
 
-.test-btn-title{
+.test-btn-title {
     font-weight: bold;
     color: var(--primary-teal);
     text-align: center;
 }
 
-.start-test-btn{
+.start-test-btn {
     height: 50px;
     border: none;
     font-weight: bold;
@@ -117,7 +117,7 @@ body {
     transition: all ease .2s;
 }
 
-.start-test-btn:hover{
+.start-test-btn:hover {
     opacity: 0.8;
 }
 
@@ -209,7 +209,7 @@ body {
     animation: fadeIn 0.5s ease-in;
 }
 
-.testimonial{
+.testimonial {
     display: inline-block;
     width: 50px;
     border-radius: 50%;
@@ -664,7 +664,6 @@ body {
     position: relative;
 }
 
-.test-card h2,
 .start-test-cover h2 {
     font-size: 30px !important;
     text-align: center;
@@ -679,10 +678,18 @@ body {
 }
 
 .card-hl {
-    margin-top: 35px;
-    font-size: 32px !important;
-    font-weight: 400;
-    line-height: 1.7;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 28px !important;
+    text-align: center;
+    color: var(--carousel-hl);
+    font-family: "Josefin Sans", sans-serif !important;
+}
+
+.test-card-hl {
+    padding: 0 10px;
+    font-size: 24px !important;
     text-align: center;
     color: var(--carousel-hl);
     font-family: "Josefin Sans", sans-serif !important;
@@ -725,17 +732,16 @@ body {
 .option {
     background: var(--carousel-option-bg);
     text-align: center;
-    padding: 15px 18px 0 18px;
+    padding: 10px 18px 10px 18px;
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.2s;
     margin: auto;
     color: #5c3b00;
     font-size: 18px;
-    height: 100px;
+    min-height: 100px;
     max-width: 650px;
-    width: 90%;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .option:hover {
@@ -791,7 +797,7 @@ body {
     margin-top: 10px;
 }
 
-#resultTextHL{
+#resultTextHL {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -804,6 +810,7 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
 
 
 #endBtn {
@@ -867,12 +874,11 @@ body {
 }
 
 .test-image {
-    width: 90%;
-    margin: 15px auto 0 auto;
-    display: block;
+    width: 100%;
+    padding-top: 0;
 }
 
-.card-title{
+.card-title {
     text-align: center;
     color: var(--carousel-hl);
     font-size: 34px !important;
@@ -885,7 +891,7 @@ body {
     margin-top: 30px;
 }
 
-.btn-bottom{
+.btn-bottom {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -894,7 +900,7 @@ body {
 }
 
 
-.carousel-select-btn{
+.carousel-select-btn {
     position: absolute;
     bottom: 80px;
     right: 70px;
@@ -910,11 +916,10 @@ body {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-select-btn:hover{
+.carousel-select-btn:hover {
     background-color: rgba(255, 255, 255, 0.85);
 }
 
-#GreetingSlide{
-    border: var(--carousel-border) 25px solid;
-    border-radius: 12px;
+#GreetingSlide {
+    border-radius: 15px;
 }

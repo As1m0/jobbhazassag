@@ -98,10 +98,11 @@
         </div>
     </div>
 
-    <!-- Progress Indicator -->
+    <!-- Progress Indicator
     <div class="progress-indicator">
         <div class="progress-bar" id="progressBar"></div>
     </div>
+     -->
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -801,7 +802,7 @@
                         </div>
                     </div>
 
-                    <div class="navigation" style="left: 22px; right: 22px; top: 40px;">
+                    <div class="navigation" style="left: 28px; right: 28px; top: 40px;">
                         <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn01" onclick="FadeBtn()"
                             data-bs-target="#imageCarousel2" data-bs-slide="prev">
                         <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn01" onclick="FadeBtn()"
@@ -809,17 +810,14 @@
                     </div>
                 </div>
                 <!--gratulation slide-->
-                <div class="carousel-wrapper" id="GreetingSlide" style="display: none; height: 90vh;">
-                    <div class="carousel-item active">
-                        <img src="img/carousel/teddmegma/final.png" class="d-block w-100 mx-auto" alt="teddmegma kep"
-                            loading="lazy" style="margin-top: -20px;">
-                    </div>
-                    <button class="carousel-select-btn" style="bottom: 20px;" onclick="hideAndScroll()">Kész</button>
+                <div class="mt-4 mb-4" id="GreetingSlide" style="display: none;">
+                    <img src="img/carousel/teddmegma/final.png" class="d-block w-100 mx-auto" alt="teddmegma kep" style="margin-top: -20px;">
+                    <button class="carousel-select-btn" style="bottom: 120px;" onclick="hideAndScroll()">Kész</button>
                 </div>
             </div>
 
             <script>
-                // Fade in effect for CourseSelect button (TeddMegMa carousel)
+                // Fade in effect for CourseSelect button
                 function FadeBtn() {
                     const courseSelectBtn = document.getElementById("CourseSelect");
                     let activeCourseItems = [
@@ -843,7 +841,7 @@
                     }
                 }
 
-                //reveal greeting slide (TeddMegMa carousel)
+                //reveal greeting slide
                 function greetings() {
                     const greetingSlide = document.getElementById("GreetingSlide");
                     greetingSlide.style.display = "block";
@@ -867,7 +865,8 @@
                         <h1 class="card-title mt-3">Teszt</h1>
                         <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
                             kapcsolatotok felbomlásához vezet</p>
-                        <img src="img/carousel/test/hellboy.png" class="test-image mb-3" alt="Rose Image">
+                        <img src="img/carousel/test/hellboy.png" class="test-image" style="padding-top: 30px"
+                            alt="ördög">
                         <button class="btn btn-light btn-bottom" id="startTestBtn">Elkezdem a
                             tesztet!</button>
                     </div>
@@ -889,7 +888,7 @@
                 <!--    next slide    -->
                 <div id="imageCarousel4" class="carousel slide" style="display: none;">
                     <div class="start-test-cover">
-                        <p class="test-description" style="margin-top: 150px; text-align: left;">Valószinűleg időnként
+                        <p class="test-description" style="margin-top: 50px; text-align: left;">Valószinűleg időnként
                             kritikusan, védekezően,
                             vagy elzárkózva reagálsz a feszültségekre - és talán már észrevetted, hogy ezek a minták nem
                             előrevisznek,hanem eltávolitanak. A jó hír? Az, hogy már észrevetted ezt, azt jelzi: van
@@ -1037,8 +1036,7 @@
                 <div id="imageCarouselGyak" class="carousel slide" style="display: none;">
                     <div class="carousel-inner" id="carouselInner">
                         <div class="carousel-item active">
-                            <img src="img/carousel/answer/001.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
+                            <img src="img/carousel/answer/001.png" class="d-block w-100" alt="önismereti gyakorlat">
                         </div>
                         <div class="carousel-item">
                             <img src="img/carousel/answer/002.png" class="d-block w-100" alt="önismereti gyakorlat"
@@ -1069,7 +1067,7 @@
                                 loading="lazy">
                         </div>
                         <div class="carousel-item">
-                            <div class="start-test-cover pt-4" style="height: 90vh;">
+                            <div class="start-test-cover pt-4 mt-0" style="height: 90vh;">
                                 <h1 class="card-hl mb-2"
                                     style="font-weight: bold; font-size: 45px !important; margin-top: 110px;">Egy mondat
                                     magamnak</h1>
@@ -1079,7 +1077,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="navigation" style="left: 22px; right: 22px; top: 40px;">
+                    <div class="navigation" style="left: 28px; right: 28px; top: 40px;">
                         <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn"
                             data-bs-target="#imageCarouselGyak" data-bs-slide="prev">
                         <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn"
@@ -1208,7 +1206,7 @@
                 nextBtn.style.display = current === last ? 'none' : 'block';
             }
 
-            updateButtons(); 
+            updateButtons();
 
             carouselElement.addEventListener('slid.bs.carousel', updateButtons);
         }

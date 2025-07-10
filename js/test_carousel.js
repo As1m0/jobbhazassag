@@ -190,7 +190,7 @@ function renderSlides() {
 
         const h2 = document.createElement('h2');
         h2.textContent = `${idx + 1}. ${q.text}`;
-        h2.classList.add('card-hl');
+        h2.classList.add('test-card-hl');
         h2.classList.add('mt-5');
         card.appendChild(h2);
 
