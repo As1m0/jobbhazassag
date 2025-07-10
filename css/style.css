@@ -765,12 +765,17 @@ body {
 
 .navigation {
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+    opacity: .5;
+    z-index: 100;
+}
+
+#resultImg{
+    margin-bottom: -80px;
 }
 
 .nav-btn1 {
