@@ -1,82 +1,89 @@
 const questions = [
     {
+        text: "Ha a párod valamiért szól neked, mit mondasz a leggyakrabban?",
+        options: [
+            { text: "Te is mindig ezt csinálod!", score: 2 },
+            { text: "Sajnálom, igazad van, figyelni fogok rá.", score: 3 },
+            { text: "Ezzel csak megint engem idegesítesz, nem hiszem el, hogy ilyen vagy.", score: 1 }
+        ]
+    },
+    {
+        text: "Hogyan szoktál elindítani egy konfliktust?",
+        options: [
+            { text: "Nem indítom el.", score: 1 },
+            { text: "Most tényleg megint én vagyok a rossz?", score: 2 },
+            { text: "Zavar, hogy nem értünk egyet, de inkább megpróbálok megoldást keresni.", score: 3 }
+        ]
+    },
+    {
+        text: "Mi történik benned a veszekedés közben?",
+        options: [
+            { text: "Folyamatosan magyarázkodom vagy visszatámadok, hogy védjem magam.", score: 2 },
+            { text: "Totálisan lekapcsolok. Testben ott vagyok, de lélekben kiléptem.", score: 1 },
+            { text: "Próbálom figyelni rá, még ha nehéz is.", score: 3 }
+        ]
+    },
+    {
         text: "Mit szoktál mondani, amikor a párod rámutat egy hibádra?",
         options: [
-            { text: "Ez most nehéz nekem, kérlek, beszéljünk róla később.", score: 2 },
-            { text: "Te beszélsz? Te meg egy lusta, önző ember vagy.", score: 1 },
-            { text: "Nem én kezdtem, ne próbáld rámkenni!", score: 3 }
+            { text: "Erre most nem szeretnék indulatból reagálni, kérlek, térjünk rá vissza később ha én is átgondoltam.", score: 3 },
+            { text: "Te beszélsz? Állandóan csak kipécézel, ahelyett, hogy a magad dolgával foglalkoznál.", score: 1 },
+            { text: "Ne hibáztass légyszíves, egy csapat vagyunk, együtt kell a dolgokat megoldanunk..", score: 2 }
         ]
     },
     {
-        text: "Hogyan reagálsz, ha nem kapsz elég figyelmet?",
+        text: "Vita után mi a jellemző rád?",
         options: [
-            { text: "Megpróbálom nyugodtan jelezni.", score: 3 },
-            { text: "Elkezdlek ignorálni.", score: 2 },
-            { text: "Dühös leszek és veszekedést kezdeményezek.", score: 1 }
+            { text: "Napokig nem vagyok hajlandó beszélni a párommal.", score: 1 },
+            { text: "Legközelebb újra felhozom ezt a témát vagy egy másikat, hogy visszavágjak.", score: 2 },
+            { text: "Próbálom beleélni magam az ő szemszögébe is, és visszajelzek neki, hogy hogyan esett nekem ez a vita.", score: 3 }
         ]
     },
     {
-        text: "Mit csinálsz, ha párod elfelejt valamit fontosat?",
+        text: "Mit gondolsz, amikor a párod panaszkodik?",
         options: [
-            { text: "Emlékeztetem és megbeszéljük.", score: 1 },
-            { text: "Megjegyzem, de nem mondok semmit.", score: 2 },
-            { text: "Rátámadok, hogy mindig ezt csinálja.", score: 3 }
+            { text: "Én sem vagyok jó passzban.", score: 2 },
+            { text: "Neked mindig valami bajod van.", score: 1 },
+            { text: "Nehéz ezt kimondani, de lehet, hogy igaza van.", score: 3 }
         ]
     },
     {
-        text: "Hogyan kezeled a vitákat?",
+        text: "Mi az, amit a leggyakrabban teszel viták alatt?",
         options: [
-            { text: "Időt kérek, hogy lenyugodjunk.", score: 1 },
-            { text: "Hagylak beszélni, de nem hallgatok.", score: 3 },
-            { text: "Megpróbállak legyőzni érvekkel vagy erővel.", score: 2 }
-        ]
-    },
-    {
-        text: "Mit teszel, ha a párod rossz napot zár?",
-        options: [
-            { text: "Támogatom és meghallgatom.", score: 2 },
-            { text: "Azt mondom: 'Nekem is vannak rossz napjaim!'", score: 3 },
-            { text: "Figyelmen kívül hagyom, nincs türelmem.", score: 1 }
-        ]
-    },
-    {
-        text: "Hogyan viszonyulsz a kompromisszumokhoz?",
-        options: [
-            { text: "Nyitott vagyok rájuk.", score: 3 },
-            { text: "Csak ha nagyon muszáj.", score: 2 },
-            { text: "Nem szeretek engedni.", score: 1 }
-        ]
-    },
-    {
-        text: "Mit teszel, ha hibázol egy vitában?",
-        options: [
-            { text: "Beismerem, és bocsánatot kérek.", score: 1 },
-            { text: "Kifogásokat keresek.", score: 2 },
-            { text: "Elterelem a témát.", score: 3 }
+            { text: "Inkább nem szólok semmit, kibekkelem, amíg vége lesz.", score: 1 },
+            { text: "Kérdezek, igyekszem megérteni az ő oldalát is.", score: 3 },
+            { text: "Elmondom, hogy nekem miért rosszabb.", score: 2 }
         ]
     }
 ];
 
 results = [
     {
-        text: "A kapcsolatodban sok a feszültség és a konfliktus. Próbáljatok meg többet kommunikálni és megérteni egymást.",
+        headline: "Kapcsolódó kommunikátor",
+        text: "A konfliktus számodra nem háború, hanem lehetőség, hogy jobbá, őszintébbé váljon a kapcsolatotok. Képes vagy szabályozni az érzéseidet, és megőrizni a kapcsolat biztonságát akkor is, ha nehéz. Ez nem azt jelenti, hogy a kapcsolatotok tökéletes, de azt igen, hogy megpróbálsz nyíltan, empatikusan kommunikálni róla. Csak így tovább!",
+        img: './img/carousel/test/kapcsolodo.png'
+    },
+    {
+        headline: "Veszélyes minták jelen vannak",
+        text: "Valószínűleg időnként kritikusan, védekezően, vagy elzárkózva reagálsz a feszültségekre -  és talán már észrevetted, hogy ezek a minták nem előrevisznek, hanem eltávolítanak. A jó hír? Az, hogy már észrevetted ezt, azt jelzi: van benned önreflexió. És ez az első lépés a változáshoz.",
         img: './img/carousel/test/rozsa.png'
     },
     {
-        text: "A kapcsolatodban vannak problémák, de van lehetőség a fejlődésre. Fontos, hogy mindketten nyitottak legyetek a változásra és a kompromisszumokra.",
-        img: './img/carousel/test/rozsa.png'
-    },
-    {
-        text: "A kapcsolatod erős alapokon áll, de mindig van hová fejlődni. Továbbra is figyeljetek egymásra és támogassátok egymást.",
-        img: './img/carousel/test/rozsa.png'
-    },
-    {
-        text: "A kapcsolatod nagyon erős és egészsé   ges. Kiválóan kommunikáltok és támogatjátok egymást. Folytassátok így!",
-        img: './img/carousel/test/rozsa.png'
+        headline: "A négy lovas bejáratos hozzád",
+        text: "A konfliktus nálad gyakran megszólalás helyett hallgatást, meghallgatás helyett támadást hoz. Lehet, hogy nem tanultál mást. Lehet, hogy fáradt vagy. De ez a felismerés nem a vég,  hanem egy új működés kezdete lehet. Fontos, hogy használd a kommunikációs önismereti és TeddMegMa gyakorlatokat, akár többször is ugyanazt. Ezek segítenek abban, hogy a kommunikáció ne egy olyan terület legyen, ami önmagában gyilkolja a kapcsolatotokat.",
+        img: './img/carousel/test/utelagazas.png'
     }
-]
+];
 
-
+function getResult(score){
+    if (score <= 10) {
+        return results[0];
+    } else if (13 <= score && score <= 17) {
+        return results[1];
+    } else {
+        return results[2];
+    }
+}
 
 
 
@@ -144,10 +151,19 @@ document.getElementById('startTestBtn').addEventListener('click', () => {
 document.getElementById('nextslide1').addEventListener('click', () => {
     currentProgress++;
     updateProgressDisplay();
-    document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
+    //document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
     document.querySelector('#imageCarousel4').style.display = 'none';
     document.getElementById('imageCarousel5').classList.add('slide-in');
     document.getElementById('imageCarousel5').style.display = 'block';
+});
+
+document.getElementById('nextslide2').addEventListener('click', () => {
+    currentProgress++;
+    updateProgressDisplay();
+    document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_filled.png';
+    document.querySelector('#imageCarousel5').style.display = 'none';
+    document.getElementById('imageCarousel6').classList.add('slide-in');
+    document.getElementById('imageCarousel6').style.display = 'block';
 });
 
 document.getElementById('finalBtn').addEventListener('click', () => {
@@ -164,31 +180,6 @@ function startTest() {
         testWrapper.classList.add('slide-in');
     }
     document.getElementById('testOpenSlide').style.display = 'none';
-}
-
-
-function getResultText(score) {
-    if (score <= 10) {
-        return results[0].text;
-    } else if (score <= 20) {
-        return results[1].text;
-    } else if (score <= 30) {
-        return results[2].text;
-    } else {
-        return results[3].text;
-    }
-}
-
-function getResultImage(score) {
-    if (score <= 10) {
-        return results[0].img;
-    } else if (score <= 20) {
-        return results[1].img;
-    } else if (score <= 30) {
-        return results[2].img;
-    } else {
-        return results[3].img;
-    }
 }
 
 function renderSlides() {
@@ -253,6 +244,8 @@ function renderSlides() {
     const resultCard = document.createElement('div');
     resultCard.className = 'test-card';
     resultCard.innerHTML = `<div class="result" id="result"></div>`;
+    const resultTextHL = document.createElement('div');
+    resultTextHL.id = 'resultTextHL';
     const resultText = document.createElement('div');
     resultText.id = 'resultText';
     const resultImg = document.createElement('img');
@@ -270,6 +263,7 @@ function renderSlides() {
         currentProgress++;
         updateProgressDisplay();
     };
+    resultCard.appendChild(resultTextHL);
     resultCard.appendChild(resultText);
     resultCard.appendChild(resultImg);
     resultCard.appendChild(nextButton);
@@ -305,11 +299,11 @@ function showResult() {
     const totalScore = answers.reduce((sum, val) => sum + (val || 0), 0);
     const result = document.getElementById("result");
     result.innerHTML = `
-      <h2>Teszt vége!</h2>
       <h1> Eredményed <strong>${totalScore}</strong> pont</h1>
     `;
-    document.getElementById('resultText').innerHTML = getResultText(totalScore);
-    document.getElementById('resultImg').src = getResultImage(totalScore);
+    document.getElementById('resultTextHL').innerHTML = getResult(totalScore).headline;
+    document.getElementById('resultText').innerHTML = getResult(totalScore).text;
+    document.getElementById('resultImg').src = getResult(totalScore).img;
 }
 
 prevBtn.onclick = () => {

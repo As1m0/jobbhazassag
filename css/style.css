@@ -97,7 +97,7 @@ body {
     padding: 20px 30px;
     border-radius: 10px;
     margin: 20px auto;
-    background-color: var(--new-orange);
+    background-image: linear-gradient(to right, var(--new-orange), #f7c83d);
 }
 
 .test-btn-title{
@@ -109,8 +109,9 @@ body {
 .start-test-btn{
     height: 50px;
     border: none;
+    font-weight: bold;
     width: 140px;
-    border-radius: 25px;
+    border-radius: 15px;
     color: var(--dark-teal);
     background-color: white;
     transition: all ease .2s;
@@ -793,6 +794,13 @@ body {
     margin-top: 10px;
 }
 
+#resultTextHL{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--carousel-text);
+}
+
 #imageCarousel5 h1 {
     color: var(--carousel-hl);
     font-size: 42px;
@@ -800,15 +808,6 @@ body {
     text-align: center;
 }
 
-#imageCarousel5 p {
-    color: var(--carousel-text);
-    font-size: 20px;
-    font-weight: normal;
-    background-color: var(--carousel-border);
-    padding: 30px 20px;
-    max-width: 350px;
-    margin: 0 auto;
-}
 
 #endBtn {
     width: 110px;
@@ -871,9 +870,15 @@ body {
 }
 
 .test-image {
-    height: 210px;
-    margin: 30px auto;
+    width: 90%;
+    margin: 15px auto 0 auto;
     display: block;
+}
+
+.card-title{
+    text-align: center;
+    color: var(--carousel-hl);
+    font-size: 34px !important;
 }
 
 #resultText {
