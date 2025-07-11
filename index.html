@@ -73,12 +73,12 @@
                             <h4 class="my-4">Ha érdekel a lehetőség kérjük add meg az email címed és hogy hogyan
                                 szólíthatunk.</h4>
                             <div class="col-md-6 mb-3">
-                                <label for="email" class="form-label">Email cím *</label>
+                                <label for="email" class="form-label lead">Email cím *</label>
                                 <input type="email" class="form-control" id="emailInput" placeholder="pelda@email.com"
                                     required>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="name" class="form-label">Hogyan szólíthatunk? *</label>
+                                <label for="name" class="form-label lead">Hogyan szólíthatunk? *</label>
                                 <input type="text" class="form-control" id="name" placeholder="Neved" required>
                             </div>
                         </div>
@@ -88,9 +88,9 @@
                     </form>
                     <div id="alertContainer"></div>
                 </div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Bezárás</button>
-                    <button type="button" class="btn btn-primary-custom2" id="submitEmail">
+                <div class="modal-footer border-0 justify-content-center mb-2">
+                    <!--<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Bezárás</button>-->
+                    <button type="button" class="btn btn-primary-custom2 m-auto test-center lead" id="submitEmail">
                         <i class="fas fa-paper-plane me-2"></i>Jelentkezem!
                     </button>
                 </div>
@@ -123,7 +123,8 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                         <h2 class="h1 mb-4 text-primary-teal display-4">Mi ez, és miért segíthet nektek is?</h2>
-                        <p class="lead">Egy kapcsolat nem akkor megy tönkre, amikor elmarad a szex. Hanem amikor már nem beszélünk,
+                        <p class="lead">Egy kapcsolat nem akkor megy tönkre, amikor elmarad a szex. Hanem amikor már nem
+                            beszélünk,
                             nem értjük egymást, nem érintjük meg a másikat. És főleg: amikor már nem is tudjuk, hogyan
                             kezdjünk hozzá a változáshoz.</p>
                         <h3 class="text-primary-teal mt-4">Ezért hoztuk létre a Jobb Házasság Akadémia 4 hetes
@@ -168,12 +169,8 @@
             <div class="section-card">
                 <h2 class="text-center mb-5 display-5">Hogyan működik a gyakorlatban?</h2>
                 <p class="lead text-center mb-5">
-                    Ez nem egy PDF, és nem egy blogcikk-gyűjtemény. Ez egy <strong>4 hetes interaktív, vezetett
-                        önismereti program,</strong> ami segít újraéleszteni a házasságotokat önismereti gyakorlatokkal,
-                    kapcsolati tesztekkel, a való életben kipróbálható gyakorlati feladatokkal és <strong>mini
-                        tananyagokkal,</strong> amik egyszerű pszichológiai ismereteket adnak át, hogy könnyebben
-                    megértsd magadat és a párodat.<br>Próbáltuk mindezt úgy összeállítani, hogy <strong>napi negyed
-                        óránál</strong> ne igényeljen több időt az életedből.
+                    Ez egy 4 hetes interaktív önismereti program, ami szegít újraéleszteni a házasságotokat. Próbáltuk
+                    mindezt úgy összeállítani, napi negyed óránál ne igényeljen több időt az életedből.
                 </p>
 
                 <div class="row">
@@ -183,7 +180,8 @@
                                 <i class="fas fa-tasks"></i>
                             </div>
                             <h4>24 Párkapcsolati teszt</h4>
-                            <p class="lead">Minden témához kapsz egy rövid tesztet, ami segít felismerni, te hogyan működsz az adott
+                            <p class="lead">Minden témához kapsz egy rövid tesztet, ami segít felismerni, te hogyan
+                                működsz az adott
                                 helyzetekben, és hol lehet a kapcsolatotokban az elakadás. Nem diagnózis. Inkább egy
                                 tükör: őszinte, de biztonságos.</p>
                             <div class="start-test-wrapper">
@@ -202,12 +200,14 @@
                                 <i class="fas fa-book-reader"></i>
                             </div>
                             <h4>12 Önismereti gyakorlat</h4>
-                            <p class="lead">Ezek vezetett írásos feladatok, amik mélyebb önreflexióra hívnak. A gyakorlat első fele
+                            <p class="lead">Ezek vezetett írásos feladatok, amik mélyebb önreflexióra hívnak. A
+                                gyakorlat első fele
                                 befelé nézést segítő kérdésekkel dolgozik, a második rész pedig elmagyarázza a
                                 viselkedésed mögött milyen sémák húzódnak meg.</p>
                             <div class="start-test-wrapper">
                                 <h2>PÉLDA</h2>
-                                <p class="test-btn-title">Önismereti gyakorlat: Miért nehéz kimondanom, "Igazad van".</p>
+                                <p class="test-btn-title">Önismereti gyakorlat: Miért nehéz kimondanom, "Igazad van".
+                                </p>
                                 <button class="start-test-btn" id="carousel-btn2"
                                     onclick="scrollToSection('carouselPos')">
                                     <span style="color: var(--primary-teal)">Start</span>
@@ -221,18 +221,21 @@
                                 <i class="fa-solid fa-location-crosshairs"></i>
                             </div>
                             <h4>40 TeddMegMa feladat</h4>
-                            <p class="lead">Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap választhatsz egyet
+                            <p class="lead">Ha van kedved gyakorlatba is átültetni, amit tanulsz, akkor minden nap
+                                választhatsz egyet
                                 a TeddMegMa feladatok közül is.</p>
                             <p class="lead">
-                                Ezek 10 apró, konkrét kapcsolódási lehetőséget kínálnak, az adott heti témához
+                                Ezek apró, konkrét kapcsolódási lehetőséget kínálnak, az adott heti témához
                                 illeszkedve.
-                                Lehet egy mondat, amit kimondasz. Egy gesztus. Egy apró lépés a másik felé.
+                                Lehet egy mondat, amit kimondasz. Egy gesztus. Egy kis lépés a másik felé.
                             </p>
-                            <p class="lead">Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a kapcsolatod csak
+                            <p class="lead">Mi ezt nagyon fontosnak tartjuk. Mert az önismeret elindul benned, de a
+                                kapcsolatod csak
                                 akkor fejlődik, ha meg is éled a tanultakat.</p>
                             <div class="start-test-wrapper">
                                 <h2>PÉLDA</h2>
-                                <p class="test-btn-title">5 TEDDMEGMA feladat, amit akár már ma is kipróbálhatsz a pároddal</p>
+                                <p class="test-btn-title">5 TEDDMEGMA feladat, amit akár már ma is kipróbálhatsz a
+                                    pároddal</p>
                                 <button class="start-test-btn" id="carousel-btn4"
                                     onclick="scrollToSection('carouselPos')">
                                     <span style="color: var(--primary-teal)">Start</span>
@@ -246,10 +249,10 @@
                                 <i class="fas fa-book-open"></i>
                             </div>
                             <h4>16 Mini tananyag</h4>
-                            <p class="lead">Rövid, könnyen olvasható anyagok, amik egy párkapcsolati témát bontanak ki, és közben
+                            <p class="lead">Rövid, könnyen olvasható anyagok, amik egy párkapcsolati témát bontanak ki,
+                                és közben
                                 érthetően elmagyarázzák a pszichológiai hátteret is. Segítenek megérteni, mi miért
-                                történik köztetek – és benned. Interaktív tesztekkel segítünk feltárni az adott témához
-                                kapcsolódó működésedet.</p>
+                                történik köztetek – és benned.</p>
                             <div class="start-test-wrapper">
                                 <h2>PÉLDA</h2>
                                 <p class="test-btn-title">Mini tananyag: A romboló kommunikációs spirál felismerése</p>
@@ -265,6 +268,554 @@
         </div>
         </div>
     </section>
+
+
+
+    <!--       CAROUSELS      -->
+
+    <section id="carouselPos">
+        <div class="container text-center" id="carouselContainer">
+
+            <!--    MINI TANANYAGOK     -->
+            <div class="carousel-section py-4" id="carouselSection1">
+                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">A romboló kommunikációs
+                    spirál
+                    felismerése</h1>
+                <span class="close-btn">X</span>
+                <div id="imageCarousel1" class="carousel slide">
+
+                    <div class="carousel-inner" id="carouselInner">
+                        <div class="carousel-item active">
+                            <img src="img/carousel/tananyag/001.png" class="d-block w-100" alt="mini tananyagok kep">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/002.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/003.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/004.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/005.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/006.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/007.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/008.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/009.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/010.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/011.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/012.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/013.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/014.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/015.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/016.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/017.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/tananyag/018.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <button class="btn carousel-select-btn" id="tananyagEnd">Kész</button>
+                            <img src="img/carousel/tananyag/019.png" class="d-block w-100" alt="mini tananyagok kep"
+                                loading="lazy">
+                        </div>
+
+                    </div>
+
+                    <div class="navigation px-1">
+                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" data-bs-target="#imageCarousel1"
+                            data-bs-slide="prev" id="prevBtn0">
+                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" data-bs-target="#imageCarousel1"
+                            data-bs-slide="next" id="nextBtn0">
+                        <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                //reset carousel
+                document.getElementById("tananyagEnd").addEventListener("click", () => {
+                    hideAndScroll();
+                    const tanCarousel = document.getElementById('imageCarousel1');
+                    const tanItems = tanCarousel.querySelectorAll('.carousel-item');
+                    for (let i = 0; i < tanItems.length; i++) {
+                        if (i === 0) {
+                            tanItems[i].classList.add("active");
+                        } else {
+                            tanItems[i].classList.remove("active");
+                        }
+                    }
+                });
+            </script>
+
+
+            <!--     TEDDMEGMA     -->
+            <div class="carousel-section py-4" id="carouselSection4">
+                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">TeddMegMa feladat</h1>
+                <span class="close-btn">X</span>
+                <div id="imageCarousel2" class="carousel slide">
+
+                    <div class="carousel-inner" id="carouselInner2">
+
+                        <button class="btn carousel-select-btn" id="CourseSelect" style="display: none;">Ezt
+                            választom</button>
+
+                        <div class="carousel-item active">
+                            <img src="img/carousel/teddmegma/001.png" class="d-block w-100" alt="teddmegma kep">
+                        </div>
+                        <div class="carousel-item course">
+                            <img src="img/carousel/teddmegma/002.png" class="d-block w-100" alt="teddmegma kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item course">
+                            <img src="img/carousel/teddmegma/003.png" class="d-block w-100" alt="teddmegma kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item course">
+                            <img src="img/carousel/teddmegma/004.png" class="d-block w-100" alt="teddmegma kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item course">
+                            <img src="img/carousel/teddmegma/005.png" class="d-block w-100" alt="teddmegma kep"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item course">
+                            <img src="img/carousel/teddmegma/006.png" class="d-block w-100" alt="teddmegma kep"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+
+                    <div class="navigation px-1">
+                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn01"
+                            data-bs-target="#imageCarousel2" data-bs-slide="prev">
+                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn01"
+                            data-bs-target="#imageCarousel2" data-bs-slide="next">
+                    </div>
+                </div>
+                <!--gratulation slide-->
+                <div class="mt-4 mb-4" id="GreetingSlide" style="display: none;">
+                    <img src="img/carousel/teddmegma/final.png" class="d-block w-100 mx-auto" alt="teddmegma kep"
+                        style="margin-top: -20px;">
+                    <button class="btn carousel-select-btn" style="bottom: 120px; box-shadow: none;"
+                        id="resetTeddMegMaCarousel">Kész</button>
+                </div>
+            </div>
+
+            <script>
+
+                function setFirstCarouselItemActive(carouselInnerId) {
+                    const carouselInner = document.getElementById(carouselInnerId);
+                    if (!carouselInner) return;
+                    const items = carouselInner.querySelectorAll('.carousel-item');
+                    console.log(items);
+                    if (items.length > 0) {
+                        items[0].classList.add("active");
+                    }
+                    carouselInner.querySelectorAll('.carousel-item.course').forEach(item => item.classList.remove("active"));
+                }
+
+                // reset carousel
+                document.getElementById('resetTeddMegMaCarousel').addEventListener('click', () => {
+                    hideAndScroll();
+                    setFirstCarouselItemActive('carouselInner2');
+                    document.getElementById("GreetingSlide").style.display = "none";
+                    document.getElementById("GreetingSlide").classList.remove("fade-in");
+                    document.getElementById('imageCarousel2').style.display = "block";
+                    document.getElementById("CourseSelect").style.display = "none";
+                })
+
+                function FadeBtn() {
+                    const courseSelectBtn = document.getElementById("CourseSelect");
+                    let activeCourseItems = [
+                        ...document.querySelectorAll(".carousel-item.course.carousel-item-next.carousel-item-start"),
+                        ...document.querySelectorAll(".carousel-item.course.carousel-item-prev.carousel-item-end")
+                    ];
+                    if (activeCourseItems.length > 0) {
+                        if (courseSelectBtn) {
+                            courseSelectBtn.style.display = "none";
+                            setTimeout(() => {
+                                courseSelectBtn.style.display = "block";
+                                courseSelectBtn.classList.add("fade-in");
+                            }, 300);
+                            setTimeout(() => {
+                                courseSelectBtn.classList.remove("fade-in");
+                            }, 1000);
+                        }
+                    }
+                    else {
+                        courseSelectBtn.style.display = "none";
+                    }
+                }
+
+                // Fade in effect for CourseSelect button
+                document.getElementById('prevBtn01').addEventListener("click", () => {
+                    FadeBtn();
+                });
+                document.getElementById('nextBtn01').addEventListener("click", () => {
+                    FadeBtn();
+                });
+
+                // Swipe gesture
+                let touchStartX1 = 0;
+                let touchEndX1 = 0;
+                const actualSlider = document.getElementById('carouselSection4');
+
+                actualSlider.addEventListener('touchstart', (e) => {
+                    touchStartX1 = e.changedTouches[0].screenX;
+                });
+
+                actualSlider.addEventListener('touchend', (e) => {
+                    touchEndX1 = e.changedTouches[0].screenX;
+                    if (touchEndX1 < touchStartX1 - 50) {
+                        FadeBtn();
+                    }
+                    if (touchEndX1 > touchStartX1 + 50) {
+                        FadeBtn();
+                    }
+                });
+
+                //reveal greeting slide
+                document.getElementById('CourseSelect').addEventListener("click", () => {
+                    const greetingSlide = document.getElementById("GreetingSlide");
+                    greetingSlide.style.display = "block";
+                    greetingSlide.classList.add("fade-in");
+                    document.getElementById('imageCarousel2').style.display = "none";
+                });
+            </script>
+
+
+
+
+            <!--    PÁRKAPCSOLATI TEST   -->
+            <div class="carousel-section py-4" id="carouselSection3">
+                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">Kommunikációs mintáid</h1>
+                <span class="close-btn">X</span>
+
+                <!--    open slide    -->
+                <div class="carousel-wrapper" id="testOpenSlide">
+                    <div class="p-3 mt-3">
+                        <h1 class="card-title mt-3">Teszt</h1>
+                        <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
+                            kapcsolatotok felbomlásához vezet</p>
+                            <button class="btn btn-center" id="startTestBtn">Elkezdem a
+                            tesztet!</button>
+                        <img src="img/carousel/test/hellboy.png" class="test-image" style="padding-top: 30px"
+                            alt="ördög">
+                    </div>
+                </div>
+                <!--    test slides   -->
+                <div class="carousel-wrapper" id="testWrapper" style="display: none;">
+                    <div class="carousel">
+                        <div class="slider" id="testSlider">
+                            <!--    JS rendering cards  -->
+                        </div>
+                        <div class="navigation">
+                            <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn">
+                            <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn">
+                            <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
+                        </div>
+                    </div>
+
+                </div>
+                <!--    next slide    -->
+                <div id="imageCarousel4" class="carousel slide" style="display: none;">
+                    <div class="start-test-cover">
+                        <p class="test-description" style="margin-top: 50px; text-align: left;">Valószinűleg időnként
+                            kritikusan, védekezően, vagy elzárkózva reagálsz a feszültségekre - és talán már
+                            észrevetted, hogy ezek a minták nem előrevisznek,hanem eltávolitanak. A jó hír? Az, hogy már
+                            észrevetted ezt, azt jelzi: van benned önreflexió. És ez az első lépés a változáshoz.</p>
+                        <button class="btn btn-bottom" id="nextslide1">Tovább</button>
+                    </div>
+                </div>
+                <!--    next slide    -->
+                <div id="imageCarousel5" class="carousel slide" style="display: none;">
+                    <div class="start-test-cover">
+                        <p class="test-description" style="font-size: 19px;">Ezek a minták nem sorsszerűek - hanem
+                            tanultak, és mint ilyenek: át is írhatók. Ha tudatosítod, mikor bukkannak fel benned ezek a
+                            reakciók, és az önismereti gyakorlatok és a TeddMegMa feladatok segítségével dolgoztok ezek
+                            megáltoztatásán, a kapcsolatotok is visszatalálhat az intimitáshoz.</p>
+                        <img src="img/carousel/test/visszatalal.png" class="test-img-bottom" loading="lazy">
+                        <button class="btn btn-bottom" id="nextslide2">Tovább</button>
+                    </div>
+                </div>
+                <!--    final slide    -->
+                <div id="imageCarousel6" class="carousel slide" style="display: none;">
+                    <div class="start-test-cover">
+                        <h1 class="card-hl mt-5 mb-2" style="font-weight: bold; font-size: 45px !important;">Egy mondat
+                            magamnak</h1>
+                        <textarea class="card-answer mt-5"
+                            placeholder="Ide be tudod magadnak írni, amit esetleg szeretnél megváltoztatni a kommunikációs mintáitokkal kapcsolatban..."
+                            onfocus="this.placeholder = ''"></textarea>
+                        <button class="btn btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
+                    </div>
+                </div>
+                <!--    progress bar    -->
+                <div class="progress-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="progress-label">Teszt</span>
+                            </div>
+                            <div class="col-8">
+                                <div class="progress-bar-test" id="progressBarTest">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <span class="progress-label">Egy mondat</span>
+                            </div>
+                        </div>
+                        <div class="progress-header">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--    ÖNISMERETI GYAK - with class control  -->
+            <div class="carousel-section py-4" id="carouselSection2">
+                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">Miért nehéz kimondanom:
+                    “Igazad
+                    van”</h1>
+                <span class="close-btn">X</span>
+
+                <!-- gyakorlat carousel -->
+                <div id="gyakCarousel">
+                    <div class="carousel-wrapper" style="height: 650px !important;">
+                        <div class="carousel">
+                            <div class="slider">
+                                <div class="carousel-card" style="background-color: var(--carousel-option-bg);">
+                                    <h2 class="card-hl mt-5 text-center" style="font-size: 36px !important">Miért nehéz
+                                        kimondanom:
+                                    </h2>
+                                    <p class="answer-block">„Sajnálom,<br>igazad van"?</p>
+                                    <img class="card-image-bottom" src="./img/carousel/answer/woman.png"
+                                        alt="Answer Image">
+                                </div>
+                                <div class="carousel-card">
+                                    <h2 class="card-hl"
+                                        style="font-size: 42px !important; margin-top: 150px; font-weight: bold;">
+                                        Belső ellenállás gyakorlat</h2>
+                                    <p class="test-description">Cél: Feltérképezni, miért vált egy egyszerű mondat belső
+                                        tiltássá.
+                                    </p>
+                                </div>
+                                <div class="carousel-card">
+                                    <h2 class="card-hl">Mi volt az a pillanat, amikor először megfordult a fejedben,
+                                        hogy
+                                        talán igaza van - és mit éreztél ekkor?"
+                                    </h2>
+                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."
+                                        onfocus="this.placeholder = ''"></textarea>
+                                    <div class="card-footer">Kérdés 1 / 5</div>
+                                </div>
+                                <div class="carousel-card">
+                                    <h2 class="card-hl">Mi lett volna a veszteség, ha akkor ott kimondod: „igazad van"?
+                                    </h2>
+                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."
+                                        onfocus="this.placeholder = ''"></textarea>
+                                    <div class="card-footer">Kérdés 2 / 5</div>
+                                </div>
+                                <div class="carousel-card">
+                                    <h2 class="card-hl">Honnan ismerős ez az érzés? Volt-e olyan gyerekkori vagy korábbi
+                                        élményed, ahol a hibázás megalázással, gyengeséggel vagy fájdalommal járt?</h2>
+                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."
+                                        onfocus="this.placeholder = ''"></textarea>
+                                    <div class="card-footer">Kérdés 3 / 5</div>
+                                </div>
+                                <div class="carousel-card">
+                                    <h2 class="card-hl" style="font-size: 20px !important;">Mit jelent számodra az, ha
+                                        tudod, hogy a párodnak igaza van és ki is mondod neki „igazad van"? Azt, hogy
+                                        lemondasz valamiről? Hogy alul maradsz? Hogy akkor te kevesebb vagy, mint ő?
+                                    </h2>
+                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."
+                                        onfocus="this.placeholder = ''"></textarea>
+                                    <div class="card-footer">Kérdés 4 / 5</div>
+                                </div>
+                                <div class="carousel-card">
+                                    <h2 class="card-hl">Mi változna kettőtök között, ha egyszer tényleg kimondanád:
+                                        „Sajnálom, ebben neked volt igazad"?</h2>
+                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."
+                                        onfocus="this.placeholder = ''"></textarea>
+                                    <div class="card-footer">Kérdés 5 / 5</div>
+                                    <button class="btn btn-bottom" id="nextsCarousel">Tovább</button>
+                                </div>
+                            </div>
+                            <div class="navigation">
+                                <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn">
+                                <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn">
+                                <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="progress-label">Önismereti<br>gyakorlatok</span>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress-bar-test">
+                                        <!-- Progress segments will be generated dynamically -->
+                                        <img class="progress-arrow" src="./img/carousel/test/arrow_empty.png">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <span class="progress-label">Séma<br>minták</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- image carousel -->
+                <div id="imageCarouselGyak" class="carousel slide" style="display: none;">
+                    <div class="carousel-inner" id="carouselInner">
+                        <div class="carousel-item active">
+                            <img src="img/carousel/answer/001.png" class="d-block w-100" alt="önismereti gyakorlat">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/answer/002.png" class="d-block w-100" alt="önismereti gyakorlat"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/answer/003.png" class="d-block w-100" alt="önismereti gyakorlat"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/answer/004.png" class="d-block w-100" alt="önismereti gyakorlat"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/answer/005.png" class="d-block w-100" alt="önismereti gyakorlat"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/answer/006.png" class="d-block w-100" alt="önismereti gyakorlat"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/answer/007.png" class="d-block w-100" alt="önismereti gyakorlat"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/carousel/answer/008.png" class="d-block w-100" alt="önismereti gyakorlat"
+                                loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="start-test-cover pt-4 mt-0" style="height: 720px;">
+                                <h1 class="card-hl mb-2"
+                                    style="font-weight: bold; font-size: 45px !important; margin-top: 110px;">Egy mondat
+                                    magamnak</h1>
+                                <textarea class="card-answer"
+                                    placeholder="Itt feljegyezheted, ha a gyakorlat közben rájöttél valamire a működésed kapcsán."
+                                    onfocus="this.placeholder = ''"></textarea>
+                                <button class="btn btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation px-1">
+                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn"
+                            data-bs-target="#imageCarouselGyak" data-bs-slide="prev" id="prevBtnGyak">
+                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn"
+                            data-bs-target="#imageCarouselGyak" data-bs-slide="next" id="nextBtnGyak">
+                    </div>
+                    <script>
+                        // Disable next-btn when last carousel-item is active
+                        function updateGyakCarouselNav() {
+                            const carousel = document.getElementById('imageCarouselGyak');
+                            const items = carousel.querySelectorAll('.carousel-item');
+                            const nextBtn = document.getElementById('nextBtnGyak');
+                            const prevBtn = document.getElementById('prevBtnGyak');
+                            const lastIdx = items.length - 1;
+                            const activeIdx = Array.from(items).findIndex(item => item.classList.contains('active'));
+                            // Disable next if last active
+                            if (activeIdx === lastIdx) {
+                                nextBtn.classList.add('disabled');
+                                nextBtn.style.pointerEvents = 'none';
+                                nextBtn.style.opacity = '0';
+                            } else {
+                                nextBtn.classList.remove('disabled');
+                                nextBtn.style.pointerEvents = '';
+                                nextBtn.style.opacity = '1';
+                            }
+                            // Optionally disable prev if first active
+                            if (activeIdx === 0) {
+                                prevBtn.classList.add('disabled');
+                                prevBtn.style.pointerEvents = 'none';
+                                prevBtn.style.opacity = '0';
+                            } else {
+                                prevBtn.classList.remove('disabled');
+                                prevBtn.style.pointerEvents = '';
+                                prevBtn.style.opacity = '1';
+                            }
+                        }
+                        document.getElementById('imageCarouselGyak').addEventListener('slid.bs.carousel', updateGyakCarouselNav);
+                        // Initial state
+                        updateGyakCarouselNav();
+                    </script>
+                </div>
+
+            </div>
+
+            <script>
+                //go forward to the image carousel
+                document.getElementById("nextsCarousel").addEventListener("click", () => {
+                    document.getElementById("gyakCarousel").style.display = "none";
+                    document.getElementById("imageCarouselGyak").classList.add("fade-in2");
+                    document.getElementById("imageCarouselGyak").style.display = "block";
+                });
+            </script>
+
+
+
+        </div>
+    </section>
+
 
     <!-- sikersztori -->
     <section class="pb-4">
@@ -681,510 +1232,6 @@
         </div>
     </section>
 
-
-
-    <!--       CAROUSELS      -->
-
-    <section id="carouselPos">
-        <div class="container text-center" id="carouselContainer">
-
-            <!--    MINI TANANYAGOK     -->
-            <div class="carousel-section py-4" id="carouselSection1">
-                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">A romboló kommunikációs
-                    spirál
-                    felismerése</h1>
-                <span class="close-btn">X</span>
-                <div id="imageCarousel1" class="carousel slide">
-
-                    <div class="carousel-inner" id="carouselInner">
-                        <div class="carousel-item active">
-                            <img src="img/carousel/tananyag/001.png" class="d-block w-100" alt="mini tananyagok kep">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/002.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/003.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/004.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/005.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/006.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/007.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/008.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/009.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/010.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/011.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/012.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/013.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/014.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/015.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/016.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/017.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/tananyag/018.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <button class="btn carousel-select-btn" id="tananyagEnd">Kész</button>
-                            <img src="img/carousel/tananyag/019.png" class="d-block w-100" alt="mini tananyagok kep"
-                                loading="lazy">
-                        </div>
-
-                    </div>
-
-                    <div class="navigation px-1">
-                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" data-bs-target="#imageCarousel1"
-                            data-bs-slide="prev" id="prevBtn0">
-                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" data-bs-target="#imageCarousel1"
-                            data-bs-slide="next" id="nextBtn0">
-                        <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
-                    </div>
-                </div>
-            </div>
-
-
-            <script>
-                //reset carousel
-                document.getElementById("tananyagEnd").addEventListener("click", () => {
-                    hideAndScroll();
-                    const tanCarousel = document.getElementById('imageCarousel1');
-                    const tanItems = tanCarousel.querySelectorAll('.carousel-item');
-                    for (let i = 0; i < tanItems.length; i++) {
-                        if (i === 0) {
-                            tanItems[i].classList.add("active");
-                        } else {
-                            tanItems[i].classList.remove("active");
-                        }
-                    }
-                });
-            </script>
-
-
-            <!--     TEDDMEGMA     -->
-            <div class="carousel-section py-4" id="carouselSection4">
-                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">TeddMegMa feladat</h1>
-                <span class="close-btn">X</span>
-                <div id="imageCarousel2" class="carousel slide">
-
-                    <div class="carousel-inner" id="carouselInner2">
-
-                        <button class="btn carousel-select-btn" id="CourseSelect" style="display: none;">Ezt
-                            választom</button>
-
-                        <div class="carousel-item active">
-                            <img src="img/carousel/teddmegma/001.png" class="d-block w-100" alt="teddmegma kep">
-                        </div>
-                        <div class="carousel-item course">
-                            <img src="img/carousel/teddmegma/002.png" class="d-block w-100" alt="teddmegma kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item course">
-                            <img src="img/carousel/teddmegma/003.png" class="d-block w-100" alt="teddmegma kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item course">
-                            <img src="img/carousel/teddmegma/004.png" class="d-block w-100" alt="teddmegma kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item course">
-                            <img src="img/carousel/teddmegma/005.png" class="d-block w-100" alt="teddmegma kep"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item course">
-                            <img src="img/carousel/teddmegma/006.png" class="d-block w-100" alt="teddmegma kep"
-                                loading="lazy">
-                        </div>
-                    </div>
-
-
-                    <div class="navigation px-1">
-                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn01"
-                            data-bs-target="#imageCarousel2" data-bs-slide="prev">
-                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn01"
-                            data-bs-target="#imageCarousel2" data-bs-slide="next">
-                    </div>
-                </div>
-                <!--gratulation slide-->
-                <div class="mt-4 mb-4" id="GreetingSlide" style="display: none;">
-                    <img src="img/carousel/teddmegma/final.png" class="d-block w-100 mx-auto" alt="teddmegma kep"
-                        style="margin-top: -20px;">
-                    <button class="btn carousel-select-btn" style="bottom: 120px; box-shadow: none;"
-                        id="resetTeddMegMaCarousel">Kész</button>
-                </div>
-            </div>
-
-            <script>
-
-                function setFirstCarouselItemActive(carouselInnerId) {
-                    const carouselInner = document.getElementById(carouselInnerId);
-                    if (!carouselInner) return;
-                    const items = carouselInner.querySelectorAll('.carousel-item');
-                    console.log(items);
-                    if (items.length > 0) {
-                        items[0].classList.add("active");
-                    }
-                    carouselInner.querySelectorAll('.carousel-item.course').forEach(item => item.classList.remove("active"));
-                }
-
-                // reset carousel
-                document.getElementById('resetTeddMegMaCarousel').addEventListener('click', () => {
-                    hideAndScroll();
-                    setFirstCarouselItemActive('carouselInner2');
-                    document.getElementById("GreetingSlide").style.display = "none";
-                    document.getElementById("GreetingSlide").classList.remove("fade-in");
-                    document.getElementById('imageCarousel2').style.display = "block";
-                    document.getElementById("CourseSelect").style.display = "none";
-                })
-
-                function FadeBtn() {
-                    const courseSelectBtn = document.getElementById("CourseSelect");
-                    let activeCourseItems = [
-                        ...document.querySelectorAll(".carousel-item.course.carousel-item-next.carousel-item-start"),
-                        ...document.querySelectorAll(".carousel-item.course.carousel-item-prev.carousel-item-end")
-                    ];
-                    if (activeCourseItems.length > 0) {
-                        if (courseSelectBtn) {
-                            courseSelectBtn.style.display = "none";
-                            setTimeout(() => {
-                                courseSelectBtn.style.display = "block";
-                                courseSelectBtn.classList.add("fade-in");
-                            }, 300);
-                            setTimeout(() => {
-                                courseSelectBtn.classList.remove("fade-in");
-                            }, 1000);
-                        }
-                    }
-                    else {
-                        courseSelectBtn.style.display = "none";
-                    }
-                }
-
-                // Fade in effect for CourseSelect button
-                document.getElementById('prevBtn01').addEventListener("click", () => {
-                    FadeBtn();
-                });
-                document.getElementById('nextBtn01').addEventListener("click", () => {
-                    FadeBtn();
-                });
-
-                // Swipe gesture
-                let touchStartX1 = 0;
-                let touchEndX1 = 0;
-                const actualSlider = document.getElementById('carouselSection4');
-
-                actualSlider.addEventListener('touchstart', (e) => {
-                    touchStartX1 = e.changedTouches[0].screenX;
-                });
-
-                actualSlider.addEventListener('touchend', (e) => {
-                    touchEndX1 = e.changedTouches[0].screenX;
-                    if (touchEndX1 < touchStartX1 - 50) {
-                        FadeBtn();
-                    }
-                    if (touchEndX1 > touchStartX1 + 50) {
-                        FadeBtn();
-                    }
-                });
-
-                //reveal greeting slide
-                document.getElementById('CourseSelect').addEventListener("click", () => {
-                    const greetingSlide = document.getElementById("GreetingSlide");
-                    greetingSlide.style.display = "block";
-                    greetingSlide.classList.add("fade-in");
-                    document.getElementById('imageCarousel2').style.display = "none";
-                });
-            </script>
-
-
-
-
-            <!--    PÁRKAPCSOLATI TEST   -->
-            <div class="carousel-section py-4" id="carouselSection3">
-                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">Kommunikációs mintáid</h1>
-                <span class="close-btn">X</span>
-
-                <!--    open slide    -->
-                <div class="carousel-wrapper" id="testOpenSlide">
-                    <div class="p-3 mt-3">
-                        <h1 class="card-title mt-3">Teszt</h1>
-                        <p class="test-description">4 kommunikációs minta, ami ha jelen van nagy valószinúséggel a
-                            kapcsolatotok felbomlásához vezet</p>
-                        <img src="img/carousel/test/hellboy.png" class="test-image" style="padding-top: 30px"
-                            alt="ördög">
-                        <button class="btn btn-bottom" id="startTestBtn">Elkezdem a
-                            tesztet!</button>
-                    </div>
-                </div>
-                <!--    test slides   -->
-                <div class="carousel-wrapper" id="testWrapper" style="display: none;">
-                    <div class="carousel">
-                        <div class="slider" id="testSlider">
-                            <!--    JS rendering cards  -->
-                        </div>
-                        <div class="navigation">
-                            <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn">
-                            <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn" id="nextBtn">
-                            <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
-                        </div>
-                    </div>
-
-                </div>
-                <!--    next slide    -->
-                <div id="imageCarousel4" class="carousel slide" style="display: none;">
-                    <div class="start-test-cover">
-                        <p class="test-description" style="margin-top: 50px; text-align: left;">Valószinűleg időnként
-                            kritikusan, védekezően, vagy elzárkózva reagálsz a feszültségekre - és talán már
-                            észrevetted, hogy ezek a minták nem előrevisznek,hanem eltávolitanak. A jó hír? Az, hogy már
-                            észrevetted ezt, azt jelzi: van benned önreflexió. És ez az első lépés a változáshoz.</p>
-                        <button class="btn btn-bottom" id="nextslide1">Tovább</button>
-                    </div>
-                </div>
-                <!--    next slide    -->
-                <div id="imageCarousel5" class="carousel slide" style="display: none;">
-                    <div class="start-test-cover">
-                        <p class="test-description" style="font-size: 19px;">Ezek a minták nem sorsszerűek - hanem
-                            tanultak, és mint ilyenek: át is írhatók. Ha tudatosítod, mikor bukkannak fel benned ezek a
-                            reakciók, és az önismereti gyakorlatok és a TeddMegMa feladatok segítségével dolgoztok ezek
-                            megáltoztatásán, a kapcsolatotok is visszatalálhat az intimitáshoz.</p>
-                        <img src="img/carousel/test/visszatalal.png" class="test-img-bottom" loading="lazy">
-                        <button class="btn btn-bottom" id="nextslide2">Tovább</button>
-                    </div>
-                </div>
-                <!--    final slide    -->
-                <div id="imageCarousel6" class="carousel slide" style="display: none;">
-                    <div class="start-test-cover">
-                        <h1 class="card-hl mt-5 mb-2" style="font-weight: bold; font-size: 45px !important;">Egy mondat
-                            magamnak</h1>
-                        <textarea class="card-answer mt-5"
-                            placeholder="Ide be tudod magadnak írni, amit esetleg szeretnél megváltoztatni a kommunikációs mintáitokkal kapcsolatban..."></textarea>
-                        <button class="btn btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
-                    </div>
-                </div>
-                <!--    progress bar    -->
-                <div class="progress-container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-2">
-                                <span class="progress-label">Teszt</span>
-                            </div>
-                            <div class="col-8">
-                                <div class="progress-bar-test" id="progressBarTest">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <span class="progress-label">Egy mondat</span>
-                            </div>
-                        </div>
-                        <div class="progress-header">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!--    ÖNISMERETI GYAK - with class control  -->
-            <div class="carousel-section py-4" id="carouselSection2">
-                <h1 class="mb-4 w-75 m-auto text-center" style="color: var(--primary-teal)">Miért nehéz kimondanom:
-                    “Igazad
-                    van”</h1>
-                <span class="close-btn">X</span>
-
-                <!-- gyakorlat carousel -->
-                <div id="gyakCarousel">
-                    <div class="carousel-wrapper" style="height: 650px !important;">
-                        <div class="carousel">
-                            <div class="slider">
-                                <div class="carousel-card" style="background-color: var(--carousel-option-bg);">
-                                    <h2 class="card-hl mt-5 text-center" style="font-size: 36px !important">Miért nehéz
-                                        kimondanom:
-                                    </h2>
-                                    <p class="answer-block">„Sajnálom,<br>igazad van"?</p>
-                                    <img class="card-image-bottom" src="./img/carousel/answer/woman.png"
-                                        alt="Answer Image">
-                                </div>
-                                <div class="carousel-card">
-                                    <h2 class="card-hl"
-                                        style="font-size: 42px !important; margin-top: 150px; font-weight: bold;">
-                                        Belső ellenállás gyakorlat</h2>
-                                    <p class="test-description">Cél: Feltérképezni, miért vált egy egyszerű mondat belső
-                                        tiltássá.
-                                    </p>
-                                </div>
-                                <div class="carousel-card">
-                                    <h2 class="card-hl">Mi volt az a pillanat, amikor először megfordult a fejedben,
-                                        hogy
-                                        talán igaza van - és mit éreztél ekkor?"
-                                    </h2>
-                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
-                                    <div class="card-footer">Kérdés 1 / 5</div>
-                                </div>
-                                <div class="carousel-card">
-                                    <h2 class="card-hl">Mi lett volna a veszteség, ha akkor ott kimondod: „igazad van"?
-                                    </h2>
-                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
-                                    <div class="card-footer">Kérdés 2 / 5</div>
-                                </div>
-                                <div class="carousel-card">
-                                    <h2 class="card-hl">Honnan ismerős ez az érzés? Volt-e olyan gyerekkori vagy korábbi
-                                        élményed, ahol a hibázás megalázással, gyengeséggel vagy fájdalommal járt?</h2>
-                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
-                                    <div class="card-footer">Kérdés 3 / 5</div>
-                                </div>
-                                <div class="carousel-card">
-                                    <h2 class="card-hl" style="font-size: 20px !important;">Mit jelent számodra az, ha
-                                        tudod, hogy a párodnak igaza van és ki is mondod neki „igazad van"? Azt, hogy
-                                        lemondasz valamiről? Hogy alul maradsz? Hogy akkor te kevesebb vagy, mint ő?
-                                    </h2>
-                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
-                                    <div class="card-footer">Kérdés 4 / 5</div>
-                                </div>
-                                <div class="carousel-card">
-                                    <h2 class="card-hl">Mi változna kettőtök között, ha egyszer tényleg kimondanád:
-                                        „Sajnálom, ebben neked volt igazad"?</h2>
-                                    <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
-                                    <div class="card-footer">Kérdés 5 / 5</div>
-                                    <button class="btn btn-bottom" id="nextsCarousel">Tovább</button>
-                                </div>
-                            </div>
-                            <div class="navigation">
-                                <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn">
-                                <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn">
-                                <img src="img/carousel/close.png" class="nav-btn1 end-btn" style="display: none">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-2">
-                                    <span class="progress-label">Önismereti<br>gyakorlatok</span>
-                                </div>
-                                <div class="col-8">
-                                    <div class="progress-bar-test">
-                                        <!-- Progress segments will be generated dynamically -->
-                                        <img class="progress-arrow" src="./img/carousel/test/arrow_empty.png">
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <span class="progress-label">Séma<br>minták</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- image carousel -->
-                <div id="imageCarouselGyak" class="carousel slide" style="display: none;">
-                    <div class="carousel-inner" id="carouselInner">
-                        <div class="carousel-item active">
-                            <img src="img/carousel/answer/001.png" class="d-block w-100" alt="önismereti gyakorlat">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/answer/002.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/answer/003.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/answer/004.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/answer/005.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/answer/006.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/answer/007.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/carousel/answer/008.png" class="d-block w-100" alt="önismereti gyakorlat"
-                                loading="lazy">
-                        </div>
-                        <div class="carousel-item">
-                            <div class="start-test-cover pt-4 mt-0" style="height: 720px;">
-                                <h1 class="card-hl mb-2"
-                                    style="font-weight: bold; font-size: 45px !important; margin-top: 110px;">Egy mondat
-                                    magamnak</h1>
-                                <textarea class="card-answer" placeholder="Írd be a mondatod..."></textarea>
-                                <button class="btn btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="navigation px-1">
-                        <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn"
-                            data-bs-target="#imageCarouselGyak" data-bs-slide="prev">
-                        <img src="img/carousel/arrow_r.png" class="nav-btn1 next-btn"
-                            data-bs-target="#imageCarouselGyak" data-bs-slide="next">
-                    </div>
-                </div>
-
-            </div>
-
-            <script>
-                //go forward to the image carousel
-                document.getElementById("nextsCarousel").addEventListener("click", () => {
-                    document.getElementById("gyakCarousel").style.display = "none";
-                    document.getElementById("imageCarouselGyak").classList.add("fade-in2");
-                    document.getElementById("imageCarouselGyak").style.display = "block";
-                });
-            </script>
-
-
-
-        </div>
-    </section>
 
 
     <!-- FOOTER -->

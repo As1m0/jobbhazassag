@@ -114,6 +114,7 @@ body {
 .start-test-btn {
     height: 50px;
     border: none;
+    font-size: 1.25rem;
     font-weight: bold;
     width: 150px;
     border-radius: 15px;
@@ -937,7 +938,21 @@ body {
     cursor: pointer;
 }
 
-.btn-bottom:hover, .carousel-select-btn:hover {
+.btn-center{
+    font-family: "Josefin Sans", sans-serif !important;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: var(--carousel-border);
+    color: var(--carousel-hl);
+    border: none;
+    width: 90%;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.btn-bottom:hover, .carousel-select-btn:hover, .btn-center:hover {
     background-color: #f3ce8e;
 }
 
