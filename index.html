@@ -745,6 +745,7 @@
                                 loading="lazy">
                         </div>
                         <div class="carousel-item">
+                            <button class="btn carousel-select-btn" id="tananyagEnd">Kész</button>
                             <img src="img/carousel/tananyag/019.png" class="d-block w-100" alt="mini tananyagok kep"
                                 loading="lazy">
                         </div>
@@ -762,7 +763,21 @@
             </div>
 
 
-
+            <script>
+                //reset carousel
+                document.getElementById("tananyagEnd").addEventListener("click", () => {
+                    hideAndScroll();
+                    const tanCarousel = document.getElementById('imageCarousel1');
+                    const tanItems = tanCarousel.querySelectorAll('.carousel-item');
+                    for (let i = 0; i < tanItems.length; i++) {
+                        if (i === 0) {
+                            tanItems[i].classList.add("active");
+                        } else {
+                            tanItems[i].classList.remove("active");
+                        }
+                    }
+                });
+            </script>
 
 
             <!--     TEDDMEGMA     -->
@@ -771,9 +786,9 @@
                 <span class="close-btn">X</span>
                 <div id="imageCarousel2" class="carousel slide">
 
-                    <div class="carousel-inner" id="carouselInner">
+                    <div class="carousel-inner" id="carouselInner2">
 
-                        <button class="carousel-select-btn" id="CourseSelect" style="display: none;">Ezt
+                        <button class="btn carousel-select-btn" id="CourseSelect" style="display: none;">Ezt
                             választom</button>
 
                         <div class="carousel-item active">
@@ -801,6 +816,7 @@
                         </div>
                     </div>
 
+
                     <div class="navigation px-1">
                         <img src="img/carousel/arrow_l.png" class="nav-btn1 prev-btn" id="prevBtn01"
                             data-bs-target="#imageCarousel2" data-bs-slide="prev">
@@ -812,11 +828,33 @@
                 <div class="mt-4 mb-4" id="GreetingSlide" style="display: none;">
                     <img src="img/carousel/teddmegma/final.png" class="d-block w-100 mx-auto" alt="teddmegma kep"
                         style="margin-top: -20px;">
-                    <button class="carousel-select-btn" style="bottom: 120px;" onclick="hideAndScroll()">Kész</button>
+                    <button class="btn carousel-select-btn" style="bottom: 120px; box-shadow: none;"
+                        id="resetTeddMegMaCarousel">Kész</button>
                 </div>
             </div>
 
             <script>
+
+                function setFirstCarouselItemActive(carouselInnerId) {
+                    const carouselInner = document.getElementById(carouselInnerId);
+                    if (!carouselInner) return;
+                    const items = carouselInner.querySelectorAll('.carousel-item');
+                    console.log(items);
+                    if (items.length > 0) {
+                        items[0].classList.add("active");
+                    }
+                    carouselInner.querySelectorAll('.carousel-item.course').forEach(item => item.classList.remove("active"));
+                }
+
+                // reset carousel
+                document.getElementById('resetTeddMegMaCarousel').addEventListener('click', () => {
+                    hideAndScroll();
+                    setFirstCarouselItemActive('carouselInner2');
+                    document.getElementById("GreetingSlide").style.display = "none";
+                    document.getElementById("GreetingSlide").classList.remove("fade-in");
+                    document.getElementById('imageCarousel2').style.display = "block";
+                    document.getElementById("CourseSelect").style.display = "none";
+                })
 
                 function FadeBtn() {
                     const courseSelectBtn = document.getElementById("CourseSelect");
@@ -893,7 +931,7 @@
                             kapcsolatotok felbomlásához vezet</p>
                         <img src="img/carousel/test/hellboy.png" class="test-image" style="padding-top: 30px"
                             alt="ördög">
-                        <button class="btn btn-light btn-bottom" id="startTestBtn">Elkezdem a
+                        <button class="btn btn-bottom" id="startTestBtn">Elkezdem a
                             tesztet!</button>
                     </div>
                 </div>
@@ -918,7 +956,7 @@
                             kritikusan, védekezően, vagy elzárkózva reagálsz a feszültségekre - és talán már
                             észrevetted, hogy ezek a minták nem előrevisznek,hanem eltávolitanak. A jó hír? Az, hogy már
                             észrevetted ezt, azt jelzi: van benned önreflexió. És ez az első lépés a változáshoz.</p>
-                        <button class="btn btn-light btn-bottom" id="nextslide1">Tovább</button>
+                        <button class="btn btn-bottom" id="nextslide1">Tovább</button>
                     </div>
                 </div>
                 <!--    next slide    -->
@@ -929,7 +967,7 @@
                             reakciók, és az önismereti gyakorlatok és a TeddMegMa feladatok segítségével dolgoztok ezek
                             megáltoztatásán, a kapcsolatotok is visszatalálhat az intimitáshoz.</p>
                         <img src="img/carousel/test/visszatalal.png" class="test-img-bottom" loading="lazy">
-                        <button class="btn btn-light btn-bottom" id="nextslide2">Tovább</button>
+                        <button class="btn btn-bottom" id="nextslide2">Tovább</button>
                     </div>
                 </div>
                 <!--    final slide    -->
@@ -937,8 +975,9 @@
                     <div class="start-test-cover">
                         <h1 class="card-hl mt-5 mb-2" style="font-weight: bold; font-size: 45px !important;">Egy mondat
                             magamnak</h1>
-                        <textarea class="card-answer" placeholder="Írd be a mondatod..."></textarea>
-                        <button class="btn btn-light btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
+                        <textarea class="card-answer mt-5"
+                            placeholder="Ide be tudod magadnak írni, amit esetleg szeretnél megváltoztatni a kommunikációs mintáitokkal kapcsolatban..."></textarea>
+                        <button class="btn btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
                     </div>
                 </div>
                 <!--    progress bar    -->
@@ -1025,7 +1064,7 @@
                                         „Sajnálom, ebben neked volt igazad"?</h2>
                                     <textarea class="card-answer" placeholder="Írd be a válaszod..."></textarea>
                                     <div class="card-footer">Kérdés 5 / 5</div>
-                                    <button class="btn btn-light btn-bottom" id="nextsCarousel">Tovább</button>
+                                    <button class="btn btn-bottom" id="nextsCarousel">Tovább</button>
                                 </div>
                             </div>
                             <div class="navigation">
@@ -1090,13 +1129,12 @@
                                 loading="lazy">
                         </div>
                         <div class="carousel-item">
-                            <div class="start-test-cover pt-4 mt-0" style="height: 90vh;">
+                            <div class="start-test-cover pt-4 mt-0" style="height: 720px;">
                                 <h1 class="card-hl mb-2"
                                     style="font-weight: bold; font-size: 45px !important; margin-top: 110px;">Egy mondat
                                     magamnak</h1>
                                 <textarea class="card-answer" placeholder="Írd be a mondatod..."></textarea>
-                                <button class="btn btn-light btn-bottom" id="finalBtn"
-                                    onclick="hideAndScroll()">Kész</button>
+                                <button class="btn btn-bottom" id="finalBtn" onclick="hideAndScroll()">Kész</button>
                             </div>
                         </div>
                     </div>
@@ -1111,6 +1149,7 @@
             </div>
 
             <script>
+                //go forward to the image carousel
                 document.getElementById("nextsCarousel").addEventListener("click", () => {
                     document.getElementById("gyakCarousel").style.display = "none";
                     document.getElementById("imageCarouselGyak").classList.add("fade-in2");
@@ -1228,14 +1267,11 @@
                 prevBtn.style.opacity = current === first ? '0' : '1';
                 nextBtn.style.display = current === last ? 'none' : 'block';
             }
-
             updateButtons();
-
             carouselElement.addEventListener('slid.bs.carousel', updateButtons);
         }
 
         setupCarouselControls('#imageCarousel1', '#prevBtn0', '#nextBtn0');
-
         setupCarouselControls('#imageCarousel2', '#prevBtn01', '#nextBtn01');
     </script>
 </body>

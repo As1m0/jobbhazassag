@@ -69,26 +69,39 @@ results = [
         img: './img/carousel/test/rozsa.png'
     },
     {
-        headline: "A négy lovas bejáratos hozzád",
+        headline: "A felismerés az első lépés",
         text: "A konfliktus nálad gyakran megszólalás helyett hallgatást, meghallgatás helyett támadást hoz. Lehet, hogy nem tanultál mást. Lehet, hogy fáradt vagy. De ez a felismerés nem a vég,  hanem egy új működés kezdete lehet. Fontos, hogy használd a kommunikációs önismereti és TeddMegMa gyakorlatokat, akár többször is ugyanazt. Ezek segítenek abban, hogy a kommunikáció ne egy olyan terület legyen, ami önmagában gyilkolja a kapcsolatotokat.",
         img: './img/carousel/test/utelagazas.png'
     }
 ];
 
-function getResult(score){
-    if (score <= 10) {
-        return results[0];
+function getResult(score) {
+    if (score <= 12) {
+        return results[2];
     } else if (13 <= score && score <= 17) {
         return results[1];
     } else {
-        return results[2];
+        return results[0];
     }
 }
 
-
-
-
 //progress bar
+function updateProgressDisplay() {
+    const segments = document.querySelectorAll('.progress-segment');
+
+    segments.forEach((segment, index) => {
+        if (index < currentProgress) {
+            segment.className = 'progress-segment filled';
+        } else {
+            segment.className = 'progress-segment empty';
+        }
+    });
+}
+// Initialize the progress bar when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initializeProgressBar();
+});
+
 
 let currentProgress = 0;
 const totalSegments = questions.length + 2; // Total number of questions
@@ -116,22 +129,6 @@ function initializeProgressBar() {
     updateProgressDisplay();
 }
 
-function updateProgressDisplay() {
-    const segments = document.querySelectorAll('.progress-segment');
-
-    segments.forEach((segment, index) => {
-        if (index < currentProgress) {
-            segment.className = 'progress-segment filled';
-        } else {
-            segment.className = 'progress-segment empty';
-        }
-    });
-}
-// Initialize the progress bar when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    initializeProgressBar();
-});
-
 
 
 //carousel
@@ -140,6 +137,35 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 let currentSlide = 0;
 let answers = new Array(questions.length).fill(null);
+
+
+function resetTestCarousel() {
+    currentSlide = 0;
+    answers = new Array(questions.length).fill(null); // Reset answers array
+    currentProgress = 0;
+    updateProgressDisplay();
+    slider.style.transform = `translateX(0)`;
+    document.getElementsByClassName('progress-arrow')[0].src = './img/carousel/test/arrow_empty.png';
+    document.getElementById('prevBtn').style.display = "block";
+
+    // Remove selected classes from options
+    const allCards = document.querySelectorAll('.test-card');
+    allCards.forEach((card, idx) => {
+        if (idx >= questions.length) return;
+        const options = card.querySelectorAll('.option');
+        options.forEach(optElem => optElem.classList.remove('selected'));
+    });
+
+    // Hide result slide if visible
+    const resultCard = document.getElementById('result');
+    if (resultCard) {
+        resultCard.innerHTML = '';
+    }
+
+    // Show first question card, hide others
+    renderSlides();
+    updateSlide();
+}
 
 
 document.getElementById('startTestBtn').addEventListener('click', () => {
@@ -167,9 +193,15 @@ document.getElementById('nextslide2').addEventListener('click', () => {
 });
 
 document.getElementById('finalBtn').addEventListener('click', () => {
+    resetTestCarousel();
     scrollToSection("how-it-works");
     hideAllCarousel();
+    document.querySelector('#imageCarousel6').style.display = 'none';
+    document.getElementById('imageCarousel6').classList.remove('slide-in');
+    document.getElementById('testOpenSlide').style.display = 'block';
+    //document.getElementById('testOpenSlide').classList.add('slide-in');
 });
+
 
 
 
@@ -252,14 +284,12 @@ function renderSlides() {
     resultImg.id = 'resultImg';
     resultImg.className = 'test-img-bottom';
     const nextButton = document.createElement('button');
-    nextButton.className = 'btn btn-light btn-bottom'; //TODO
+    nextButton.className = 'btn btn-bottom';
     nextButton.textContent = 'Tovább';
     nextButton.onclick = () => {
-        //scrollToSection("how-it-works");
-        //hideAllCarousel();
         document.querySelector('#testWrapper').style.display = 'none';
-        document.querySelector('#imageCarousel4').style.display = 'block';
-        document.querySelector('#imageCarousel4').classList.add('slide-in');
+        document.querySelector('#imageCarousel5').style.display = 'block';
+        document.querySelector('#imageCarousel5').classList.add('slide-in');
         currentProgress++;
         updateProgressDisplay();
     };
