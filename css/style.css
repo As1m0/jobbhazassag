@@ -101,16 +101,21 @@ body {
 }
 
 .test-btn-title {
+    font-size: 1.25rem;
     font-weight: bold;
     color: var(--primary-teal);
     text-align: center;
+}
+
+.accordion-button{
+    font-size: 1.25rem;
 }
 
 .start-test-btn {
     height: 50px;
     border: none;
     font-weight: bold;
-    width: 140px;
+    width: 150px;
     border-radius: 15px;
     color: var(--dark-teal);
     background-color: white;
@@ -211,7 +216,7 @@ body {
 
 .testimonial {
     display: inline-block;
-    width: 50px;
+    width: 70px;
     border-radius: 50%;
     margin-right: 15px;
 }
@@ -435,7 +440,11 @@ body {
     }
 }
 
-
+.siker-hl{
+    color: var(--primary-teal);
+    margin-bottom: 10px;
+    font-size: 1.35rem;
+}
 
 
 /*           CAROUSEL           */
@@ -931,7 +940,6 @@ body {
 .btn-bottom:hover, .carousel-select-btn:hover {
     background-color: #f3ce8e;
 }
-
 
 .carousel-select-btn {
     position: absolute;
