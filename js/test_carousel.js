@@ -20,7 +20,7 @@ const questions = [
         options: [
             { text: "Folyamatosan magyarázkodom vagy visszatámadok, hogy védjem magam.", score: 2 },
             { text: "Totálisan lekapcsolok. Testben ott vagyok, de lélekben kiléptem.", score: 1 },
-            { text: "Próbálom figyelni rá, még ha nehéz is.", score: 3 }
+            { text: "Próbálok figyelni rá, még ha nehéz is.", score: 3 }
         ]
     },
     {
