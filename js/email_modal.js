@@ -77,7 +77,8 @@ submitBtn.addEventListener('click', async function () {
             setTimeout(() => {
                 const modal = bootstrap.Modal.getInstance(document.getElementById('emailModal'));
                 modal.hide();
-            }, 2000);
+                //const hideElement = document.getElementsByClassName('modal-backdrop');
+            }, 1500);
         } else {
             showAlert(result.error || 'Hiba az email cím elküldésénél.', 'danger');
         }

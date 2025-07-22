@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Email Addresses">
+<Table>
+<Row>
+<Cell><Data ss:Type="String"><B>Email Address</B></Data></Cell>
+<Cell><Data ss:Type="String"><B>Submission Date</B></Data></Cell>
+<Cell><Data ss:Type="String"><B>IP Address</B></Data></Cell>
+<Cell><Data ss:Type="String"><B>Name</B></Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">abel@test.hu</Data></Cell>
+<Cell><Data ss:Type="String">2025-07-11T17:44:59.984Z</Data></Cell>
+<Cell><Data ss:Type="String">::1</Data></Cell>
+<Cell><Data ss:Type="String">abel</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">asd@asd.hu</Data></Cell>
+<Cell><Data ss:Type="String">2025-07-11T17:46:13.577Z</Data></Cell>
+<Cell><Data ss:Type="String">::1</Data></Cell>
+<Cell><Data ss:Type="String">asdasd</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>
