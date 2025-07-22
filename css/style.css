@@ -52,7 +52,7 @@ body {
 
 .hero-section {
     /*background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-teal) 100%);*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../img/cover_img1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('../img/cover_img1.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
